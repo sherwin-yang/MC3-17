@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		21AA702E24C58CE600DA35F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA702D24C58CE600DA35F6 /* AppDelegate.swift */; };
 		21AA703024C58CE600DA35F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */; };
-		21AA703224C58CE600DA35F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA703124C58CE600DA35F6 /* ViewController.swift */; };
 		21AA703524C58CE600DA35F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21AA703324C58CE600DA35F6 /* Main.storyboard */; };
 		21AA703824C58CE600DA35F6 /* MC3_17.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21AA703624C58CE600DA35F6 /* MC3_17.xcdatamodeld */; };
 		21AA703A24C58CE800DA35F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21AA703924C58CE800DA35F6 /* Assets.xcassets */; };
 		21AA703D24C58CE800DA35F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21AA703B24C58CE800DA35F6 /* LaunchScreen.storyboard */; };
 		21AA704824C58CE800DA35F6 /* MC3_17Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA704724C58CE800DA35F6 /* MC3_17Tests.swift */; };
 		21AA705324C58CE800DA35F6 /* MC3_17UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA705224C58CE800DA35F6 /* MC3_17UITests.swift */; };
+		21B4E12824C5A04D00EAC15F /* Drill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E12724C5A04D00EAC15F /* Drill.swift */; };
+		21B4E13024C6054E00EAC15F /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B4E12F24C6054E00EAC15F /* PopUp.storyboard */; };
+		21B4E13224C60FF100EAC15F /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13124C60FF100EAC15F /* PopUpViewController.swift */; };
+		21B4E13624C6120C00EAC15F /* DrillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13524C6120C00EAC15F /* DrillViewController.swift */; };
+		21B4E13A24C6174E00EAC15F /* Drill.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B4E13924C6174E00EAC15F /* Drill.storyboard */; };
+		21B4E13C24C618F800EAC15F /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13B24C618F800EAC15F /* Extentions.swift */; };
+		21B4E13F24C77AD500EAC15F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13E24C77AD500EAC15F /* DataModel.swift */; };
+		21B4E14124C7818100EAC15F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E14024C7818100EAC15F /* Constants.swift */; };
+		21B4E14624C9EF7000EAC15F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 21B4E14524C9EF7000EAC15F /* video.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,6 @@
 		21AA702A24C58CE600DA35F6 /* MC3-17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AA702D24C58CE600DA35F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		21AA703124C58CE600DA35F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21AA703424C58CE600DA35F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21AA703724C58CE600DA35F6 /* MC3_17.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MC3_17.xcdatamodel; sourceTree = "<group>"; };
 		21AA703924C58CE800DA35F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +58,15 @@
 		21AA704E24C58CE800DA35F6 /* MC3-17UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MC3-17UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AA705224C58CE800DA35F6 /* MC3_17UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_17UITests.swift; sourceTree = "<group>"; };
 		21AA705424C58CE800DA35F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21B4E12724C5A04D00EAC15F /* Drill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drill.swift; sourceTree = "<group>"; };
+		21B4E12F24C6054E00EAC15F /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
+		21B4E13124C60FF100EAC15F /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		21B4E13524C6120C00EAC15F /* DrillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillViewController.swift; sourceTree = "<group>"; };
+		21B4E13924C6174E00EAC15F /* Drill.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drill.storyboard; sourceTree = "<group>"; };
+		21B4E13B24C618F800EAC15F /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		21B4E13E24C77AD500EAC15F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		21B4E14024C7818100EAC15F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		21B4E14524C9EF7000EAC15F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,7 @@
 		21AA702124C58CE600DA35F6 = {
 			isa = PBXGroup;
 			children = (
+				21B4E14524C9EF7000EAC15F /* video.mov */,
 				21AA702C24C58CE600DA35F6 /* MC3-17 */,
 				21AA704624C58CE800DA35F6 /* MC3-17Tests */,
 				21AA705124C58CE800DA35F6 /* MC3-17UITests */,
@@ -103,7 +120,9 @@
 			children = (
 				21AA702D24C58CE600DA35F6 /* AppDelegate.swift */,
 				21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */,
-				21AA703124C58CE600DA35F6 /* ViewController.swift */,
+				21B4E13D24C7280300EAC15F /* Shared */,
+				21B4E12324C5A01C00EAC15F /* Drill Page */,
+				21B4E12B24C6050400EAC15F /* Pop-Up Page */,
 				21AA703324C58CE600DA35F6 /* Main.storyboard */,
 				21AA703924C58CE800DA35F6 /* Assets.xcassets */,
 				21AA703B24C58CE800DA35F6 /* LaunchScreen.storyboard */,
@@ -129,6 +148,83 @@
 				21AA705424C58CE800DA35F6 /* Info.plist */,
 			);
 			path = "MC3-17UITests";
+			sourceTree = "<group>";
+		};
+		21B4E12324C5A01C00EAC15F /* Drill Page */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E12624C5A03700EAC15F /* Contoller */,
+				21B4E12524C5A03300EAC15F /* View */,
+				21B4E12424C5A02F00EAC15F /* Model */,
+			);
+			path = "Drill Page";
+			sourceTree = "<group>";
+		};
+		21B4E12424C5A02F00EAC15F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E12724C5A04D00EAC15F /* Drill.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21B4E12524C5A03300EAC15F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E13924C6174E00EAC15F /* Drill.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21B4E12624C5A03700EAC15F /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E13524C6120C00EAC15F /* DrillViewController.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		21B4E12B24C6050400EAC15F /* Pop-Up Page */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E12E24C6053F00EAC15F /* Controller */,
+				21B4E12D24C6053B00EAC15F /* View */,
+				21B4E12C24C6052D00EAC15F /* Model */,
+			);
+			path = "Pop-Up Page";
+			sourceTree = "<group>";
+		};
+		21B4E12C24C6052D00EAC15F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21B4E12D24C6053B00EAC15F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E12F24C6054E00EAC15F /* PopUp.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21B4E12E24C6053F00EAC15F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E13124C60FF100EAC15F /* PopUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21B4E13D24C7280300EAC15F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				21B4E13B24C618F800EAC15F /* Extentions.swift */,
+				21B4E13E24C77AD500EAC15F /* DataModel.swift */,
+				21B4E14024C7818100EAC15F /* Constants.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +331,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B4E13024C6054E00EAC15F /* PopUp.storyboard in Resources */,
+				21B4E13A24C6174E00EAC15F /* Drill.storyboard in Resources */,
 				21AA703D24C58CE800DA35F6 /* LaunchScreen.storyboard in Resources */,
 				21AA703A24C58CE800DA35F6 /* Assets.xcassets in Resources */,
 				21AA703524C58CE600DA35F6 /* Main.storyboard in Resources */,
+				21B4E14624C9EF7000EAC15F /* video.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +361,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21AA703224C58CE600DA35F6 /* ViewController.swift in Sources */,
+				21B4E13624C6120C00EAC15F /* DrillViewController.swift in Sources */,
+				21B4E13224C60FF100EAC15F /* PopUpViewController.swift in Sources */,
+				21B4E13C24C618F800EAC15F /* Extentions.swift in Sources */,
 				21AA703824C58CE600DA35F6 /* MC3_17.xcdatamodeld in Sources */,
 				21AA702E24C58CE600DA35F6 /* AppDelegate.swift in Sources */,
+				21B4E13F24C77AD500EAC15F /* DataModel.swift in Sources */,
 				21AA703024C58CE600DA35F6 /* SceneDelegate.swift in Sources */,
+				21B4E12824C5A04D00EAC15F /* Drill.swift in Sources */,
+				21B4E14124C7818100EAC15F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
