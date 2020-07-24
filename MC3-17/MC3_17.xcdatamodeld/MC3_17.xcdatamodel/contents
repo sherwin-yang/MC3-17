@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DrillDetails" representedClassName="DrillDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="drill_number" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="drillDetail_id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shotQuality" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="header" maxCount="1" deletionRule="Nullify" destinationEntity="Drills"/>
+    </entity>
+    <entity name="Drills" representedClassName="Drills" syncable="YES" codeGenerationType="class">
+        <attribute name="drill_name" attributeType="String"/>
+        <attribute name="drill_number" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="video" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Drills" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="DrillDetails" positionX="117.7265625" positionY="-25.3046875" width="128" height="118"/>
+    </elements>
 </model>
