@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B0J-eC-jet">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tst-Gv-Wz1">
+            <objects>
+                <viewController id="N4M-ca-eTF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wuU-QH-tHO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KfP-TP-bfk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tabbar camera" id="aiZ-2I-tug"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B62-uO-PyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-515" y="-23"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="bpq-3K-gik">
+            <objects>
+                <viewController id="GDO-BJ-siZ" customClass="CategoryViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t0d-Ta-jgb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Badminton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-VF-yIt">
+                                <rect key="frame" x="33" y="80" width="191" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hjK-Rk-g7Y">
+                                <rect key="frame" x="20" y="225" width="374" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AKl-5D-8Il">
+                                    <size key="itemSize" width="374" height="243"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="8TW-EI-yfW" customClass="CategoryCell" customModule="MC3_17" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="243"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mqe-gc-eMh">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="243"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8k-fc-L7v">
+                                                    <rect key="frame" x="8" y="8" width="358" height="226"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-i8-inI">
+                                                    <rect key="frame" x="170" y="34" width="170" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="374" height="243"/>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="I8k-fc-L7v" id="y5c-g9-nGg"/>
+                                            <outlet property="categoryName" destination="tRo-i8-inI" id="rty-Ms-3qV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="GDO-BJ-siZ" id="mOU-wv-Mq5"/>
+                                    <outlet property="delegate" destination="GDO-BJ-siZ" id="oRv-Li-FtA"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All you need is to know how to play correctly and then train your badminton basics Correctly!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3r-sB-L4d">
+                                <rect key="frame" x="33" y="131" width="331" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mrl-b1-uOL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5aW-fY-2yO"/>
+                    <connections>
+                        <outlet property="categoryCollection" destination="hjK-Rk-g7Y" id="cbt-ET-gIy"/>
+                        <segue destination="HMq-LH-Lor" kind="show" identifier="toShotsPage" id="c1p-AV-RbY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyN-b4-HAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394.20289855072468" y="-672.32142857142856"/>
+        </scene>
+        <!--Shots-->
+        <scene sceneID="1rL-I9-NQa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shots" id="HMq-LH-Lor" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nH0-sk-Es6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewc-Fy-lyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.00000000000011" y="-672.32142857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ong-7K-caS">
+            <objects>
+                <tabBarController id="B0J-eC-jet" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ax1-kX-dHi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WsE-5J-LKp" kind="relationship" relationship="viewControllers" id="lN3-9L-Wss"/>
+                        <segue destination="N4M-ca-eTF" kind="relationship" relationship="viewControllers" id="U91-vh-7SY"/>
+                        <segue destination="Axj-D5-zJq" kind="relationship" relationship="viewControllers" id="m8D-MD-gnu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NrL-fU-OPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1432" y="-348"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bEJ-7Q-bze">
+            <objects>
+                <viewController id="Axj-D5-zJq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rtg-2F-JKe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Mav-eG-uIA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tabbar chart" id="EwT-aN-NxO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UNb-wg-szz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="670"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kdN-US-vqr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WsE-5J-LKp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tabbar badminton" id="BU9-hO-Rod"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wzk-Kt-Zh3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GDO-BJ-siZ" kind="relationship" relationship="rootViewController" id="QW3-BU-eS6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRZ-Zv-Age" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-515.94202898550725" y="-672.32142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar badminton" width="24" height="31"/>
+        <image name="tabbar camera" width="91" height="91"/>
+        <image name="tabbar chart" width="31" height="21"/>
+    </resources>
+</document>
