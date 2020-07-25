@@ -15,6 +15,7 @@
 		215DA69124CC6FBD0035603A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215DA68F24CC6FBD0035603A /* CategoryViewController.swift */; };
 		215DA69324CC6FC70035603A /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215DA69224CC6FC70035603A /* Category.storyboard */; };
 		215DA69524CC6FCE0035603A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215DA69424CC6FCE0035603A /* Category.swift */; };
+		217678AE24CCD91D004EC8B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217678AD24CCD91D004EC8B2 /* Main.storyboard */; };
 		21AA702E24C58CE600DA35F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA702D24C58CE600DA35F6 /* AppDelegate.swift */; };
 		21AA703024C58CE600DA35F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */; };
 		21AA703824C58CE600DA35F6 /* MC3_17.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21AA703624C58CE600DA35F6 /* MC3_17.xcdatamodeld */; };
@@ -30,7 +31,6 @@
 		21B4E13C24C618F800EAC15F /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13B24C618F800EAC15F /* Extentions.swift */; };
 		21B4E13F24C77AD500EAC15F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13E24C77AD500EAC15F /* DataModel.swift */; };
 		21B4E14124C7818100EAC15F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E14024C7818100EAC15F /* Constants.swift */; };
-		21B4E14624C9EF7000EAC15F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 21B4E14524C9EF7000EAC15F /* video.mov */; };
 		A5E65F2E24CB60400048828A /* ResultsVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */; };
 		A5E65F3024CB60640048828A /* ResultsNoVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F2F24CB60640048828A /* ResultsNoVideo.storyboard */; };
 		A5E65F3224CB606F0048828A /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F3124CB606F0048828A /* Camera.storyboard */; };
@@ -65,6 +65,7 @@
 		215DA68F24CC6FBD0035603A /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		215DA69224CC6FC70035603A /* Category.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		215DA69424CC6FCE0035603A /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		217678AD24CCD91D004EC8B2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		21AA702A24C58CE600DA35F6 /* MC3-17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AA702D24C58CE600DA35F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		21B4E13B24C618F800EAC15F /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		21B4E13E24C77AD500EAC15F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		21B4E14024C7818100EAC15F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		21B4E14524C9EF7000EAC15F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsVideo.storyboard; sourceTree = "<group>"; };
 		A5E65F2F24CB60640048828A /* ResultsNoVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsNoVideo.storyboard; sourceTree = "<group>"; };
 		A5E65F3124CB606F0048828A /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 		21AA702124C58CE600DA35F6 = {
 			isa = PBXGroup;
 			children = (
-				21B4E14524C9EF7000EAC15F /* video.mov */,
 				21AA702C24C58CE600DA35F6 /* MC3-17 */,
 				21AA704624C58CE800DA35F6 /* MC3-17Tests */,
 				21AA705124C58CE800DA35F6 /* MC3-17UITests */,
@@ -224,6 +223,7 @@
 				A5E65F2124CB5F7B0048828A /* Camera Page */,
 				A5E65F2324CB5F850048828A /* Results Video Page */,
 				A5E65F2224CB5F800048828A /* Results No-Video Page */,
+				217678AD24CCD91D004EC8B2 /* Main.storyboard */,
 				21AA703924C58CE800DA35F6 /* Assets.xcassets */,
 				21AA703B24C58CE800DA35F6 /* LaunchScreen.storyboard */,
 				21AA703E24C58CE800DA35F6 /* Info.plist */,
@@ -535,11 +535,11 @@
 				215DA69324CC6FC70035603A /* Category.storyboard in Resources */,
 				21B4E13A24C6174E00EAC15F /* Drill.storyboard in Resources */,
 				A5E65F2E24CB60400048828A /* ResultsVideo.storyboard in Resources */,
+				217678AE24CCD91D004EC8B2 /* Main.storyboard in Resources */,
 				21AA703D24C58CE800DA35F6 /* LaunchScreen.storyboard in Resources */,
 				21AA703A24C58CE800DA35F6 /* Assets.xcassets in Resources */,
 				A5E65F3224CB606F0048828A /* Camera.storyboard in Resources */,
 				215DA68D24CC6FB00035603A /* Shots.storyboard in Resources */,
-				21B4E14624C9EF7000EAC15F /* video.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
