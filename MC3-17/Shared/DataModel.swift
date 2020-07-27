@@ -45,9 +45,7 @@ struct DataModel {
         }
     }
     
-    // MARK: - FUNCTION TO ADD DUMMY DATA
-    
-    static func addDummyData(drill: Drill) {
+    static func addNewData(drill: Drill) {
         let newDrill = Drills.init(context: context)
         let newDrillDetail = DrillDetails.init(context: context)
         

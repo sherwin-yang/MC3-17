@@ -21,7 +21,6 @@ class CameraVC: UIViewController, RPPreviewViewControllerDelegate{
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     let recorder = RPScreenRecorder.shared()
     
-    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var cameraButtonStop: UIButton!
@@ -40,7 +39,7 @@ class CameraVC: UIViewController, RPPreviewViewControllerDelegate{
     // Create the capture session.
     @IBAction func cameraButtonDidTapped(_ sender: UIButton) {
         recorder.stopRecording { (previewVC, error) in
-            if let previewVC = previewVC{
+            if let previewVC = previewVC {
                 previewVC.modalPresentationStyle = .overFullScreen
                 previewVC.previewControllerDelegate = self
                 self.present(previewVC, animated: true, completion: nil)
