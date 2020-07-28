@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let mainStoryboard = UIStoryboard(name: "ResultOverview", bundle: nil)
+        let mainStoryboard = UIStoryboard(name: "Category", bundle: nil)
         
         let vc = mainStoryboard.instantiateInitialViewController()
         self.window?.rootViewController = vc

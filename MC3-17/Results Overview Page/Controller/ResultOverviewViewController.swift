@@ -13,25 +13,19 @@ class ResultOverviewViewController: UIViewController {
     @IBOutlet var moveCategorySegmentedControl: UISegmentedControl!
     @IBOutlet var overviewTableView: UITableView!
     
-    var moveCategories = [MoveCategory]()
+    var movesCategory = [MoveCategory]()
     var goodMoves = [MoveCategory]()
     var badMoves = [MoveCategory]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        dummy()
         self.allocateGoodBadMoves()
     }
     
     func allocateGoodBadMoves() {
-        for i in 0..<moveCategories.count {
-            if moveCategories[i].shotQuality == ShotQuality.goodMove {
-                goodMoves.append(moveCategories[i])
-            }
-            else if moveCategories[i].shotQuality == ShotQuality.badMove {
-                badMoves.append(moveCategories[i])
-            }
-        }
+        goodMoves = MoveCategory.passGoodMoves(movesCategory)
+        badMoves = MoveCategory.passBadMoves(movesCategory)
     }
     
     @IBAction func moveCategorySegmentedIndexChanged(_ sender: Any) {
@@ -39,18 +33,18 @@ class ResultOverviewViewController: UIViewController {
     }
     
 //    func dummy() {
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 30))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 50))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 230))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 250))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 300))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 430))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 550))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 610))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 640))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 1000))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 3800))
-//        moveCategories.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 4600))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 30))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 50))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 230))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 250))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 300))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 430))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 550))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 610))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 640))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 1000))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.goodMove, time: 3800))
+//        movesCategory.append(MoveCategory(shotQuality: ShotQuality.badMove, time: 4600))
 //    }
 }
 

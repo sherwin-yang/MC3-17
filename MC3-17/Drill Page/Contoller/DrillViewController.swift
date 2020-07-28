@@ -78,26 +78,31 @@ class DrillViewController: UIViewController {
 }
 
 extension DrillViewController: WCSessionDelegate {
-    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.connected)
-        appleWatchConnectivityLabel.text = AppleWatchConnectivity.connectedLabel
+        DispatchQueue.main.async {
+            self.appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.connected)
+            self.appleWatchConnectivityLabel.text = AppleWatchConnectivity.connectedLabel
+        }
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-    
+
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.disonnected)
-        appleWatchConnectivityLabel.text = AppleWatchConnectivity.disconnectedLabel
+        DispatchQueue.main.async {
+            self.appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.disonnected)
+            self.appleWatchConnectivityLabel.text = AppleWatchConnectivity.disconnectedLabel
+        }
     }
     
     func checkWatchConnectivity() {
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self
-            session.activate()
+            if session.isPaired {
+                session.activate()
+            }
         }
     }
     
