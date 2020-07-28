@@ -18,6 +18,8 @@ struct SegueIdentifier {
     static let toDrillPage = "toDrillPage"
     static let toPopUpScreen = "toPopUpScreen"
     static let toCameraScreen = "toCameraScreen"
+    static let toDrillingPage = "toDrillingPage"
+    static let toInfoPage = "toInfoPage"
 }
 
 struct DrillName {

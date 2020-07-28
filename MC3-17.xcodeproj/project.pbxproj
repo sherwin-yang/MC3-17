@@ -37,6 +37,10 @@
 		A5E65F3424CB60A40048828A /* ResultsNoVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E65F3324CB60A40048828A /* ResultsNoVideoVC.swift */; };
 		A5E65F3624CB60CD0048828A /* ResultsVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E65F3524CB60CD0048828A /* ResultsVideoVC.swift */; };
 		A5E65F3824CB60FB0048828A /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E65F3724CB60FB0048828A /* CameraVC.swift */; };
+		AD1A4BD124CF3F390023E012 /* InfoPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1A4BD024CF3F390023E012 /* InfoPage.storyboard */; };
+		AD1A4BD324CF3F980023E012 /* DrillingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */; };
+		AD1A4BD524CF40170023E012 /* DrillingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4BD424CF40170023E012 /* DrillingPageViewController.swift */; };
+		AD1A4BD724CF40240023E012 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,10 @@
 		A5E65F3324CB60A40048828A /* ResultsNoVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsNoVideoVC.swift; sourceTree = "<group>"; };
 		A5E65F3524CB60CD0048828A /* ResultsVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVideoVC.swift; sourceTree = "<group>"; };
 		A5E65F3724CB60FB0048828A /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		AD1A4BD024CF3F390023E012 /* InfoPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoPage.storyboard; sourceTree = "<group>"; };
+		AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrillingPage.storyboard; sourceTree = "<group>"; };
+		AD1A4BD424CF40170023E012 /* DrillingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillingPageViewController.swift; sourceTree = "<group>"; };
+		AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +221,8 @@
 		21AA702C24C58CE600DA35F6 /* MC3-17 */ = {
 			isa = PBXGroup;
 			children = (
+				AD1A4BC924CF3EFC0023E012 /* Drilling Page */,
+				AD1A4BC824CF3EC00023E012 /* Info Page */,
 				21AA702D24C58CE600DA35F6 /* AppDelegate.swift */,
 				21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */,
 				21B4E13D24C7280300EAC15F /* Shared */,
@@ -426,6 +436,72 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AD1A4BC824CF3EC00023E012 /* Info Page */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A4BCC24CF3F160023E012 /* Model */,
+				AD1A4BCB24CF3F100023E012 /* View */,
+				AD1A4BCA24CF3F030023E012 /* Controller */,
+			);
+			path = "Info Page";
+			sourceTree = "<group>";
+		};
+		AD1A4BC924CF3EFC0023E012 /* Drilling Page */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A4BCF24CF3F250023E012 /* Model */,
+				AD1A4BCE24CF3F200023E012 /* View */,
+				AD1A4BCD24CF3F1A0023E012 /* Controller */,
+			);
+			path = "Drilling Page";
+			sourceTree = "<group>";
+		};
+		AD1A4BCA24CF3F030023E012 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD1A4BCB24CF3F100023E012 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A4BD024CF3F390023E012 /* InfoPage.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD1A4BCC24CF3F160023E012 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD1A4BCD24CF3F1A0023E012 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A4BD424CF40170023E012 /* DrillingPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD1A4BCE24CF3F200023E012 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD1A4BCF24CF3F250023E012 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -530,7 +606,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1A4BD324CF3F980023E012 /* DrillingPage.storyboard in Resources */,
 				21B4E13024C6054E00EAC15F /* PopUp.storyboard in Resources */,
+				AD1A4BD124CF3F390023E012 /* InfoPage.storyboard in Resources */,
 				A5E65F3024CB60640048828A /* ResultsNoVideo.storyboard in Resources */,
 				215DA69324CC6FC70035603A /* Category.storyboard in Resources */,
 				21B4E13A24C6174E00EAC15F /* Drill.storyboard in Resources */,
@@ -567,7 +645,9 @@
 				A5E65F3424CB60A40048828A /* ResultsNoVideoVC.swift in Sources */,
 				A5E65F3824CB60FB0048828A /* CameraVC.swift in Sources */,
 				215DA69124CC6FBD0035603A /* CategoryViewController.swift in Sources */,
+				AD1A4BD724CF40240023E012 /* InfoPageViewController.swift in Sources */,
 				A5E65F3624CB60CD0048828A /* ResultsVideoVC.swift in Sources */,
+				AD1A4BD524CF40170023E012 /* DrillingPageViewController.swift in Sources */,
 				21B4E13624C6120C00EAC15F /* DrillViewController.swift in Sources */,
 				215DA69524CC6FCE0035603A /* Category.swift in Sources */,
 				21B4E13224C60FF100EAC15F /* PopUpViewController.swift in Sources */,
@@ -678,7 +758,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -732,7 +812,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -747,7 +827,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 35HAL8HCRV;
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -765,7 +845,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
