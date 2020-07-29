@@ -78,6 +78,7 @@ class DrillViewController: UIViewController {
 }
 
 extension DrillViewController: WCSessionDelegate {
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         DispatchQueue.main.async {
             self.appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.connected)
@@ -86,7 +87,7 @@ extension DrillViewController: WCSessionDelegate {
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-
+    
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
