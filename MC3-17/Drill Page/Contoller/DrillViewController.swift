@@ -100,9 +100,7 @@ extension DrillViewController: WCSessionDelegate {
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self
-            if session.isPaired {
-                session.activate()
-            }
+            session.activate()
         }
     }
     
