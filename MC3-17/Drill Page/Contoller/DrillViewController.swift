@@ -28,7 +28,7 @@ class DrillViewController: UIViewController {
         super.viewDidLoad()
         self.drillCardView.addCardShadow()
         self.setAllLabels()
-        self.checkWatchConnectivity()
+        self.activateWCSession()
     }
     
     @IBAction func playVideoButton(_ sender: Any) {
@@ -97,11 +97,13 @@ extension DrillViewController: WCSessionDelegate {
         }
     }
     
-    func checkWatchConnectivity() {
+    func activateWCSession() {
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self
-            session.activate()
+            if session.isPaired {
+                session.activate()
+            }
         }
     }
     
