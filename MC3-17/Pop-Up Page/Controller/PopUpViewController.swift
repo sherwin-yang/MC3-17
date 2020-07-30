@@ -25,7 +25,7 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: SegueIdentifier.toCameraScreen, sender: self)
+        performSegue(withIdentifier: SegueIdentifier.toInfoPage, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

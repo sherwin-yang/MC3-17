@@ -47,6 +47,7 @@ while training?</string>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="noButtonTapped:" destination="cfS-Ic-nEE" eventType="touchUpInside" id="PiD-60-tKl"/>
+                                            <segue destination="wIL-Ch-aRn" kind="show" identifier="toInfoPage" id="Zat-1k-aSn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBC-zn-Mu3">
@@ -93,7 +94,17 @@ while training?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycz-Wh-Fg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995.6521739130437" y="79.6875"/>
+            <point key="canvasLocation" x="2307" y="68"/>
+        </scene>
+        <!--InfoPage-->
+        <scene sceneID="onh-xO-ssM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoPage" id="wIL-Ch-aRn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iOm-AP-hT0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8M-Ez-goW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3144" y="-94"/>
         </scene>
         <!--Camera-->
         <scene sceneID="ajx-jL-2oF">
@@ -103,7 +114,7 @@ while training?</string>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xug-cU-FHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704" y="82"/>
+            <point key="canvasLocation" x="3083" y="212"/>
         </scene>
     </scenes>
     <resources>
