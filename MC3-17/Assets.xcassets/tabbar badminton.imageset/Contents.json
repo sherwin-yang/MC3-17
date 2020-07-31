@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "tabbar badminton-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "tabbar badminton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tabbar badminton.png",
+      "filename" : "tabbar badminton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -48,6 +48,6 @@ extension CategoryViewController:  UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = categories[indexPath.row]
-        performSegue(withIdentifier: SegueIdentifier.totoShotsPage, sender: category)
+        performSegue(withIdentifier: SegueIdentifier.toShotsPage, sender: category)
     }
 }

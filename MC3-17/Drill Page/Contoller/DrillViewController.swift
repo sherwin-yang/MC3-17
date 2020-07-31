@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import WatchConnectivity
 
 class DrillViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class DrillViewController: UIViewController {
     @IBOutlet var badMovesLabel: UILabel!
     @IBOutlet var goodMovesLabel: UILabel!
     @IBOutlet var highestScoreLabel: UILabel!
+    @IBOutlet var appleWatchConnectivityMark: UIView!
+    @IBOutlet var appleWatchConnectivityLabel: UILabel!
     
     var drillName: String?
     
@@ -25,6 +28,7 @@ class DrillViewController: UIViewController {
         super.viewDidLoad()
         self.drillCardView.addCardShadow()
         self.setAllLabels()
+        self.activateWCSession()
     }
     
     @IBAction func playVideoButton(_ sender: Any) {
@@ -59,7 +63,7 @@ class DrillViewController: UIViewController {
         else if drillName == DrillName.smash {
             self.descriptionLabel.text = DrillDescription.smash
         }
-    }
+    }    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
@@ -71,4 +75,36 @@ class DrillViewController: UIViewController {
         }
     }
 
+}
+
+extension DrillViewController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        DispatchQueue.main.async {
+            self.appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.connected)
+            self.appleWatchConnectivityLabel.text = AppleWatchConnectivity.connectedLabel
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        DispatchQueue.main.async {
+            self.appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.disonnected)
+            self.appleWatchConnectivityLabel.text = AppleWatchConnectivity.disconnectedLabel
+        }
+    }
+    
+    func activateWCSession() {
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            if session.isPaired {
+                session.activate()
+            }
+        }
+    }
+    
 }

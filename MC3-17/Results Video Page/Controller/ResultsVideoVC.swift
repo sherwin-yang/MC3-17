@@ -9,6 +9,7 @@
 import UIKit
 
 class ResultsVideoVC: UIViewController{
+    
     @IBOutlet weak var videoView: UIImageView!
     @IBOutlet weak var overview: UIView!
     @IBOutlet weak var badViewSmall: UIView!
@@ -31,7 +32,7 @@ class ResultsVideoVC: UIViewController{
         super.viewDidLoad()
         rounded()
         shadow()
-//        coloringTotalScoreCircle()
+        //        coloringTotalScoreCircle()
     }
     
     @IBAction func practiceBtnDidTapped(_ sender: UIButton) {
@@ -39,19 +40,19 @@ class ResultsVideoVC: UIViewController{
     
     @IBAction func doneBtnDidTapped(_ sender: UIButton) {
     }
-        
-//    func coloringTotalScoreCircle(){
-//        switch <#value#> {
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemPink.cgColor
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemYellow.cgColor
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemGreen.cgColor
-//        default:
-//            <#code#>
-//        }
-//    }
+    
+    //    func coloringTotalScoreCircle(){
+    //        switch <#value#> {
+    //        case <#pattern#>:
+    //            totalScoreViewLarge.layer.backgroundColor = UIColor.systemPink.cgColor
+    //        case <#pattern#>:
+    //            totalScoreViewLarge.layer.backgroundColor = UIColor.systemYellow.cgColor
+    //        case <#pattern#>:
+    //            totalScoreViewLarge.layer.backgroundColor = UIColor.systemGreen.cgColor
+    //        default:
+    //            <#code#>
+    //        }
+    //    }
     
     func shadow(){
         videoView.layer.shadowColor = UIColor.black.cgColor
@@ -72,6 +73,6 @@ class ResultsVideoVC: UIViewController{
         practiceBtn.layer.cornerRadius = 10
         doneBtn.layer.cornerRadius = 10
     }
-
+    
 }
 

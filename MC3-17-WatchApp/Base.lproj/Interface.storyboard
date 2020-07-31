@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097.2" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MC3_17_WatchApp" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="dP0-6W-d0n">
+                            <items>
+                                <label width="1" alignment="left" text="00:00:00" id="B4N-OM-Jwl">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="36"/>
+                                </label>
+                                <group width="1" alignment="left" id="q7q-Jc-L8Q">
+                                    <items>
+                                        <group width="0.5" alignment="left" layout="vertical" id="BPg-PN-HtP">
+                                            <items>
+                                                <label width="1" alignment="left" text="0" id="8a0-Po-T08">
+                                                    <color key="textColor" red="0.62352941176470589" green="0.86274509803921573" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="36"/>
+                                                </label>
+                                                <label width="1" alignment="left" text="0" id="6D7-dQ-meg">
+                                                    <color key="textColor" red="0.98039215686274506" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="36"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="0.5" height="1" alignment="left" layout="overlap" id="WB4-Ue-qy9">
+                                            <items>
+                                                <button alignment="center" verticalAlignment="center" hidden="YES" backgroundImage="stop" id="my8-1V-Uio">
+                                                    <connections>
+                                                        <action selector="stopButtonTapped" destination="AgC-eL-Hgc" id="znc-oo-sT2"/>
+                                                    </connections>
+                                                </button>
+                                                <button alignment="center" verticalAlignment="center" backgroundImage="start" id="7V0-bT-djI">
+                                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                                    <connections>
+                                                        <action selector="startButtonTapped" destination="AgC-eL-Hgc" id="jJC-ar-hBH"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="badMoveLabel" destination="6D7-dQ-meg" id="YHL-Ri-H7n"/>
+                        <outlet property="goodMoveLabel" destination="8a0-Po-T08" id="8m8-dF-ve8"/>
+                        <outlet property="startButton" destination="7V0-bT-djI" id="Uhu-dd-fqC"/>
+                        <outlet property="stopButton" destination="my8-1V-Uio" id="PMO-fa-TI7"/>
+                        <outlet property="timerLabel" destination="B4N-OM-Jwl" id="m6m-Bn-zFC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+        <!--showResult-->
+        <scene sceneID="acp-OW-nPw">
+            <objects>
+                <controller identifier="showResult" id="6v3-F1-kRI" customClass="ResultInterfaceController" customModule="MC3_17_WatchApp_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="HFb-gk-t2B">
+                            <items>
+                                <group width="1" alignment="center" layout="vertical" id="bfT-g7-I5z">
+                                    <items>
+                                        <label width="1" alignment="center" text="00:00:00" textAlignment="center" id="5MZ-DP-LUQ">
+                                            <color key="textColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                                        </label>
+                                        <label alignment="center" text="Total Attempts" id="B5q-IV-nQv">
+                                            <color key="textColor" red="0.45098039215686275" green="0.78823529411764703" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="11"/>
+                                        </label>
+                                        <label width="1" alignment="center" verticalAlignment="bottom" text="0" textAlignment="center" id="NSo-Q6-kdo">
+                                            <color key="textColor" red="0.45098039220000002" green="0.78823529410000004" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="47"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="Z5U-rp-lob">
+                                    <items>
+                                        <group width="0.5" alignment="left" layout="vertical" id="VSy-jP-rz6">
+                                            <items>
+                                                <imageView alignment="center" image="hand.thumbsup.fill" catalog="system" id="FlP-5h-2lr">
+                                                    <color key="tintColor" red="0.62352941176470589" green="0.86274509803921573" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label width="1" alignment="left" text="0" textAlignment="center" id="Has-RI-fpe">
+                                                    <color key="textColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="0.5" alignment="left" layout="vertical" id="UEz-kq-5tT">
+                                            <items>
+                                                <imageView alignment="center" image="hand.thumbsdown.fill" catalog="system" id="pVN-RO-hEU">
+                                                    <color key="tintColor" red="0.98039215686274506" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label width="1" alignment="left" text="0" textAlignment="center" id="Ooq-1x-qhG">
+                                                    <color key="textColor" red="0.98039215690000003" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="totalAttemptsLabel" destination="NSo-Q6-kdo" id="WVE-JD-W1b"/>
+                        <outlet property="totalBadMoveLabel" destination="Ooq-1x-qhG" id="MqF-4X-iTN"/>
+                        <outlet property="totalGoodMoveLabel" destination="Has-RI-fpe" id="vxX-YG-oao"/>
+                        <outlet property="totalTimeLabel" destination="5MZ-DP-LUQ" id="vIf-Sc-SM6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="277" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="124"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="124"/>
+        <image name="start" width="59" height="36"/>
+        <image name="stop" width="59" height="36"/>
+    </resources>
+</document>
