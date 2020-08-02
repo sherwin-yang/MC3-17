@@ -155,7 +155,6 @@ extension DrillingPageViewController: WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("MESSAGE")
         if let instruction = message["instructionFromWatch"] as? String {
             print(instruction)
         }
@@ -176,8 +175,11 @@ extension DrillingPageViewController: WCSessionDelegate {
         
     }
     
-    func sendInstruction(strInstruction: String) {
-        let message = ["instructionFromIos":strInstruction]
+    func sendMessage(strMsg: String, isPreditionData: Bool){
+        var message = ["instructionFromIos":strMsg]
+        if isPreditionData {
+            message = ["preditionFromIos":strMsg]
+        }
         
         wcSession.sendMessage(message, replyHandler: nil) { (error) in
             
@@ -226,7 +228,10 @@ extension DrillingPageViewController {
                 if (self.currentIndexInPredictionWindow == MlParameters.predictionWindowSize) {
                     // Move to main thread to update the UI
                     DispatchQueue.main.async {
-                        print("PREDICTION: \(self.activityPrediction() ?? "N/A")")
+                        if let predictionResult = self.activityPrediction() {
+                            print("PREDICTION: \(predictionResult)")
+                            self.sendMessage(strMsg: predictionResult, isPreditionData: true)
+                        }
                     }
                     // Start a new prediction window from scratch
                     self.currentIndexInPredictionWindow = 0

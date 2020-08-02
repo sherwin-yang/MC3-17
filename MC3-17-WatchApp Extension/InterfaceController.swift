@@ -159,6 +159,16 @@ extension InterfaceController {
 extension InterfaceController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        if let prediction = message["preditionFromIos"] as? String {
+            print(prediction)
+            if prediction == "lob_betul" {
+                result.goodMoves += 1
+                goodMoveLabel.setText(String(result.goodMoves))
+            } else if prediction == "lob_salah" {
+                result.badMoves += 1
+                badMoveLabel.setText(String(result.badMoves))
+            }
+        }
         
         if let instruction = message["instructionFromIos"] as? String {
             print(instruction)

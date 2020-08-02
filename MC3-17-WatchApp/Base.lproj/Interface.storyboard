@@ -18,7 +18,7 @@
                                 </label>
                                 <group width="1" alignment="left" id="q7q-Jc-L8Q">
                                     <items>
-                                        <group width="0.5" alignment="left" layout="vertical" id="BPg-PN-HtP">
+                                        <group width="0.5" height="88" alignment="left" layout="vertical" id="BPg-PN-HtP">
                                             <items>
                                                 <label width="1" alignment="left" text="0" id="8a0-Po-T08">
                                                     <color key="textColor" red="0.62352941176470589" green="0.86274509803921573" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,14 +49,18 @@
                                 </group>
                             </items>
                         </group>
-                        <label width="1" alignment="left" text="BPM" textAlignment="center" id="Dqd-U3-t8e">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
-                        </label>
-                        <label width="1" alignment="left" text="0" textAlignment="center" id="ywZ-rp-r0O">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
-                        </label>
+                        <group width="1" alignment="left" layout="overlap" id="B7A-DE-YZl">
+                            <items>
+                                <label width="1" alignment="left" text="BPM" textAlignment="center" id="Dqd-U3-t8e">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                                </label>
+                                <label width="1" height="40" alignment="left" text="0" textAlignment="center" id="ywZ-rp-r0O">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="badMoveLabel" destination="6D7-dQ-meg" id="YHL-Ri-H7n"/>
