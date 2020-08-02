@@ -49,17 +49,26 @@
                                 </group>
                             </items>
                         </group>
+                        <label width="1" alignment="left" text="BPM" textAlignment="center" id="Dqd-U3-t8e">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                        </label>
+                        <label width="1" alignment="left" text="0" textAlignment="center" id="ywZ-rp-r0O">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="badMoveLabel" destination="6D7-dQ-meg" id="YHL-Ri-H7n"/>
                         <outlet property="goodMoveLabel" destination="8a0-Po-T08" id="8m8-dF-ve8"/>
+                        <outlet property="heartRateLabel" destination="ywZ-rp-r0O" id="RcS-gy-2jE"/>
                         <outlet property="startButton" destination="7V0-bT-djI" id="Uhu-dd-fqC"/>
                         <outlet property="stopButton" destination="my8-1V-Uio" id="PMO-fa-TI7"/>
                         <outlet property="timerLabel" destination="B4N-OM-Jwl" id="m6m-Bn-zFC"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="34" y="31"/>
+            <point key="canvasLocation" x="34" y="30.357142857142858"/>
         </scene>
         <!--showResult-->
         <scene sceneID="acp-OW-nPw">

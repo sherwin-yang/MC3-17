@@ -38,3 +38,9 @@ struct AppleWatchConnectivity {
     static let connectedLabel = "Connected to Apple Watch"
     static let disconnectedLabel = "Disconnected From Apple Watch"
 }
+
+struct MlParameters {
+    static let predictionWindowSize = 6
+    static let sensorsUpdateFrequency = 1.0 / 75.0
+    static let stateInLength = 400
+}
