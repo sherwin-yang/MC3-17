@@ -44,10 +44,15 @@
 		21B4E13C24C618F800EAC15F /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13B24C618F800EAC15F /* Extentions.swift */; };
 		21B4E13F24C77AD500EAC15F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E13E24C77AD500EAC15F /* DataModel.swift */; };
 		21B4E14124C7818100EAC15F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4E14024C7818100EAC15F /* Constants.swift */; };
+
 		3D1EC43524D6629400250EFF /* BadmintonActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC43424D6629400250EFF /* BadmintonActivityClassifier.mlmodel */; };
 		3D1EC43924D6630900250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43824D6630900250EFF /* HealthKit.framework */; };
 		3D1EC43C24D6636800250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43B24D6636800250EFF /* HealthKit.framework */; };
 		3D1EC43F24D66C1B00250EFF /* PermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */; };
+
+		2524FF3624D6F7BB00B0E794 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2524FF3524D6F7BB00B0E794 /* Onboarding.storyboard */; };
+		2524FF3824D6F93300B0E794 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524FF3724D6F93300B0E794 /* PageControlViewController.swift */; };
+
 		A5E65F2E24CB60400048828A /* ResultsVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */; };
 		A5E65F3024CB60640048828A /* ResultsNoVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F2F24CB60640048828A /* ResultsNoVideo.storyboard */; };
 		A5E65F3224CB606F0048828A /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F3124CB606F0048828A /* Camera.storyboard */; };
@@ -162,12 +167,17 @@
 		21B4E13B24C618F800EAC15F /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		21B4E13E24C77AD500EAC15F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		21B4E14024C7818100EAC15F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+
 		3D1EC43424D6629400250EFF /* BadmintonActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BadmintonActivityClassifier.mlmodel; sourceTree = "<group>"; };
 		3D1EC43624D6630900250EFF /* MC3-17.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MC3-17.entitlements"; sourceTree = "<group>"; };
 		3D1EC43824D6630900250EFF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3D1EC43A24D6636800250EFF /* MC3-17-WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MC3-17-WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		3D1EC43B24D6636800250EFF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionHelper.swift; sourceTree = "<group>"; };
+
+		2524FF3524D6F7BB00B0E794 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		2524FF3724D6F93300B0E794 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+
 		A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsVideo.storyboard; sourceTree = "<group>"; };
 		A5E65F2F24CB60640048828A /* ResultsNoVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsNoVideo.storyboard; sourceTree = "<group>"; };
 		A5E65F3124CB606F0048828A /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
@@ -371,7 +381,11 @@
 		21AA702C24C58CE600DA35F6 /* MC3-17 */ = {
 			isa = PBXGroup;
 			children = (
+
 				3D1EC43624D6630900250EFF /* MC3-17.entitlements */,
+
+				2524FF3224D6F75B00B0E794 /* Onboarding */,
+
 				AD1A4BC924CF3EFC0023E012 /* Drilling Page */,
 				AD1A4BC824CF3EC00023E012 /* Info Page */,
 				21AA702D24C58CE600DA35F6 /* AppDelegate.swift */,
@@ -491,6 +505,7 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+
 		3D1EC43724D6630900250EFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +521,31 @@
 				3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */,
 			);
 			path = Helper;
+
+		2524FF3224D6F75B00B0E794 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2524FF3424D6F76F00B0E794 /* Controller */,
+				2524FF3324D6F76500B0E794 /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2524FF3324D6F76500B0E794 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2524FF3524D6F7BB00B0E794 /* Onboarding.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2524FF3424D6F76F00B0E794 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2524FF3724D6F93300B0E794 /* PageControlViewController.swift */,
+			);
+			path = Controller;
+
 			sourceTree = "<group>";
 		};
 		A5E65F2124CB5F7B0048828A /* Camera Page */ = {
@@ -849,6 +889,7 @@
 				217678AE24CCD91D004EC8B2 /* Main.storyboard in Resources */,
 				21AA703D24C58CE800DA35F6 /* LaunchScreen.storyboard in Resources */,
 				21AA703A24C58CE800DA35F6 /* Assets.xcassets in Resources */,
+				2524FF3624D6F7BB00B0E794 /* Onboarding.storyboard in Resources */,
 				A5E65F3224CB606F0048828A /* Camera.storyboard in Resources */,
 				215DA68D24CC6FB00035603A /* Shots.storyboard in Resources */,
 			);
@@ -910,6 +951,7 @@
 				215DA69024CC6FBD0035603A /* CategoryCell.swift in Sources */,
 				21AA703024C58CE600DA35F6 /* SceneDelegate.swift in Sources */,
 				215DA68824CC6FA00035603A /* ShotsViewController.swift in Sources */,
+				2524FF3824D6F93300B0E794 /* PageControlViewController.swift in Sources */,
 				21B4E12824C5A04D00EAC15F /* Drill.swift in Sources */,
 				21B4E14124C7818100EAC15F /* Constants.swift in Sources */,
 			);
