@@ -62,12 +62,14 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func startButtonTapped() {
+        startRecording()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
         startButton.setHidden(true)
         stopButton.setHidden(false)
     }
     
     @IBAction func stopButtonTapped() {
+        stopRecording()
         timer.invalidate()
         timer = nil
         timerLabel.setText("00:00:00")

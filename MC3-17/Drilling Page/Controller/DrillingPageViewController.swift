@@ -226,9 +226,7 @@ extension DrillingPageViewController {
                 if (self.currentIndexInPredictionWindow == MlParameters.predictionWindowSize) {
                     // Move to main thread to update the UI
                     DispatchQueue.main.async {
-                        // Use the predicted activity
-//                        self.label.text = self.activityPrediction() ?? "N/A"
-                        print(self.activityPrediction() ?? "N/A")
+                        print("PREDICTION: \(self.activityPrediction() ?? "N/A")")
                     }
                     // Start a new prediction window from scratch
                     self.currentIndexInPredictionWindow = 0
