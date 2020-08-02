@@ -35,7 +35,7 @@ class PageControlViewController: UIPageViewController, UIPageViewControllerDeleg
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
            let pageContentVC = pageViewController.viewControllers![0]
-           self.pageControl.currentPage = orderedVC.firstIndex(of: pageViewController)!
+           self.pageControl.currentPage = orderedVC.firstIndex(of: pageContentVC)!
        }
        
        func configurePageControl() {
@@ -49,7 +49,7 @@ class PageControlViewController: UIPageViewController, UIPageViewControllerDeleg
        
 
        func newVC(viewController: String) -> UIViewController {
-           return UIStoryboard(name: "Onboarding2", bundle: nil).instantiateViewController(identifier: viewController)
+           return UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: viewController)
        }
        
        func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
