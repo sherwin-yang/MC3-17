@@ -40,7 +40,7 @@ struct AppleWatchConnectivity {
 }
 
 struct MlParameters {
-    static let predictionWindowSize = 6
+    static let predictionWindowSize = 60
     static let sensorsUpdateFrequency = 1.0 / 75.0
     static let stateInLength = 400
 }
