@@ -55,6 +55,7 @@ class DrillingPageViewController: UIViewController {
     var timer = Timer()
     var permissionHelper = PermissionHelper()
     var isHealthStoreAuthorized = false
+    var isRun = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +71,7 @@ class DrillingPageViewController: UIViewController {
     }
     
     @objc func count() {
-        if isHealthStoreAuthorized {
+        if isHealthStoreAuthorized && isRun {
             seconds += 1
             if seconds == 60 {
                 minutes += 1
@@ -156,7 +157,13 @@ extension DrillingPageViewController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let instruction = message["instructionFromWatch"] as? String {
-            print(instruction)
+            print("INSTRUCTION1: \(instruction)")
+            if instruction == "START" {
+                self.isRun = true
+            } else if instruction == "STOP" {
+                self.isRun = false
+                // Go to result page
+            }
         }
         
         if let csv = message["motionFromWatch"] as? String {
@@ -166,6 +173,12 @@ extension DrillingPageViewController: WCSessionDelegate {
         }
         
     }
+    
+//    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+//        if let instruction = message["instructionFromWatch"] as? String {
+//            print("INSTRUCTION2: \(instruction)")
+//        }
+//    }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
         
@@ -186,6 +199,10 @@ extension DrillingPageViewController: WCSessionDelegate {
             print(error.localizedDescription)
             
         }
+    }
+    
+    private func isReachable() -> Bool {
+        return wcSession.isReachable
     }
 }
 

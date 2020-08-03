@@ -63,22 +63,10 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func startButtonTapped() {
         startRecording()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
-        startButton.setHidden(true)
-        stopButton.setHidden(false)
     }
     
     @IBAction func stopButtonTapped() {
         stopRecording()
-        timer.invalidate()
-        timer = nil
-        timerLabel.setText("00:00:00")
-        goodMoveLabel.setText("0")
-        badMoveLabel.setText("0")
-        startButton.setHidden(false)
-        stopButton.setHidden(true)
-        pushController(withName: "showResult", context: result)
-        result = Result(goodMoves: 0, badMoves: 0, timeSecond: 0)
     }
     
     @objc func setTimer() {
@@ -114,14 +102,28 @@ class InterfaceController: WKInterfaceController {
     }
     
     func startRecording(){
+        sendMessage(strMsg: "START", isMotion: false)
         startWorkout()
         startDeviceMotion()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
+        startButton.setHidden(true)
+        stopButton.setHidden(false)
     }
     
     func stopRecording(){
+        sendMessage(strMsg: "STOP", isMotion: false)
         stopDeviceMotion()
         wkSession?.stopActivity(with: Date())
         heartRateLabel.setText("0")
+        timer.invalidate()
+        timer = nil
+        timerLabel.setText("00:00:00")
+        goodMoveLabel.setText("0")
+        badMoveLabel.setText("0")
+        startButton.setHidden(false)
+        stopButton.setHidden(true)
+        pushController(withName: "showResult", context: result)
+        result = Result(goodMoves: 0, badMoves: 0, timeSecond: 0)
     }
 }
 
@@ -134,7 +136,7 @@ extension InterfaceController {
         motion.deviceMotionUpdateInterval  = sensorsUpdateFrequency
         motion.startDeviceMotionUpdates(to: OperationQueue.current!) {
             (data, error) in
-            print(data as Any)
+//            print(data as Any)
             if let trueData =  data {
                 
                 csvString = "\(trueData.userAcceleration.x),\(trueData.userAcceleration.y),\(trueData.userAcceleration.z),\(trueData.rotationRate.x),\(trueData.rotationRate.y),\(trueData.rotationRate.z)\n"
@@ -198,6 +200,24 @@ extension InterfaceController: WCSessionDelegate {
         }
         
         print("sendMessage")
+    }
+    
+//    func sendMessageWithReply(strMsg: String){
+//        let message = ["instructionFromWatch":strMsg]
+//
+//        if isReachable() {
+//            wcSession.sendMessage(message, replyHandler: { (response) in
+//                print("Reply: \(response)")
+//            }, errorHandler: { (error) in
+//                print("Error sending message: %@", error)
+//            })
+//        } else {
+//            print("iPhone is not reachable!!")
+//        }
+//    }
+    
+    private func isReachable() -> Bool {
+        return wcSession.isReachable
     }
 }
 
