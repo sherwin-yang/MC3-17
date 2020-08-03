@@ -38,7 +38,6 @@ less than 10 meters.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="startDrillingButton:" destination="sEX-Rf-BYx" eventType="touchUpInside" id="FNw-Ya-jde"/>
                                     <segue destination="6g2-OO-RIb" kind="presentation" identifier="toDrillingPage" modalPresentationStyle="fullScreen" id="c72-MF-pjQ"/>
                                 </connections>
                             </button>
