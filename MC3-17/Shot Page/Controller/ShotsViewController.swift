@@ -19,7 +19,10 @@ class ShotsViewController: UIViewController {
     
     let shots = [
         Shots(shotsName: DrillName.lob, shotsImage: "Shots", shotsDesc: "Lob shot is a shots aim to lift the shuttlecock, so it can give time to get back to the ready position"),
-        Shots(shotsName: "Drive", shotsImage: "Drive", shotsDesc: "Drive")]
+        Shots(shotsName: "Drive", shotsImage: "Shots", shotsDesc: "Drive is an attacking shot in which the shuttlecock is hit so fast that the opponent barely has time to react"),
+        Shots(shotsName: "Smash", shotsImage: "Shots", shotsDesc: "Smash is the most powerfull shots in badminton, the aim of this shots is mostly to score a direct point"),
+        Shots(shotsName: "Dropshot", shotsImage: "Shots", shotsDesc: "Dropshot is a stroke that falls, or drops, directly behind the net, hence the name"),
+        Shots(shotsName: "Netshot", shotsImage: "Shots", shotsDesc: "Netshot is a shot that is performed from the front of the court, near the net, to the front of the court of your opponent")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +41,7 @@ class ShotsViewController: UIViewController {
 
 extension ShotsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return shots.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,6 +57,15 @@ extension ShotsViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let shot = shots[indexPath.row]
-        performSegue(withIdentifier: SegueIdentifier.toDrillPage, sender: shot)
+        
+        let alert = UIAlertController(title: "", message: "This feature is still under development", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        if indexPath.row > 0 {
+            alert.addAction(alertAction)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: SegueIdentifier.toDrillPage, sender: shot)
+        }
     }
 }

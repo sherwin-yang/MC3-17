@@ -10,7 +10,8 @@ import UIKit
 
 class ShotsCell: UICollectionViewCell {
     
-    @IBOutlet var cellsView: UIView!
+    
+    @IBOutlet weak var cellsView: UIView!
     @IBOutlet weak var shotsImage: UIImageView!
     @IBOutlet weak var shotsName: UILabel!
     @IBOutlet weak var shotsDesc: UILabel!
