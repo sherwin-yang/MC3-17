@@ -15,13 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warningjarak" translatesAutoresizingMaskIntoConstraints="NO" id="tV1-pl-CQ8">
-                                <rect key="frame" x="70" y="227" width="274" height="274"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-rD-SNC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-rD-SNC">
                                 <rect key="frame" x="84" y="537" width="246" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Keep the distance between your
 Apple Watch and your phone
 less than 10 meters.</string>
@@ -29,21 +24,43 @@ less than 10 meters.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ6-Jf-RT1">
-                                <rect key="frame" x="31" y="660" width="352" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ6-Jf-RT1">
+                                <rect key="frame" x="31" y="664" width="352" height="40"/>
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="352" id="MYV-i7-Xbl"/>
+                                    <constraint firstAttribute="height" constant="40" id="vGi-bc-yBe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Start Drilling!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startDrillingButton:" destination="sEX-Rf-BYx" eventType="touchUpInside" id="FNw-Ya-jde"/>
                                     <segue destination="6g2-OO-RIb" kind="presentation" identifier="toDrillingPage" modalPresentationStyle="fullScreen" id="c72-MF-pjQ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warningjarak" translatesAutoresizingMaskIntoConstraints="NO" id="tV1-pl-CQ8">
+                                <rect key="frame" x="70" y="201" width="274" height="357"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kit-yE-fA4" firstAttribute="bottom" secondItem="QQ6-Jf-RT1" secondAttribute="bottom" constant="158" id="FTa-re-qk8"/>
+                            <constraint firstItem="tV1-pl-CQ8" firstAttribute="leading" secondItem="Kit-yE-fA4" secondAttribute="leading" constant="70" id="OdK-qi-KAt"/>
+                            <constraint firstItem="3bG-rD-SNC" firstAttribute="leading" secondItem="Kit-yE-fA4" secondAttribute="leading" constant="84" id="XUz-kW-afn"/>
+                            <constraint firstItem="QQ6-Jf-RT1" firstAttribute="top" secondItem="3bG-rD-SNC" secondAttribute="bottom" constant="66" id="eFL-Bu-KhE"/>
+                            <constraint firstItem="Kit-yE-fA4" firstAttribute="trailing" secondItem="QQ6-Jf-RT1" secondAttribute="trailing" constant="31" id="hiX-y6-wCt"/>
+                            <constraint firstItem="Kit-yE-fA4" firstAttribute="trailing" secondItem="3bG-rD-SNC" secondAttribute="trailing" constant="84" id="nBy-0e-FmJ"/>
+                            <constraint firstItem="QQ6-Jf-RT1" firstAttribute="leading" secondItem="Kit-yE-fA4" secondAttribute="leading" constant="31" id="rc8-Y9-pko"/>
+                            <constraint firstItem="tV1-pl-CQ8" firstAttribute="top" secondItem="24e-1G-S5F" secondAttribute="topMargin" constant="157" id="rdX-kO-Miu"/>
+                            <constraint firstItem="Kit-yE-fA4" firstAttribute="trailing" secondItem="tV1-pl-CQ8" secondAttribute="trailing" constant="70" id="yXx-3j-Y8j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kit-yE-fA4"/>
                     </view>
                 </viewController>
