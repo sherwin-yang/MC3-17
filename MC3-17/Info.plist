@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>This app uses the camera  to capture your badminton gameplay</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to capture a snap shot of your heart rate for the purpose of using the data in a clinical research study. Please grant this permission to continue participating.</string>
 	<key>NSHealthUpdateUsageDescription</key>
