@@ -15,6 +15,8 @@ class DrillingPageViewController: UIViewController {
     @IBOutlet weak var minuteText: UILabel!
     @IBOutlet weak var secondsText: UILabel!
     
+    var results = [Result]()
+    
     let accX = try? MLMultiArray(
         shape: [MlParameters.predictionWindowSize] as [NSNumber],
         dataType: MLMultiArrayDataType.double)

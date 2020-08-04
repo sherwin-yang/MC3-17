@@ -21,23 +21,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8X-nS-ZQV">
-                                <rect key="frame" x="24" y="80" width="200" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8X-nS-ZQV">
+                                <rect key="frame" x="24" y="68" width="366" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ser-je-IMT">
-                                <rect key="frame" x="24" y="135" width="364" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ser-je-IMT">
+                                <rect key="frame" x="24" y="123" width="366" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="e74-ac-Tr2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BGJ-lG-vPJ">
-                                <rect key="frame" x="8" y="220" width="396" height="484"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BGJ-lG-vPJ">
+                                <rect key="frame" x="8" y="208" width="398" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QAd-bT-j5i">
                                     <size key="itemSize" width="396" height="133"/>
@@ -47,32 +47,24 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shotsCell" id="QoY-7s-nUB" customClass="ShotsCell" customModule="MC3_17" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="396" height="133"/>
+                                        <rect key="frame" x="10" y="0.0" width="378" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XfW-ev-mqA">
-                                            <rect key="frame" x="0.0" y="0.0" width="396" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="378" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WfM-dt-2Ja">
-                                                    <rect key="frame" x="8" y="9" width="380" height="116"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="WfM-dt-2Ja">
+                                                    <rect key="frame" x="8" y="8" width="362" height="117"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8P-WD-tvI">
-                                                            <rect key="frame" x="167" y="16" width="200" height="24"/>
+                                                            <rect key="frame" x="153" y="12" width="213" height="28"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wd-dJ-5dw">
-                                                            <rect key="frame" x="166" y="42" width="203" height="54"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="SFCompactDisplay-Light" family="SF Compact Display" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1x-6y-xu6">
-                                                            <rect key="frame" x="16" y="12" width="137" height="92"/>
+                                                            <rect key="frame" x="8" y="12" width="137" height="92"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -80,8 +72,15 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wd-dJ-5dw">
+                                                            <rect key="frame" x="153" y="44" width="213" height="60"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="SFCompactDisplay-Light" family="SF Compact Display" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <integer key="value" value="12"/>
@@ -89,10 +88,18 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WfM-dt-2Ja" secondAttribute="trailing" constant="8" id="4QB-Ku-dXs"/>
+                                                <constraint firstItem="WfM-dt-2Ja" firstAttribute="leading" secondItem="XfW-ev-mqA" secondAttribute="leading" constant="8" id="LxI-wf-llO"/>
+                                                <constraint firstAttribute="bottom" secondItem="WfM-dt-2Ja" secondAttribute="bottom" constant="8" id="QkI-hr-jTy"/>
+                                                <constraint firstItem="WfM-dt-2Ja" firstAttribute="top" secondItem="XfW-ev-mqA" secondAttribute="top" constant="8" id="e0x-aF-Dbe"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="396" height="133"/>
+                                        <size key="customSize" width="378" height="133"/>
                                         <connections>
-                                            <outlet property="cellsView" destination="WfM-dt-2Ja" id="gUw-pY-an1"/>
+                                            <outlet property="cellsView" destination="WfM-dt-2Ja" id="nkU-yd-3ZN"/>
                                             <outlet property="shotsDesc" destination="7wd-dJ-5dw" id="WGg-4J-llU"/>
                                             <outlet property="shotsImage" destination="s1x-6y-xu6" id="u9X-EP-quu"/>
                                             <outlet property="shotsName" destination="S8P-WD-tvI" id="mqP-uS-vUP"/>
@@ -106,6 +113,18 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W8X-nS-ZQV" firstAttribute="top" secondItem="ZAy-1z-rh3" secondAttribute="top" constant="24" id="7tc-pV-Dti"/>
+                            <constraint firstItem="BGJ-lG-vPJ" firstAttribute="top" secondItem="ser-je-IMT" secondAttribute="bottom" constant="20" id="B6z-N0-qeh"/>
+                            <constraint firstItem="ZAy-1z-rh3" firstAttribute="trailing" secondItem="BGJ-lG-vPJ" secondAttribute="trailing" constant="8" id="Gia-G0-uyW"/>
+                            <constraint firstItem="BGJ-lG-vPJ" firstAttribute="leading" secondItem="ZAy-1z-rh3" secondAttribute="leading" constant="8" id="He1-8I-8fP"/>
+                            <constraint firstItem="ZAy-1z-rh3" firstAttribute="trailing" secondItem="W8X-nS-ZQV" secondAttribute="trailing" constant="24" id="QOC-6X-gmK"/>
+                            <constraint firstItem="ser-je-IMT" firstAttribute="leading" secondItem="ZAy-1z-rh3" secondAttribute="leading" constant="24" id="XvN-Oo-Vn5"/>
+                            <constraint firstItem="BGJ-lG-vPJ" firstAttribute="bottom" secondItem="ZAy-1z-rh3" secondAttribute="bottom" id="YNV-PD-nZA"/>
+                            <constraint firstItem="ZAy-1z-rh3" firstAttribute="trailing" secondItem="ser-je-IMT" secondAttribute="trailing" constant="24" id="YsA-ib-JAp"/>
+                            <constraint firstItem="W8X-nS-ZQV" firstAttribute="leading" secondItem="ZAy-1z-rh3" secondAttribute="leading" constant="24" id="c5R-Ww-fQU"/>
+                            <constraint firstItem="ser-je-IMT" firstAttribute="top" secondItem="W8X-nS-ZQV" secondAttribute="bottom" constant="12" id="zDr-uC-ozL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZAy-1z-rh3"/>
                     </view>
                     <connections>
