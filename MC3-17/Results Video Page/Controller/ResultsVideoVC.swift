@@ -27,7 +27,7 @@ class ResultsVideoVC: UIViewController{
     
     @IBOutlet weak var practiceBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
-    
+    //adfadf
     override func viewDidLoad() {
         super.viewDidLoad()
         rounded()
