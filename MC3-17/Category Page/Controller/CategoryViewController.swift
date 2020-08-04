@@ -34,7 +34,6 @@ class CategoryViewController: UIViewController {
         }
     }
     
-    
 }
 
 extension CategoryViewController:  UICollectionViewDataSource, UICollectionViewDelegate {

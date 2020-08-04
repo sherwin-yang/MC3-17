@@ -19,10 +19,10 @@ class ShotsViewController: UIViewController {
     
     let shots = [
         Shots(shotsName: DrillName.lob, shotsImage: "Shots", shotsDesc: "Lob shot is a shots aim to lift the shuttlecock, so it can give time to get back to the ready position"),
-        Shots(shotsName: "Drive", shotsImage: "Shots", shotsDesc: "Drive is an attacking shot in which the shuttlecock is hit so fast that the opponent barely has time to react"),
-        Shots(shotsName: "Smash", shotsImage: "Shots", shotsDesc: "Smash is the most powerfull shots in badminton, the aim of this shots is mostly to score a direct point"),
-        Shots(shotsName: "Dropshot", shotsImage: "Shots", shotsDesc: "Dropshot is a stroke that falls, or drops, directly behind the net, hence the name"),
-        Shots(shotsName: "Netshot", shotsImage: "Shots", shotsDesc: "Netshot is a shot that is performed from the front of the court, near the net, to the front of the court of your opponent")]
+        Shots(shotsName: DrillName.drive, shotsImage: "Shots", shotsDesc: "Drive is an attacking shot in which the shuttlecock is hit so fast that the opponent barely has time to react"),
+        Shots(shotsName: DrillName.smash, shotsImage: "Shots", shotsDesc: "Smash is the most powerfull shots in badminton, the aim of this shots is mostly to score a direct point"),
+        Shots(shotsName: DrillName.dropshot, shotsImage: "Shots", shotsDesc: "Dropshot is a stroke that falls, or drops, directly behind the net, hence the name"),
+        Shots(shotsName: DrillName.netshot, shotsImage: "Shots", shotsDesc: "Netshot is a shot that is performed from the front of the court, near the net, to the front of the court of your opponent")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class ShotsViewController: UIViewController {
         categoryDetail.text = categoryDesc
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DrillViewController,
-            let index = shotsCollection.indexPathsForSelectedItems?.first {
-            destination.drillName = shots[index.row].shotsName
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? DrillViewController,
+//            let index = shotsCollection.indexPathsForSelectedItems?.first {
+//            destination.drillName = shots[index.row].shotsName
+//        }
+//    }
 
 }
 
@@ -57,6 +57,7 @@ extension ShotsViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let shot = shots[indexPath.row]
+        SharedInfo.selectedDrill = shot.shotsName
         
         let alert = UIAlertController(title: "", message: "This feature is still under development", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
