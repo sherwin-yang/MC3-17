@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct SharedInfo {
+    static var selectedDrill: String?
+}
+
 struct ShotQuality {
     static let goodMove = "good"
     static let badMove = "bad"
@@ -20,11 +24,17 @@ struct SegueIdentifier {
     static let toCameraScreen = "toCameraScreen"
     static let toDrillingPage = "toDrillingPage"
     static let toInfoPage = "toInfoPage"
+    static let cameraToInfoPage = "cameraToInfoPage"
+    static let toVideoPage = "toVideoPage"
+    static let toCategoryPage = "toCategoryPage"
 }
 
 struct DrillName {
     static let lob = "Lob"
+    static let drive = "Drive"
     static let smash = "Smash"
+    static let dropshot = "Dropshot"
+    static let netshot = "Netshot"
 }
 
 struct DrillDescription {

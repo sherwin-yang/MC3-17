@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Shots.png",
+      "filename" : "iconplayvideo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "iconplayvideo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "iconplayvideo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

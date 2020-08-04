@@ -1,89 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xuT-ys-8Fj">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eBh-TB-DnY">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CameraVC-->
-        <scene sceneID="ob4-RI-Uyd">
+        <!--InfoPage-->
+        <scene sceneID="IHD-em-koR">
             <objects>
-                <viewController id="xuT-ys-8Fj" customClass="CameraVC" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zz9-V3-tyA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewControllerPlaceholder storyboardName="InfoPage" id="KY7-uw-VLf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LiS-9y-ovw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18O-5A-71U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-21563" y="-733"/>
+        </scene>
+        <!--CameraVC-->
+        <scene sceneID="r7h-JE-BeX">
+            <objects>
+                <viewController id="eBh-TB-DnY" customClass="CameraVC" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5L8-Gx-XuY">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV2-XL-OKC">
-                                <rect key="frame" x="7" y="435.5" width="80" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-Zu-AIb">
+                                <rect key="frame" x="403" y="343" width="90" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="8Hg-Aa-kNJ"/>
-                                    <constraint firstAttribute="width" constant="80" id="Asy-HF-svf"/>
+                                    <constraint firstAttribute="width" constant="90" id="FRP-FW-YAj"/>
+                                    <constraint firstAttribute="height" constant="25" id="Qn6-5a-JrX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <color key="textColor" red="0.80784313730000001" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GM-Ef-in1">
-                                <rect key="frame" x="7" y="144" width="80" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yj-Xz-7w0">
+                                <rect key="frame" x="809" y="177" width="60" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="6Ta-ba-ued"/>
-                                    <constraint firstAttribute="width" constant="80" id="YZ8-pP-br3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4z-wQ-Dhu">
-                                <rect key="frame" x="177" y="792" width="60" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Nqp-Kf-p6J"/>
-                                    <constraint firstAttribute="height" constant="60" id="mTh-W9-y2h"/>
+                                    <constraint firstAttribute="width" constant="60" id="9SI-fK-Vc8"/>
+                                    <constraint firstAttribute="height" constant="60" id="FjX-Hh-Ocq"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
+                                <state key="normal" image="stop">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="cameraButtonDidTapped:" destination="xuT-ys-8Fj" eventType="touchUpInside" id="zvk-64-cef"/>
+                                    <action selector="cameraButtonDidTapped:" destination="eBh-TB-DnY" eventType="touchUpInside" id="aJB-PP-h1s"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ol-PT-L3T">
+                                <rect key="frame" x="110" y="343" width="110" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="gcx-Ag-8Mg"/>
+                                    <constraint firstAttribute="height" constant="25" id="ng5-Fu-Ed5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2GM-Ef-in1" firstAttribute="leading" secondItem="Qpe-Ii-D9I" secondAttribute="leading" constant="7" id="9QJ-sD-LcF"/>
-                            <constraint firstItem="2GM-Ef-in1" firstAttribute="top" secondItem="Qpe-Ii-D9I" secondAttribute="top" constant="100" id="a4I-St-7sX"/>
-                            <constraint firstItem="dV2-XL-OKC" firstAttribute="centerY" secondItem="Zz9-V3-tyA" secondAttribute="centerY" id="gUw-xM-IlL"/>
-                            <constraint firstItem="Qpe-Ii-D9I" firstAttribute="bottom" secondItem="n4z-wQ-Dhu" secondAttribute="bottom" constant="10" id="lag-Pi-iI7"/>
-                            <constraint firstItem="dV2-XL-OKC" firstAttribute="leading" secondItem="Qpe-Ii-D9I" secondAttribute="leading" constant="7" id="tN6-D5-Gig"/>
-                            <constraint firstItem="n4z-wQ-Dhu" firstAttribute="centerX" secondItem="Zz9-V3-tyA" secondAttribute="centerX" id="xhq-i9-mPI"/>
+                            <constraint firstItem="9yj-Xz-7w0" firstAttribute="centerX" secondItem="5L8-Gx-XuY" secondAttribute="centerX" constant="391" id="4Kf-j7-scZ"/>
+                            <constraint firstItem="2Ol-PT-L3T" firstAttribute="leading" secondItem="0C4-nL-oWc" secondAttribute="leading" constant="66" id="6zT-m0-gbT"/>
+                            <constraint firstItem="0C4-nL-oWc" firstAttribute="bottom" secondItem="9yj-Xz-7w0" secondAttribute="bottom" constant="156" id="9RE-DQ-TCk"/>
+                            <constraint firstItem="0C4-nL-oWc" firstAttribute="bottom" secondItem="d5f-Zu-AIb" secondAttribute="bottom" constant="25" id="DuG-hL-Srg"/>
+                            <constraint firstItem="0C4-nL-oWc" firstAttribute="bottom" secondItem="2Ol-PT-L3T" secondAttribute="bottom" constant="25" id="GM5-fB-vbo"/>
+                            <constraint firstItem="d5f-Zu-AIb" firstAttribute="centerX" secondItem="5L8-Gx-XuY" secondAttribute="centerX" id="oE1-5f-Ca7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Qpe-Ii-D9I"/>
+                        <viewLayoutGuide key="safeArea" id="0C4-nL-oWc"/>
                     </view>
                     <connections>
-                        <outlet property="cameraButtonStop" destination="n4z-wQ-Dhu" id="QRo-eU-E7V"/>
-                        <outlet property="durationLabel" destination="2GM-Ef-in1" id="FzC-EL-Ijf"/>
-                        <outlet property="scoreLabel" destination="dV2-XL-OKC" id="t74-zP-182"/>
-                        <segue destination="qTp-YO-bJQ" kind="show" identifier="showVideoSegue" id="EvH-Wo-deH"/>
+                        <outlet property="cameraButtonStop" destination="9yj-Xz-7w0" id="oOu-g2-4g7"/>
+                        <outlet property="durationLabel" destination="2Ol-PT-L3T" id="PKU-6m-Bcz"/>
+                        <outlet property="scoreLabel" destination="d5f-Zu-AIb" id="HBo-l5-rAq"/>
+                        <segue destination="glL-8b-YtH" kind="show" identifier="toVideoPage" id="LGE-LL-Zps"/>
+                        <segue destination="KY7-uw-VLf" kind="show" identifier="cameraToInfoPage" id="pMA-PF-V8n"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzr-l4-zaY" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKk-DI-ayA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-21975" y="-577"/>
         </scene>
         <!--ResultsVideo-->
-        <scene sceneID="AsU-xy-H9w">
+        <scene sceneID="om1-YN-2g1">
             <objects>
-                <viewControllerPlaceholder storyboardName="ResultsVideo" id="qTp-YO-bJQ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="aD9-QC-n1b"/>
+                <viewControllerPlaceholder storyboardName="ResultsVideo" id="glL-8b-YtH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="q4X-ty-lpO"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j8q-rX-OZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGU-hQ-Vxj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-21375" y="-577"/>
+            <point key="canvasLocation" x="-21561" y="-430"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stop" width="86" height="86"/>
+    </resources>
 </document>
