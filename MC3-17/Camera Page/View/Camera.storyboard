@@ -52,6 +52,14 @@
                                     <action selector="cameraButtonDidTapped:" destination="xuT-ys-8Fj" eventType="touchUpInside" id="zvk-64-cef"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tv-xE-Gyj">
+                                <rect key="frame" x="357" y="45" width="28" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="􀁡"/>
+                                <connections>
+                                    <segue destination="wJy-vg-rQj" kind="presentation" modalTransitionStyle="crossDissolve" id="PRJ-bi-Kcc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -75,6 +83,14 @@
             </objects>
             <point key="canvasLocation" x="-21975" y="-577"/>
         </scene>
+        <!--CancelPopUp-->
+        <scene sceneID="KxJ-LO-4LB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CancelPopUp" id="wJy-vg-rQj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykN-iH-2XO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-21411" y="-768"/>
+        </scene>
         <!--ResultsVideo-->
         <scene sceneID="AsU-xy-H9w">
             <objects>
@@ -86,4 +102,7 @@
             <point key="canvasLocation" x="-21375" y="-577"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="􀁡" width="28" height="29"/>
+    </resources>
 </document>

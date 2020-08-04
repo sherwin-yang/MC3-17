@@ -60,6 +60,8 @@
 		AD1A4BD324CF3F980023E012 /* DrillingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */; };
 		AD1A4BD524CF40170023E012 /* DrillingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4BD424CF40170023E012 /* DrillingPageViewController.swift */; };
 		AD1A4BD724CF40240023E012 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */; };
+		ADA4257124D8743D00E7B98A /* CancelPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA4257024D8743D00E7B98A /* CancelPopUp.storyboard */; };
+		ADA4257324D8797500E7B98A /* CancelPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4257224D8797500E7B98A /* CancelPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,8 @@
 		AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrillingPage.storyboard; sourceTree = "<group>"; };
 		AD1A4BD424CF40170023E012 /* DrillingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillingPageViewController.swift; sourceTree = "<group>"; };
 		AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
+		ADA4257024D8743D00E7B98A /* CancelPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CancelPopUp.storyboard; sourceTree = "<group>"; };
+		ADA4257224D8797500E7B98A /* CancelPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +379,7 @@
 		21AA702C24C58CE600DA35F6 /* MC3-17 */ = {
 			isa = PBXGroup;
 			children = (
+				ADA4256B24D8740A00E7B98A /* Cancel Pop Up */,
 				2524FF3224D6F75B00B0E794 /* Onboarding */,
 				3D1EC43624D6630900250EFF /* MC3-17.entitlements */,
 				AD1A4BC924CF3EFC0023E012 /* Drilling Page */,
@@ -519,8 +524,8 @@
 				2524FF3724D6F93300B0E794 /* PageControlViewController.swift */,
 			);
 			path = Controller;
-            sourceTree = "<group>";
-        };
+			sourceTree = "<group>";
+		};
 		3D1EC43724D6630900250EFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,6 +708,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		ADA4256B24D8740A00E7B98A /* Cancel Pop Up */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4256E24D8741900E7B98A /* Controller */,
+				ADA4256D24D8741600E7B98A /* View */,
+				ADA4256C24D8741100E7B98A /* Model */,
+			);
+			path = "Cancel Pop Up";
+			sourceTree = "<group>";
+		};
+		ADA4256C24D8741100E7B98A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADA4256D24D8741600E7B98A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4257024D8743D00E7B98A /* CancelPopUp.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADA4256E24D8741900E7B98A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4257224D8797500E7B98A /* CancelPopUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -871,6 +909,7 @@
 				AD1A4BD324CF3F980023E012 /* DrillingPage.storyboard in Resources */,
 				21B4E13024C6054E00EAC15F /* PopUp.storyboard in Resources */,
 				AD1A4BD124CF3F390023E012 /* InfoPage.storyboard in Resources */,
+				ADA4257124D8743D00E7B98A /* CancelPopUp.storyboard in Resources */,
 				A5E65F3024CB60640048828A /* ResultsNoVideo.storyboard in Resources */,
 				217678B824CF4000004EC8B2 /* ResultOverview.storyboard in Resources */,
 				215DA69324CC6FC70035603A /* Category.storyboard in Resources */,
@@ -928,6 +967,7 @@
 				A5E65F3624CB60CD0048828A /* ResultsVideoVC.swift in Sources */,
 				AD1A4BD524CF40170023E012 /* DrillingPageViewController.swift in Sources */,
 				21B4E13624C6120C00EAC15F /* DrillViewController.swift in Sources */,
+				ADA4257324D8797500E7B98A /* CancelPopUpViewController.swift in Sources */,
 				215DA69524CC6FCE0035603A /* Category.swift in Sources */,
 				21B4E13224C60FF100EAC15F /* PopUpViewController.swift in Sources */,
 				215DA68924CC6FA00035603A /* ShotsCell.swift in Sources */,
@@ -1014,10 +1054,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbar.MC3-17.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1033,10 +1073,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbar.MC3-17.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1052,14 +1092,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbar.MC3-17.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1075,14 +1115,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbar.MC3-17.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1212,13 +1252,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbar.MC3-17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1231,13 +1271,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = ZCP2H94KCT;
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbar.MC3-17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

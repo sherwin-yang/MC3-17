@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E4J-lB-IOd">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cancel Pop Up View Controller-->
+        <scene sceneID="bPX-jA-mHa">
+            <objects>
+                <viewController id="E4J-lB-IOd" customClass="CancelPopUpViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPh-xq-wtw">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fU-sL-DfX">
+                                <rect key="frame" x="294" y="76.5" width="308" height="261"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do You Want to Stop Recording Yourself?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHd-fU-uSU">
+                                        <rect key="frame" x="19" y="14" width="270" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All of your movements will be discarded" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-mP-B3R">
+                                        <rect key="frame" x="35" y="129" width="239" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-7J-0du">
+                                        <rect key="frame" x="19" y="170" width="270" height="35"/>
+                                        <color key="backgroundColor" red="0.75254013829999999" green="0.76070514349999996" blue="0.78520015929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="glW-8n-wCK"/>
+                                            <constraint firstAttribute="height" constant="35" id="ovD-8f-HYQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Yes">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="PI4-pX-sOk" kind="presentation" modalPresentationStyle="fullScreen" id="1AS-Zt-ZcO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpK-Lh-tpv">
+                                        <rect key="frame" x="19" y="213" width="270" height="34"/>
+                                        <color key="backgroundColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="YPM-Kt-qWK"/>
+                                            <constraint firstAttribute="width" constant="270" id="mC6-4F-C8y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="No">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnNo:" destination="E4J-lB-IOd" eventType="touchUpInside" id="68Q-Nt-XBY"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CameraAlert" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-41-VC9">
+                                        <rect key="frame" x="127" y="68" width="55" height="53"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uVL-mP-B3R" secondAttribute="trailing" constant="34" id="4x4-DS-Pq2"/>
+                                    <constraint firstAttribute="trailing" secondItem="DHd-fU-uSU" secondAttribute="trailing" constant="19" id="97c-3p-Zgd"/>
+                                    <constraint firstAttribute="trailing" secondItem="zZe-7J-0du" secondAttribute="trailing" constant="19" id="9sh-ZA-zQw"/>
+                                    <constraint firstItem="uVL-mP-B3R" firstAttribute="top" secondItem="DHd-fU-uSU" secondAttribute="bottom" constant="74" id="B6B-bi-E0n"/>
+                                    <constraint firstAttribute="height" constant="261" id="Bvr-NT-qQj"/>
+                                    <constraint firstAttribute="width" constant="308" id="C1Y-do-Ifo"/>
+                                    <constraint firstItem="DHd-fU-uSU" firstAttribute="leading" secondItem="0fU-sL-DfX" secondAttribute="leading" constant="19" id="FeS-oV-wBo"/>
+                                    <constraint firstItem="aTb-41-VC9" firstAttribute="top" secondItem="DHd-fU-uSU" secondAttribute="bottom" constant="16" id="Sr8-BN-6AS"/>
+                                    <constraint firstAttribute="trailing" secondItem="KpK-Lh-tpv" secondAttribute="trailing" constant="19" id="UOd-eF-Khm"/>
+                                    <constraint firstItem="KpK-Lh-tpv" firstAttribute="leading" secondItem="0fU-sL-DfX" secondAttribute="leading" constant="19" id="apJ-kE-PyU"/>
+                                    <constraint firstItem="zZe-7J-0du" firstAttribute="top" secondItem="uVL-mP-B3R" secondAttribute="bottom" constant="26.5" id="fl2-rw-3EG"/>
+                                    <constraint firstItem="DHd-fU-uSU" firstAttribute="top" secondItem="0fU-sL-DfX" secondAttribute="top" constant="14" id="q31-wx-nj2"/>
+                                    <constraint firstItem="aTb-41-VC9" firstAttribute="centerX" secondItem="0fU-sL-DfX" secondAttribute="centerX" id="rfA-c6-sk5"/>
+                                    <constraint firstItem="uVL-mP-B3R" firstAttribute="leading" secondItem="0fU-sL-DfX" secondAttribute="leading" constant="35" id="tR5-Tp-MG8"/>
+                                    <constraint firstItem="zZe-7J-0du" firstAttribute="leading" secondItem="0fU-sL-DfX" secondAttribute="leading" constant="19" id="wtP-1l-5w5"/>
+                                    <constraint firstItem="KpK-Lh-tpv" firstAttribute="top" secondItem="zZe-7J-0du" secondAttribute="bottom" constant="8" id="ygB-Ds-Jlb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0fU-sL-DfX" firstAttribute="centerY" secondItem="XPh-xq-wtw" secondAttribute="centerY" id="HXR-os-gcs"/>
+                            <constraint firstItem="0fU-sL-DfX" firstAttribute="centerX" secondItem="XPh-xq-wtw" secondAttribute="centerX" id="feP-Xf-gdP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BkW-3H-12y"/>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="XPh-xq-wtw" id="XIU-Mp-jZo"/>
+                        <outlet property="buttonNo" destination="KpK-Lh-tpv" id="EXy-oW-ZDy"/>
+                        <outlet property="buttonYes" destination="zZe-7J-0du" id="6nG-LP-mTw"/>
+                        <outlet property="imageCamera" destination="aTb-41-VC9" id="Jyr-eK-ufG"/>
+                        <outlet property="labelQuestion" destination="DHd-fU-uSU" id="sdY-Ji-cHe"/>
+                        <outlet property="labelSmall" destination="uVL-mP-B3R" id="Zvb-JF-LlN"/>
+                        <outlet property="smallView" destination="0fU-sL-DfX" id="mpz-n2-DxD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6v-Sl-MJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="136"/>
+        </scene>
+        <!--Drill-->
+        <scene sceneID="Gvm-ci-XC6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Drill" id="PI4-pX-sOk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vh8-V7-sE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="14"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CameraAlert" width="81" height="78"/>
+    </resources>
+</document>
