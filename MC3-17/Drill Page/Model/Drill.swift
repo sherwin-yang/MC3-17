@@ -9,7 +9,6 @@
 import Foundation
 
 struct Drill {
-    var drill_number: Int
     var drill_name: String
     var video: String
     var drill_details = [DrillDetail]()
@@ -102,8 +101,6 @@ struct Drill {
 }
 
 struct DrillDetail {
-    var drillDetail_id: Int
-    var drill_number: Int
     var shotQuality: String
     var time: Int
 }

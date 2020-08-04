@@ -22,8 +22,6 @@ class DrillViewController: UIViewController {
     @IBOutlet var appleWatchConnectivityMark: UIView!
     @IBOutlet var appleWatchConnectivityLabel: UILabel!
     
-    var drillName: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.drillCardView.addCardShadow()
@@ -44,37 +42,36 @@ class DrillViewController: UIViewController {
     }
     
     func setAllLabels() {
-        if drillName != nil {
-            self.drillNameLabel.text = drillName
+        if SharedInfo.selectedDrill != nil {
+            self.drillNameLabel.text = SharedInfo.selectedDrill
             self.setDescriptionLabel()
-            self.totalAttemptsLabel.text = String(Drill.countTotalAttempts(drillName!))
-            if Drill.countTotalAttempts(drillName!) != 0 {
-                self.badMovesLabel.text = String(Drill.countBadMoves(drillName!))
-                self.goodMovesLabel.text = String(Drill.countGoodMoves(drillName!))
-                self.highestScoreLabel.text = String(Drill.findHighestScore(drillName!))
+            self.totalAttemptsLabel.text = String(Drill.countTotalAttempts(SharedInfo.selectedDrill!))
+            if Drill.countTotalAttempts(SharedInfo.selectedDrill!) != 0 {
+                self.badMovesLabel.text = String(Drill.countBadMoves(SharedInfo.selectedDrill!))
+                self.goodMovesLabel.text = String(Drill.countGoodMoves(SharedInfo.selectedDrill!))
+                self.highestScoreLabel.text = String(Drill.findHighestScore(SharedInfo.selectedDrill!))
             }
         }
     }
     
     func setDescriptionLabel() {
-        if drillName == DrillName.lob {
+        if SharedInfo.selectedDrill == DrillName.lob {
             self.descriptionLabel.text = DrillDescription.lob
         }
-        else if drillName == DrillName.smash {
+        else if SharedInfo.selectedDrill == DrillName.smash {
             self.descriptionLabel.text = DrillDescription.smash
         }
-    }    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            if identifier == SegueIdentifier.toPopUpScreen {
-                if let destination = segue.destination as? PopUpViewController {
-                    destination.drillName = drillName
-                }
-            }
-        }
     }
-
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let identifier = segue.identifier {
+//            if identifier == SegueIdentifier.toPopUpScreen {
+//                if let destination = segue.destination as? PopUpViewController {
+//                    destination.drillName = drillName
+//                }
+//            }
+//        }
+//    }
 }
 
 extension DrillViewController: WCSessionDelegate {
