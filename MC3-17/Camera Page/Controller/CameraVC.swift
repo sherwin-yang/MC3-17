@@ -24,6 +24,8 @@ class CameraVC: UIViewController, RPPreviewViewControllerDelegate{
     var assetWriter: AVAssetWriter!
     var videoInput: AVAssetWriterInput!
     
+    var results: Result!
+    var drillDetails = [DrillDetail]()
     var timer: Timer!
 
     var hours = 0
@@ -257,11 +259,13 @@ class CameraVC: UIViewController, RPPreviewViewControllerDelegate{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        results = Result(drillDetail: drillDetails)
         if let identifier = segue.identifier {
             if identifier == SegueIdentifier.toVideoPage {
                 if let destination = segue.destination as? ResultsVideoVC {
                     destination.URIPATH = self.URIPATH
                     destination.currentDuration = self.currentDuration
+                    destination.results = self.results
                 }
             }
         }

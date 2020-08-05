@@ -15,7 +15,8 @@ class DrillingPageViewController: UIViewController {
     @IBOutlet weak var minuteText: UILabel!
     @IBOutlet weak var secondsText: UILabel!
     
-    var results = [Result]()
+    var results: Result!
+    var drillDetails = [DrillDetail]()
     
     let accX = try? MLMultiArray(
         shape: [MlParameters.predictionWindowSize] as [NSNumber],
@@ -106,7 +107,16 @@ class DrillingPageViewController: UIViewController {
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        results = Result(drillDetail: drillDetails)
+        if let identifer = segue.identifier {
+            if identifer == SegueIdentifier.toResultsNoVideo {
+                if let destination = segue.destination as? ResultNoVideoVC {
+                    destination.results = results
+                }
+            }
+        }
+    }
     
     /*
      // MARK: - Navigation
@@ -165,6 +175,9 @@ extension DrillingPageViewController: WCSessionDelegate {
             } else if instruction == "STOP" {
                 self.isRun = false
                 // Go to result page
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: SegueIdentifier.toResultsNoVideo, sender: self)
+                }
             }
         }
         
@@ -249,6 +262,13 @@ extension DrillingPageViewController {
                     DispatchQueue.main.async {
                         if let predictionResult = self.activityPrediction() {
                             print("PREDICTION: \(predictionResult)")
+                            if predictionResult == "lob_betul" {
+                                self.drillDetails.append(DrillDetail(shotQuality: ShotQuality.goodMove, time: 0)) // need time sended from watch
+                            }
+                            else if predictionResult == "lob_salah" {
+                                self.drillDetails.append(DrillDetail(shotQuality: ShotQuality.badMove, time: 0)) // need time sended from watch
+                            }
+                            
                             self.sendMessage(strMsg: predictionResult, isPreditionData: true)
                         }
                     }
@@ -259,3 +279,12 @@ extension DrillingPageViewController {
         }
     }
 }
+
+
+//extension UINavigationController {
+//  func popToViewController(ofClass: AnyClass, animated: Bool = true) {
+//    if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
+//      popToViewController(vc, animated: animated)
+//    }
+//  }
+//}

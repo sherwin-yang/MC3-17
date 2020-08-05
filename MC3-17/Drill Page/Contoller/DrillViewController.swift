@@ -8,12 +8,14 @@
 
 import UIKit
 import AVKit
+import AVFoundation
 import WatchConnectivity
 
 class DrillViewController: UIViewController {
 
     @IBOutlet var drillCardView: UIView!
     @IBOutlet var drillNameLabel: UILabel!
+    @IBOutlet var videoThumbnail: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var totalAttemptsLabel: UILabel!
     @IBOutlet var badMovesLabel: UILabel!
@@ -22,19 +24,27 @@ class DrillViewController: UIViewController {
     @IBOutlet var appleWatchConnectivityMark: UIView!
     @IBOutlet var appleWatchConnectivityLabel: UILabel!
     
+    var videoName: String?
+    
+    var URIPATH: URL!
+    var thumbnail: UIImage!
+    
+    let documentsFolder = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.drillCardView.addCardShadow()
         self.setAllLabels()
+        URIPATH = documentsFolder.appendingPathComponent("Lob Video.mp4")
+        generateThumbnail()
         self.activateWCSession()
     }
     
     @IBAction func playVideoButton(_ sender: Any) {
-        if let path = Bundle.main.path(forResource: "video", ofType: "mov") {
+        if let path = Bundle.main.path(forResource: videoName, ofType: "mp4") {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             let videoPlayer = AVPlayerViewController()
             videoPlayer.player = video
-            
             present(videoPlayer, animated: true) {
                 video.play()
             }
@@ -63,15 +73,31 @@ class DrillViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let identifier = segue.identifier {
-//            if identifier == SegueIdentifier.toPopUpScreen {
-//                if let destination = segue.destination as? PopUpViewController {
-//                    destination.drillName = drillName
-//                }
-//            }
-//        }
-//    }
+    func generateThumbnail() {
+            do{
+                if let cekURL = URIPATH {
+                    let asset = AVURLAsset(url: cekURL)
+                    let imageGenerator = AVAssetImageGenerator(asset: asset)
+                    imageGenerator.appliesPreferredTrackTransform = true
+                    let cgImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 1), actualTime: nil)
+                    thumbnail = UIImage(cgImage: cgImage)
+                    videoThumbnail.image = thumbnail
+                }
+                else{
+                    return print("error generating thumbnail")
+                }
+            }catch let error{
+                print(error.localizedDescription)
+            }
+        }
+    
+    func setVideoName() -> String {
+        if SharedInfo.selectedDrill == DrillName.lob {
+            self.videoName = "Lob Video"
+        }
+        
+        return videoName!
+    }
 }
 
 extension DrillViewController: WCSessionDelegate {

@@ -29,6 +29,8 @@ class ResultNoVideoVC: UIViewController {
     @IBOutlet weak var practiceBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
     
+    var results = Result()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         rounded()
@@ -39,21 +41,10 @@ class ResultNoVideoVC: UIViewController {
     @IBAction func practiceBtnDidTapped(_ sender: UIButton) {
     }
     
-    @IBAction func doneBtnDidTapped(_ sender: UIButton) {
+    @IBAction func doneBtnDidTapped(_ sender: Any) {
+        print("Yes")
+        self.navigationController?.popToRootViewController(animated: true)
     }
-    
-//    func coloringTotalScoreCircle(){
-//        switch <#value#> {
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemPink.cgColor
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemYellow.cgColor
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemGreen.cgColor
-//        default:
-//            <#code#>
-//        }
-//    }
     
     func shadow(){
         videoView.layer.shadowColor = UIColor.black.cgColor

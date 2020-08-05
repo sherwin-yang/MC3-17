@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AfB-TO-tZk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Results No VideoVC-->
+        <!--Result No VideoVC-->
         <scene sceneID="wOe-PG-RaV">
             <objects>
-                <viewController id="AfB-TO-tZk" customClass="ResultsNoVideoVC" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AfB-TO-tZk" customClass="ResultNoVideoVC" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZXe-WO-Fmb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,6 @@
                                 </state>
                                 <connections>
                                     <action selector="practiceBtnDidTapped:" destination="AfB-TO-tZk" eventType="touchUpInside" id="YDA-iN-lpI"/>
-                                    <segue destination="cKT-br-B2g" kind="show" identifier="toDrillPage" id="qHr-aP-QYV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-6s-Cfn">
@@ -238,8 +237,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneBtnDidTapped:" destination="AfB-TO-tZk" eventType="touchUpInside" id="rwi-9L-ubL"/>
-                                    <segue destination="e3X-Fx-3f3" kind="show" identifier="toCategoryPage" id="0ZG-Nu-cDf"/>
+                                    <action selector="doneBtnDidTapped:" destination="AfB-TO-tZk" eventType="touchUpInside" id="brh-a4-rcL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The average score of all good moves" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS1-Yc-S6Y">
@@ -284,7 +282,7 @@
                         <outlet property="badLabel" destination="cu5-H6-wh1" id="HKv-J6-p4d"/>
                         <outlet property="badViewLarge" destination="JtV-fC-hgO" id="hbg-YM-tRH"/>
                         <outlet property="badViewSmall" destination="g1m-Yl-EQk" id="IOe-L4-3ff"/>
-                        <outlet property="doneBtn" destination="OAs-6s-Cfn" id="RqT-ST-fzI"/>
+                        <outlet property="doneBtn" destination="OAs-6s-Cfn" id="mxo-CU-BWp"/>
                         <outlet property="durationLabel" destination="4B8-IO-IKo" id="lOP-ap-yCn"/>
                         <outlet property="goodLabel" destination="kBL-Au-GJ6" id="Tm1-Nn-sP3"/>
                         <outlet property="goodViewLarge" destination="Hk2-3h-6Ft" id="ehk-TG-hiP"/>
@@ -300,26 +298,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ise-NG-Jqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1784" y="115"/>
-        </scene>
-        <!--Drill-->
-        <scene sceneID="I3J-wd-YS7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Drill" id="cKT-br-B2g" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="pQW-ef-aMd"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dNc-PY-ExO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1227" y="97"/>
-        </scene>
-        <!--Category-->
-        <scene sceneID="XdT-ux-MaV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Category" id="e3X-Fx-3f3" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="xho-ro-AJ7"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="89e-jK-WGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1204" y="130"/>
         </scene>
     </scenes>
 </document>
