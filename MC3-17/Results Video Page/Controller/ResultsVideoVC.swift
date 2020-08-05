@@ -33,7 +33,7 @@ class ResultsVideoVC: UIViewController{
     
     var URIPATH: URL!
     var currentDuration = "00:00:00"
-    var results: Result!
+    var results: Result?
     var thumbnail: UIImage!
 
     let documentsFolder = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)

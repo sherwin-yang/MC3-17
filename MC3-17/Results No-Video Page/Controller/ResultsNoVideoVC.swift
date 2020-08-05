@@ -29,12 +29,13 @@ class ResultNoVideoVC: UIViewController {
     @IBOutlet weak var practiceBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
     
-    var results = Result()
+    var results: Result?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         rounded()
         shadow()
+        print(navigationController?.viewControllers.count)
 //        coloringTotalScoreCircle()
     }
     

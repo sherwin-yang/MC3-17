@@ -70,6 +70,8 @@ class DrillingPageViewController: UIViewController {
         permissionHelper.delegate = self
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
         
+        print(navigationController?.viewControllers.count)
+        
         checkHealthStoreAuth()
     }
     

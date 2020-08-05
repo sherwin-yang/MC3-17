@@ -28,16 +28,15 @@ class DrillViewController: UIViewController {
     
     var URIPATH: URL!
     var thumbnail: UIImage!
-    
-    let documentsFolder = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+    let file = Bundle.main.url(forResource: "Lob Video", withExtension: "mp4")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.drillCardView.addCardShadow()
         self.setAllLabels()
-        URIPATH = documentsFolder.appendingPathComponent("Lob Video.mp4")
         generateThumbnail()
         self.activateWCSession()
+        print("VC : " + "\(navigationController?.viewControllers.count)")
     }
     
     @IBAction func playVideoButton(_ sender: Any) {
@@ -75,7 +74,7 @@ class DrillViewController: UIViewController {
     
     func generateThumbnail() {
             do{
-                if let cekURL = URIPATH {
+                if let cekURL = file {
                     let asset = AVURLAsset(url: cekURL)
                     let imageGenerator = AVAssetImageGenerator(asset: asset)
                     imageGenerator.appliesPreferredTrackTransform = true
@@ -124,9 +123,7 @@ extension DrillViewController: WCSessionDelegate {
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self
-            if session.isPaired {
-                session.activate()
-            }
+            session.activate()
         }
     }
     
