@@ -16,13 +16,28 @@ struct Result {
         return attempts
     }
     
-    func countScoreResult() -> Int {
+    func countGoodMoves() -> Int {
         var goodMoves = 0
         for i in 0..<drillDetail.count {
             if drillDetail[i].shotQuality == ShotQuality.goodMove {
                 goodMoves += 1
             }
         }
-        return goodMoves/countTotalAttempts()
+        return goodMoves
     }
+    
+    func countBadMoves() -> Int {
+        var badMoves = 0
+        for i in 0..<drillDetail.count {
+            if drillDetail[i].shotQuality == ShotQuality.badMove {
+                badMoves += 0
+            }
+        }
+        return badMoves
+    }
+    
+    func countScoreResult() -> Int {
+        return countGoodMoves()/countTotalAttempts()
+    }
+    
 }

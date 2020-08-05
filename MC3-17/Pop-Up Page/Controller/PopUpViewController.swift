@@ -14,6 +14,7 @@ class PopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(navigationController?.viewControllers.count)
     }
 
     @IBAction func closeButtonTapped(_ sender: Any) {

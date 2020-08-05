@@ -69,11 +69,22 @@
                         <outlet property="hoursText" destination="avy-5Z-KmP" id="LIK-oR-pg3"/>
                         <outlet property="minuteText" destination="auj-fR-wtb" id="hHu-li-ZLl"/>
                         <outlet property="secondsText" destination="vHS-Zy-Wjv" id="zdN-y0-L1g"/>
+                        <segue destination="FGV-8G-sqN" kind="presentation" identifier="toResultsNoVideo" modalPresentationStyle="fullScreen" id="bPv-GR-85x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2V-q0-l3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="121.875"/>
+        </scene>
+        <!--ResultsNoVideo-->
+        <scene sceneID="JEr-eB-bzH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ResultsNoVideo" id="FGV-8G-sqN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WPm-DB-Tax"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPR-CT-KYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="122"/>
         </scene>
     </scenes>
     <resources>
