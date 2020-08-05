@@ -47,16 +47,34 @@
                                         <rect key="frame" x="8" y="8" width="352" height="199"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG0-ty-FBr">
-                                                <rect key="frame" x="144" y="66.5" width="65" height="65"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDJ-lQ-UQ3">
+                                                <rect key="frame" x="2" y="5" width="350" height="202"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" backgroundImage="play.circle.fill" catalog="system"/>
-                                                <connections>
-                                                    <action selector="playVideoButton:" destination="3sk-S6-z9r" eventType="touchUpInside" id="ast-RW-fH5"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48d-fz-lt2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="349" height="202"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG0-ty-FBr">
+                                                        <rect key="frame" x="143" y="68.5" width="65" height="65"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" backgroundImage="play.circle.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="playVideoButton:" destination="3sk-S6-z9r" eventType="touchUpInside" id="ast-RW-fH5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
@@ -69,7 +87,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-SI-JRM">
-                                <rect key="frame" x="29" y="483" width="357" height="69"/>
+                                <rect key="frame" x="29" y="457" width="357" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -112,7 +130,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXM-O6-NMs">
-                                        <rect key="frame" x="17" y="122" width="21" height="37"/>
+                                        <rect key="frame" x="17" y="122" width="69" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,7 +144,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg8-3Y-dxn">
-                                        <rect key="frame" x="108" y="122" width="21" height="37"/>
+                                        <rect key="frame" x="108" y="122" width="78" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                         <color key="textColor" red="0.30196078430000001" green="0.6588235294" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,8 +157,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoY-cG-ZXY">
-                                        <rect key="frame" x="224" y="62" width="132" height="90"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoY-cG-ZXY">
+                                        <rect key="frame" x="216" y="62" width="132" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="75"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,28 +167,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bt1-VH-dvM">
-                                <rect key="frame" x="0.0" y="844" width="414" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disconnected From Apple Watch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mN-oM-qGs">
-                                        <rect key="frame" x="81" y="8" width="252" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JeK-N4-WRT"/>
                     </view>
                     <navigationItem key="navigationItem" id="yLK-7e-Qsr"/>
                     <connections>
-                        <outlet property="appleWatchConnectivityLabel" destination="0mN-oM-qGs" id="o58-ah-1RF"/>
-                        <outlet property="appleWatchConnectivityMark" destination="Bt1-VH-dvM" id="w7J-Eg-lz3"/>
                         <outlet property="badMovesLabel" destination="MXM-O6-NMs" id="ZG0-Nd-wnj"/>
                         <outlet property="descriptionLabel" destination="YgZ-SI-JRM" id="BGL-Jz-ABP"/>
                         <outlet property="drillCardView" destination="WHv-zZ-7Y2" id="DLB-ih-bqt"/>
@@ -178,6 +180,7 @@
                         <outlet property="goodMovesLabel" destination="Cg8-3Y-dxn" id="rG1-V6-04L"/>
                         <outlet property="highestScoreLabel" destination="CoY-cG-ZXY" id="qOP-iI-IHr"/>
                         <outlet property="totalAttemptsLabel" destination="4Ag-8L-Iof" id="0Kd-ff-brU"/>
+                        <outlet property="videoThumbnail" destination="48d-fz-lt2" id="a0S-mT-ILb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sx-mQ-5qn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,14 +190,16 @@
         <!--PopUp-->
         <scene sceneID="WHA-op-c5g">
             <objects>
-                <viewControllerPlaceholder storyboardName="PopUp" id="FwG-Va-oLQ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PopUp" id="FwG-Va-oLQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8bJ-rG-EHe"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGt-Tl-yjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="80"/>
+            <point key="canvasLocation" x="1777" y="80"/>
         </scene>
     </scenes>
     <resources>
-        <image name="CardBestRecord" width="1068" height="561"/>
+        <image name="CardBestRecord" width="356" height="187"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

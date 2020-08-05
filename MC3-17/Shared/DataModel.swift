@@ -49,15 +49,17 @@ struct DataModel {
         let newDrill = Drills.init(context: context)
         let newDrillDetail = DrillDetails.init(context: context)
         
-        newDrill.drill_number = Int16(drill.drill_number)
+        let drillsData = loadDrills()
+        newDrill.drill_number = Int16(drillsData.count+1)
         newDrill.drill_name = drill.drill_name
         newDrill.video = drill.video
         drills.append(newDrill)
         self.save()
         
         for i in 0..<drill.drill_details.count {
-            newDrillDetail.drillDetail_id = Int32(drill.drill_details[i].drillDetail_id)
-            newDrillDetail.drill_number = Int16(drill.drill_number)
+            let countDrillDetailsData = loadDrillDetails().count+i+1
+            newDrillDetail.drillDetail_id = Int32(countDrillDetailsData)
+            newDrillDetail.drill_number = Int16(newDrill.drill_number)
             newDrillDetail.shotQuality = drill.drill_details[i].shotQuality
             newDrillDetail.time = Int16(drill.drill_details[i].time)
             newDrillDetail.header = newDrill

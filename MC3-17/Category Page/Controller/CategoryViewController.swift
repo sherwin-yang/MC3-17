@@ -14,7 +14,10 @@ class CategoryViewController: UIViewController {
     
     let categories = [
         Category(categoryName: "Shots", categoryImage: "Shots", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
-        Category(categoryName: "Footwork", categoryImage: "Footwork", categoryDesc: "")]
+        Category(categoryName: "Serve", categoryImage: "Serve", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
+        Category(categoryName: "Footwork", categoryImage: "Notyet", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
+        Category(categoryName: "Grip", categoryImage: "Notyet", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
+        Category(categoryName: "Position", categoryImage: "Notyet", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,7 @@ class CategoryViewController: UIViewController {
             destination.categoryDesc = categories[index.row].categoryDesc
         }
     }
+    
 }
 
 extension CategoryViewController:  UICollectionViewDataSource, UICollectionViewDelegate {
@@ -48,6 +52,43 @@ extension CategoryViewController:  UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = categories[indexPath.row]
-        performSegue(withIdentifier: SegueIdentifier.toShotsPage, sender: category)
+        
+        let alert = UIAlertController(title: "", message: "This feature is still under development", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        if indexPath.row > 0 {
+            alert.addAction(alertAction)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: SegueIdentifier.toShotsPage, sender: category)
+        }
+
+    }
+}
+
+
+extension CategoryViewController: UITabBarControllerDelegate {
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.delegate = self
+    }
+    
+    override func viewWillLayoutSubviews() {
+        var tabFrame = self.tabBarController?.tabBar.frame
+        
+        tabFrame?.size.height = 100
+        tabFrame?.origin.y = self.view.frame.size.height - 100
+        self.tabBarController?.tabBar.frame = tabFrame!
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+
+        if tabBarController.selectedIndex > 0{
+            tabBarController.selectedIndex = 0
+            let alert = UIAlertController(title: "", message: "This feature is still under development", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel) { action in
+            })
+            self.present(alert, animated: true, completion: {
+            })
+        }
     }
 }

@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct SharedInfo {
+    static var selectedDrill: String?
+}
+
 struct ShotQuality {
     static let goodMove = "good"
     static let badMove = "bad"
@@ -20,11 +24,19 @@ struct SegueIdentifier {
     static let toCameraScreen = "toCameraScreen"
     static let toDrillingPage = "toDrillingPage"
     static let toInfoPage = "toInfoPage"
+    static let cameraToInfoPage = "cameraToInfoPage"
+    static let toVideoPage = "toVideoPage"
+    static let toCategoryPage = "toCategoryPage"
+    static let toResultsVideo = "toResultsVideo"
+    static let toResultsNoVideo = "toResultsNoVideo"
 }
 
 struct DrillName {
     static let lob = "Lob"
+    static let drive = "Drive"
     static let smash = "Smash"
+    static let dropshot = "Dropshot"
+    static let netshot = "Netshot"
 }
 
 struct DrillDescription {
@@ -37,4 +49,10 @@ struct AppleWatchConnectivity {
     static let disonnected = "disconnected"
     static let connectedLabel = "Connected to Apple Watch"
     static let disconnectedLabel = "Disconnected From Apple Watch"
+}
+
+struct MlParameters {
+    static let predictionWindowSize = 60
+    static let sensorsUpdateFrequency = 1.0 / 75.0
+    static let stateInLength = 400
 }

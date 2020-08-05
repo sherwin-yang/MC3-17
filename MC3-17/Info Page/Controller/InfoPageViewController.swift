@@ -12,12 +12,8 @@ class InfoPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(navigationController?.viewControllers.count)
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func startDrillingButton(_ sender: Any) {
-        performSegue(withIdentifier: SegueIdentifier.toDrillingPage, sender: self)
     }
     
 
