@@ -63,12 +63,12 @@ class ResultNoVideoVC: UIViewController {
     func rounded(){
         videoView.layer.cornerRadius = 10
         overviewLabel.layer.cornerRadius = 10
-        badViewLarge.layer.cornerRadius = badViewLarge.frame.size.height/2
-        badViewSmall.layer.cornerRadius = badViewSmall.frame.size.height/2
-        goodViewLarge.layer.cornerRadius = goodViewLarge.frame.size.height/2
-        goodViewSmall.layer.cornerRadius = goodViewSmall.frame.size.height/2
-        totalScoreViewLarge.layer.cornerRadius = totalScoreViewLarge.frame.size.height/2
-        totalScoreViewSmall.layer.cornerRadius = totalScoreViewSmall.frame.size.height/2
+//        badViewLarge.layer.cornerRadius = badViewLarge.frame.size.height/2
+//        badViewSmall.layer.cornerRadius = badViewSmall.frame.size.height/2
+//        goodViewLarge.layer.cornerRadius = goodViewLarge.frame.size.height/2
+//        goodViewSmall.layer.cornerRadius = goodViewSmall.frame.size.height/2
+//        totalScoreViewLarge.layer.cornerRadius = totalScoreViewLarge.frame.size.height/2
+//        totalScoreViewSmall.layer.cornerRadius = totalScoreViewSmall.frame.size.height/2
         practiceBtn.layer.cornerRadius = 10
         doneBtn.layer.cornerRadius = 10
     }

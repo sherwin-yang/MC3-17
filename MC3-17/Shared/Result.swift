@@ -37,6 +37,9 @@ struct Result {
     }
     
     func countScoreResult() -> Int {
+        if countTotalAttempts() == 0{
+            return 0
+        }
         return countGoodMoves()/countTotalAttempts()
     }
     
