@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BGJ-lG-vPJ">
-                                <rect key="frame" x="8" y="208" width="398" height="654"/>
+                                <rect key="frame" x="8" y="208" width="398" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QAd-bT-j5i">
                                     <size key="itemSize" width="396" height="133"/>
@@ -73,7 +73,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wd-dJ-5dw">
-                                                            <rect key="frame" x="153" y="44" width="213" height="60"/>
+                                                            <rect key="frame" x="153" y="36" width="213" height="73"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="SFCompactDisplay-Light" family="SF Compact Display" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -118,9 +118,9 @@
                             <constraint firstItem="BGJ-lG-vPJ" firstAttribute="top" secondItem="ser-je-IMT" secondAttribute="bottom" constant="20" id="B6z-N0-qeh"/>
                             <constraint firstItem="ZAy-1z-rh3" firstAttribute="trailing" secondItem="BGJ-lG-vPJ" secondAttribute="trailing" constant="8" id="Gia-G0-uyW"/>
                             <constraint firstItem="BGJ-lG-vPJ" firstAttribute="leading" secondItem="ZAy-1z-rh3" secondAttribute="leading" constant="8" id="He1-8I-8fP"/>
+                            <constraint firstItem="BGJ-lG-vPJ" firstAttribute="bottom" secondItem="ZAy-1z-rh3" secondAttribute="bottom" constant="-20" id="NEo-W9-qRY"/>
                             <constraint firstItem="ZAy-1z-rh3" firstAttribute="trailing" secondItem="W8X-nS-ZQV" secondAttribute="trailing" constant="24" id="QOC-6X-gmK"/>
                             <constraint firstItem="ser-je-IMT" firstAttribute="leading" secondItem="ZAy-1z-rh3" secondAttribute="leading" constant="24" id="XvN-Oo-Vn5"/>
-                            <constraint firstItem="BGJ-lG-vPJ" firstAttribute="bottom" secondItem="ZAy-1z-rh3" secondAttribute="bottom" id="YNV-PD-nZA"/>
                             <constraint firstItem="ZAy-1z-rh3" firstAttribute="trailing" secondItem="ser-je-IMT" secondAttribute="trailing" constant="24" id="YsA-ib-JAp"/>
                             <constraint firstItem="W8X-nS-ZQV" firstAttribute="leading" secondItem="ZAy-1z-rh3" secondAttribute="leading" constant="24" id="c5R-Ww-fQU"/>
                             <constraint firstItem="ser-je-IMT" firstAttribute="top" secondItem="W8X-nS-ZQV" secondAttribute="bottom" constant="12" id="zDr-uC-ozL"/>
