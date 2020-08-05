@@ -29,31 +29,29 @@ class ResultNoVideoVC: UIViewController {
     @IBOutlet weak var practiceBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
     
+    var results: Result!
+    var duration = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         rounded()
         shadow()
+        attemptsLabel.text = "\(results.countTotalAttempts())"
+        goodLabel.text = "\(results.countGoodMoves())"
+        badLabel.text = "\(results.countBadMoves())"
+        totalScoreLabel.text = "\(results.countScoreResult())"
+        
+        print(navigationController?.viewControllers.count)
 //        coloringTotalScoreCircle()
     }
     
     @IBAction func practiceBtnDidTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: SegueIdentifier.toDrillPage, sender: self)
     }
     
-    @IBAction func doneBtnDidTapped(_ sender: UIButton) {
+    @IBAction func doneBtnDidTapped(_ sender: Any) {
+        performSegue(withIdentifier: SegueIdentifier.toCategoryPage, sender: self)
     }
-    
-//    func coloringTotalScoreCircle(){
-//        switch <#value#> {
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemPink.cgColor
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemYellow.cgColor
-//        case <#pattern#>:
-//            totalScoreViewLarge.layer.backgroundColor = UIColor.systemGreen.cgColor
-//        default:
-//            <#code#>
-//        }
-//    }
     
     func shadow(){
         videoView.layer.shadowColor = UIColor.black.cgColor
@@ -76,3 +74,11 @@ class ResultNoVideoVC: UIViewController {
     }
     
 }
+
+//extension UINavigationController {
+//  func popToViewController(ofClass: AnyClass, animated: Bool = true) {
+//    if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
+//      popToViewController(vc, animated: animated)
+//    }
+//  }
+//}

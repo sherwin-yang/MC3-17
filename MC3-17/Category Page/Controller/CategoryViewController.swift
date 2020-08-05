@@ -66,3 +66,29 @@ extension CategoryViewController:  UICollectionViewDataSource, UICollectionViewD
     }
 }
 
+
+extension CategoryViewController: UITabBarControllerDelegate {
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.delegate = self
+    }
+    
+    override func viewWillLayoutSubviews() {
+        var tabFrame = self.tabBarController?.tabBar.frame
+        
+        tabFrame?.size.height = 100
+        tabFrame?.origin.y = self.view.frame.size.height - 100
+        self.tabBarController?.tabBar.frame = tabFrame!
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+
+        if tabBarController.selectedIndex > 0{
+            tabBarController.selectedIndex = 0
+            let alert = UIAlertController(title: "", message: "This feature is still under development", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel) { action in
+            })
+            self.present(alert, animated: true, completion: {
+            })
+        }
+    }
+}

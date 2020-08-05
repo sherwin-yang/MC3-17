@@ -29,7 +29,7 @@
         <!--Category View Controller-->
         <scene sceneID="bpq-3K-gik">
             <objects>
-                <viewController id="GDO-BJ-siZ" customClass="CategoryViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="GDO-BJ-siZ" customClass="CategoryViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t0d-Ta-jgb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

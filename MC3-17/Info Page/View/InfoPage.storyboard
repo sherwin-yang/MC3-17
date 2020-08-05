@@ -37,6 +37,11 @@ less than 10 meters.</string>
                                 <state key="normal" title="Start Drilling!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="6g2-OO-RIb" kind="presentation" identifier="toDrillingPage" modalPresentationStyle="fullScreen" id="c72-MF-pjQ"/>
                                 </connections>

@@ -33,6 +33,7 @@ class ResultsVideoVC: UIViewController{
     
     var URIPATH: URL!
     var currentDuration = "00:00:00"
+    var results: Result?
     var thumbnail: UIImage!
 
     let documentsFolder = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -43,6 +44,7 @@ class ResultsVideoVC: UIViewController{
         let value = UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         rounded()
+
         shadow()
         URIPATH = documentsFolder.appendingPathComponent("Content/Test.mp4")
         generateThumbnail()

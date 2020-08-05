@@ -15,7 +15,8 @@ class DrillingPageViewController: UIViewController {
     @IBOutlet weak var minuteText: UILabel!
     @IBOutlet weak var secondsText: UILabel!
     
-    var results = [Result]()
+    var results: Result!
+    var drillDetails = [DrillDetail]()
     
     let accX = try? MLMultiArray(
         shape: [MlParameters.predictionWindowSize] as [NSNumber],
@@ -69,6 +70,8 @@ class DrillingPageViewController: UIViewController {
         permissionHelper.delegate = self
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
         
+        print(navigationController?.viewControllers.count)
+        
         checkHealthStoreAuth()
     }
     
@@ -106,7 +109,19 @@ class DrillingPageViewController: UIViewController {
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        results = Result(drillDetail: drillDetails)
+        let drillResult = Drill(drill_name: SharedInfo.selectedDrill, video: nil, drill_details: drillDetails)
+        DataModel.addNewData(drill: drillResult)
+        if let identifer = segue.identifier {
+            if identifer == SegueIdentifier.toResultsNoVideo {
+                if let destination = segue.destination as? ResultNoVideoVC {
+                    destination.results = results
+                    destination.duration = "\(hours):\(minutes):\(seconds)"
+                }
+            }
+        }
+    }
     
     /*
      // MARK: - Navigation
@@ -165,6 +180,9 @@ extension DrillingPageViewController: WCSessionDelegate {
             } else if instruction == "STOP" {
                 self.isRun = false
                 // Go to result page
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: SegueIdentifier.toResultsNoVideo, sender: self)
+                }
             }
         }
         
@@ -249,6 +267,13 @@ extension DrillingPageViewController {
                     DispatchQueue.main.async {
                         if let predictionResult = self.activityPrediction() {
                             print("PREDICTION: \(predictionResult)")
+                            if predictionResult == "lob_betul" {
+                                self.drillDetails.append(DrillDetail(shotQuality: ShotQuality.goodMove, time: 0)) // need time sended from watch
+                            }
+                            else if predictionResult == "lob_salah" {
+                                self.drillDetails.append(DrillDetail(shotQuality: ShotQuality.badMove, time: 0)) // need time sended from watch
+                            }
+                            
                             self.sendMessage(strMsg: predictionResult, isPreditionData: true)
                         }
                     }
