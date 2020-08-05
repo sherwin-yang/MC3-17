@@ -40,7 +40,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="FwG-Va-oLQ" kind="presentation" identifier="toPopUpScreen" modalPresentationStyle="fullScreen" id="9oE-Fh-Kyv"/>
+                                            <segue destination="FwG-Va-oLQ" kind="presentation" identifier="toPopUpScreen" id="9oE-Fh-Kyv"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4Y-I8-wDC">
@@ -130,7 +130,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXM-O6-NMs">
-                                        <rect key="frame" x="17" y="122" width="21" height="37"/>
+                                        <rect key="frame" x="17" y="122" width="69" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,7 +144,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg8-3Y-dxn">
-                                        <rect key="frame" x="108" y="122" width="21" height="37"/>
+                                        <rect key="frame" x="108" y="122" width="78" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                         <color key="textColor" red="0.30196078430000001" green="0.6588235294" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,28 +167,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bt1-VH-dvM">
-                                <rect key="frame" x="0.0" y="844" width="414" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disconnected From Apple Watch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mN-oM-qGs">
-                                        <rect key="frame" x="81" y="8" width="252" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JeK-N4-WRT"/>
                     </view>
                     <navigationItem key="navigationItem" id="yLK-7e-Qsr"/>
                     <connections>
-                        <outlet property="appleWatchConnectivityLabel" destination="0mN-oM-qGs" id="o58-ah-1RF"/>
-                        <outlet property="appleWatchConnectivityMark" destination="Bt1-VH-dvM" id="w7J-Eg-lz3"/>
                         <outlet property="badMovesLabel" destination="MXM-O6-NMs" id="ZG0-Nd-wnj"/>
                         <outlet property="descriptionLabel" destination="YgZ-SI-JRM" id="BGL-Jz-ABP"/>
                         <outlet property="drillCardView" destination="WHv-zZ-7Y2" id="DLB-ih-bqt"/>

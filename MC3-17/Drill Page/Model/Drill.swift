@@ -9,8 +9,8 @@
 import Foundation
 
 struct Drill {
-    var drill_name: String
-    var video: String
+    var drill_name: String!
+    var video: String?
     var drill_details = [DrillDetail]()
     
     static let drillsData = DataModel.loadDrills()
@@ -90,11 +90,11 @@ struct Drill {
     }
     
     static func calculateHighestScore(currentHighestScore: Int, newTotalAttepts: Int, newTotalGoodMoves: Int) -> Int {
-        let newHighestScore = newTotalGoodMoves/newTotalAttepts*100
-        if newHighestScore > currentHighestScore {
-            return newHighestScore
-        }
-        
+//        let newHighestScore = newTotalGoodMoves/newTotalAttepts*100
+//        if newHighestScore > currentHighestScore {
+//            return newHighestScore
+//        }
+//        
         return currentHighestScore
     }
     

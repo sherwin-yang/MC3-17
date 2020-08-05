@@ -29,22 +29,28 @@ class ResultNoVideoVC: UIViewController {
     @IBOutlet weak var practiceBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
     
-    var results: Result?
+    var results: Result!
+    var duration = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         rounded()
         shadow()
+        attemptsLabel.text = "\(results.countTotalAttempts())"
+        goodLabel.text = "\(results.countGoodMoves())"
+        badLabel.text = "\(results.countBadMoves())"
+        totalScoreLabel.text = "\(results.countScoreResult())"
+        
         print(navigationController?.viewControllers.count)
 //        coloringTotalScoreCircle()
     }
     
     @IBAction func practiceBtnDidTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: SegueIdentifier.toDrillPage, sender: self)
     }
     
     @IBAction func doneBtnDidTapped(_ sender: Any) {
-        print("Yes")
-        self.navigationController?.popToRootViewController(animated: true)
+        performSegue(withIdentifier: SegueIdentifier.toCategoryPage, sender: self)
     }
     
     func shadow(){
@@ -68,3 +74,11 @@ class ResultNoVideoVC: UIViewController {
     }
     
 }
+
+//extension UINavigationController {
+//  func popToViewController(ofClass: AnyClass, animated: Bool = true) {
+//    if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
+//      popToViewController(vc, animated: animated)
+//    }
+//  }
+//}

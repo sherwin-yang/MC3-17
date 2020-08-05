@@ -21,8 +21,6 @@ class DrillViewController: UIViewController {
     @IBOutlet var badMovesLabel: UILabel!
     @IBOutlet var goodMovesLabel: UILabel!
     @IBOutlet var highestScoreLabel: UILabel!
-    @IBOutlet var appleWatchConnectivityMark: UIView!
-    @IBOutlet var appleWatchConnectivityLabel: UILabel!
     
     var videoName: String?
     
@@ -35,7 +33,6 @@ class DrillViewController: UIViewController {
         self.drillCardView.addCardShadow()
         self.setAllLabels()
         generateThumbnail()
-        self.activateWCSession()
         print("VC : " + "\(navigationController?.viewControllers.count)")
     }
     
@@ -97,34 +94,4 @@ class DrillViewController: UIViewController {
         
         return videoName!
     }
-}
-
-extension DrillViewController: WCSessionDelegate {
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        DispatchQueue.main.async {
-            self.appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.connected)
-            self.appleWatchConnectivityLabel.text = AppleWatchConnectivity.connectedLabel
-        }
-    }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-    
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        DispatchQueue.main.async {
-            self.appleWatchConnectivityMark.appleWatchMarkColor(connectivity: AppleWatchConnectivity.disonnected)
-            self.appleWatchConnectivityLabel.text = AppleWatchConnectivity.disconnectedLabel
-        }
-    }
-    
-    func activateWCSession() {
-        if WCSession.isSupported() {
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
-        }
-    }
-    
 }

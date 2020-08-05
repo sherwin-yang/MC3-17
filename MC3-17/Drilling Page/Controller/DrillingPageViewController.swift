@@ -111,10 +111,13 @@ class DrillingPageViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         results = Result(drillDetail: drillDetails)
+        let drillResult = Drill(drill_name: SharedInfo.selectedDrill, video: nil, drill_details: drillDetails)
+        DataModel.addNewData(drill: drillResult)
         if let identifer = segue.identifier {
             if identifer == SegueIdentifier.toResultsNoVideo {
                 if let destination = segue.destination as? ResultNoVideoVC {
                     destination.results = results
+                    destination.duration = "\(hours):\(minutes):\(seconds)"
                 }
             }
         }
@@ -281,12 +284,3 @@ extension DrillingPageViewController {
         }
     }
 }
-
-
-//extension UINavigationController {
-//  func popToViewController(ofClass: AnyClass, animated: Bool = true) {
-//    if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
-//      popToViewController(vc, animated: animated)
-//    }
-//  }
-//}

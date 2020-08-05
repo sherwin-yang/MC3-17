@@ -224,6 +224,7 @@
                                 </state>
                                 <connections>
                                     <action selector="practiceBtnDidTapped:" destination="AfB-TO-tZk" eventType="touchUpInside" id="YDA-iN-lpI"/>
+                                    <segue destination="mIv-58-oit" kind="presentation" identifier="toDrillPage" modalPresentationStyle="fullScreen" id="tuM-AR-4Tg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The average score of all good moves" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS1-Yc-S6Y">
@@ -244,6 +245,7 @@
                                 </state>
                                 <connections>
                                     <action selector="doneBtnDidTapped:" destination="AfB-TO-tZk" eventType="touchUpInside" id="9Pc-jQ-Jjt"/>
+                                    <segue destination="5gC-N8-81h" kind="presentation" identifier="toCategoryPage" modalPresentationStyle="fullScreen" id="gxw-FR-EUR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -297,6 +299,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ise-NG-Jqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1784.057971014493" y="114.50892857142857"/>
+        </scene>
+        <!--Drill-->
+        <scene sceneID="7DB-dG-Udu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Drill" id="mIv-58-oit" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wjf-Ia-Fla"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQC-hS-7H7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1160" y="198"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="EtG-TD-Eb4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Category" id="5gC-N8-81h" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZUr-6o-YWf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBu-kT-gsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1160" y="30"/>
         </scene>
     </scenes>
 </document>
