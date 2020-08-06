@@ -49,6 +49,9 @@ class InterfaceController: WKInterfaceController {
         wcSession.delegate = self
         wcSession.activate()
         
+        
+        WKExtension.shared().isAutorotating = true
+        
         //Check HealthStore
         guard HKHealthStore.isHealthDataAvailable() == true else {
             print("Health Data Not Avaliable")
