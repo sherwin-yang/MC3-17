@@ -173,7 +173,7 @@ class CameraVC: UIViewController, RPPreviewViewControllerDelegate{
                 print("Fetch URLPath \(self.fetchURLPath())")
             }
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: SegueIdentifier.toVideoPage, sender: self)
+                self.performSegue(withIdentifier: SegueIdentifier.toResultsVideo, sender: self)
             }
         }
     }
@@ -261,7 +261,7 @@ class CameraVC: UIViewController, RPPreviewViewControllerDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         results = Result(drillDetail: drillDetails)
         if let identifier = segue.identifier {
-            if identifier == SegueIdentifier.toVideoPage {
+            if identifier == SegueIdentifier.toResultsVideo {
                 if let destination = segue.destination as? ResultsVideoVC {
                     destination.URIPATH = self.URIPATH
                     destination.currentDuration = self.currentDuration

@@ -41,7 +41,6 @@ class ResultNoVideoVC: UIViewController {
         badLabel.text = "\(results.countBadMoves())"
         totalScoreLabel.text = "\(results.countScoreResult())"
         
-        print(navigationController?.viewControllers.count)
 //        coloringTotalScoreCircle()
     }
     

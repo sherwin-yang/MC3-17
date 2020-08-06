@@ -29,13 +29,6 @@ class ShotsViewController: UIViewController {
         categoryName.text = categoryNames
         categoryDetail.text = categoryDesc
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? DrillViewController,
-//            let index = shotsCollection.indexPathsForSelectedItems?.first {
-//            destination.drillName = shots[index.row].shotsName
-//        }
-//    }
 
 }
 

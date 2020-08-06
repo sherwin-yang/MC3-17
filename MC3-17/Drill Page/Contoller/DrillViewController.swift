@@ -23,17 +23,13 @@ class DrillViewController: UIViewController {
     @IBOutlet var highestScoreLabel: UILabel!
     
     var videoName: String?
-    
-    var URIPATH: URL!
-    var thumbnail: UIImage!
-    let file = Bundle.main.url(forResource: "Lob Video", withExtension: "mp4")
+    var thumbnail: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.generateThumbnail()
         self.drillCardView.addCardShadow()
         self.setAllLabels()
-        generateThumbnail()
-        print("VC : " + "\(navigationController?.viewControllers.count)")
     }
     
     @IBAction func playVideoButton(_ sender: Any) {
@@ -62,17 +58,17 @@ class DrillViewController: UIViewController {
     
     func setDescriptionLabel() {
         if SharedInfo.selectedDrill == DrillName.lob {
-            self.descriptionLabel.text = DrillDescription.lob
+            self.descriptionLabel.text = DrillDescription.Long.lob
         }
         else if SharedInfo.selectedDrill == DrillName.smash {
-            self.descriptionLabel.text = DrillDescription.smash
+            self.descriptionLabel.text = DrillDescription.Long.smash
         }
     }
     
     func generateThumbnail() {
             do{
-                if let cekURL = file {
-                    let asset = AVURLAsset(url: cekURL)
+                if let file = Bundle.main.url(forResource: videoName, withExtension: "mp4") {
+                    let asset = AVURLAsset(url: file)
                     let imageGenerator = AVAssetImageGenerator(asset: asset)
                     imageGenerator.appliesPreferredTrackTransform = true
                     let cgImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 1), actualTime: nil)
@@ -87,7 +83,7 @@ class DrillViewController: UIViewController {
             }
         }
     
-    func setVideoName() -> String {
+    func setVideo() -> String {
         if SharedInfo.selectedDrill == DrillName.lob {
             self.videoName = "Lob Video"
         }

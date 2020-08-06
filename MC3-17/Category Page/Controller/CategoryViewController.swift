@@ -21,9 +21,12 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        DataModel.loadDrills()
+        DataModel.loadDrillDetails()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
