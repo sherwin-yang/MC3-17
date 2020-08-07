@@ -467,16 +467,8 @@
 			children = (
 				21B4E12E24C6053F00EAC15F /* Controller */,
 				21B4E12D24C6053B00EAC15F /* View */,
-				21B4E12C24C6052D00EAC15F /* Model */,
 			);
 			path = "Pop-Up Page";
-			sourceTree = "<group>";
-		};
-		21B4E12C24C6052D00EAC15F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		21B4E12D24C6053B00EAC15F /* View */ = {
@@ -562,7 +554,6 @@
 			children = (
 				A5E65F2624CB5FF90048828A /* Controller */,
 				A5E65F2524CB5FF30048828A /* View */,
-				A5E65F2424CB5FED0048828A /* Model */,
 			);
 			path = "Camera Page";
 			sourceTree = "<group>";
@@ -580,18 +571,11 @@
 		A5E65F2324CB5F850048828A /* Results Video Page */ = {
 			isa = PBXGroup;
 			children = (
-				A509A72924D955720084F8AE /* Model */,
 				A5E65F2C24CB60150048828A /* Controller */,
 				A5E65F2B24CB60110048828A /* View */,
+				A509A72924D955720084F8AE /* Model */,
 			);
 			path = "Results Video Page";
-			sourceTree = "<group>";
-		};
-		A5E65F2424CB5FED0048828A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		A5E65F2524CB5FF30048828A /* View */ = {
@@ -652,9 +636,8 @@
 		AD1A4BC824CF3EC00023E012 /* Info Page */ = {
 			isa = PBXGroup;
 			children = (
-				AD1A4BCC24CF3F160023E012 /* Model */,
-				AD1A4BCB24CF3F100023E012 /* View */,
 				AD1A4BCA24CF3F030023E012 /* Controller */,
+				AD1A4BCB24CF3F100023E012 /* View */,
 			);
 			path = "Info Page";
 			sourceTree = "<group>";
@@ -662,9 +645,8 @@
 		AD1A4BC924CF3EFC0023E012 /* Drilling Page */ = {
 			isa = PBXGroup;
 			children = (
-				AD1A4BCF24CF3F250023E012 /* Model */,
-				AD1A4BCE24CF3F200023E012 /* View */,
 				AD1A4BCD24CF3F1A0023E012 /* Controller */,
+				AD1A4BCE24CF3F200023E012 /* View */,
 			);
 			path = "Drilling Page";
 			sourceTree = "<group>";
@@ -685,13 +667,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AD1A4BCC24CF3F160023E012 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		AD1A4BCD24CF3F1A0023E012 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,13 +681,6 @@
 				AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AD1A4BCF24CF3F250023E012 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1030,10 +998,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QG2498G8L;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marsel.MC3-17.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sherwinyang.MC3-17.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1049,10 +1017,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QG2498G8L;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marsel.MC3-17.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sherwinyang.MC3-17.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1068,14 +1036,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QG2498G8L;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marsel.MC3-17.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sherwinyang.MC3-17.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1091,14 +1059,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QG2498G8L;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marsel.MC3-17.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sherwinyang.MC3-17.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1228,13 +1196,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QG2498G8L;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marsel.MC3-17";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sherwinyang.MC3-17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1247,13 +1215,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QG2498G8L;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marsel.MC3-17";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sherwinyang.MC3-17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1267,7 +1235,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1290,7 +1258,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1311,7 +1279,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1331,7 +1299,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 35HAL8HCRV;
 				INFOPLIST_FILE = "MC3-17UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

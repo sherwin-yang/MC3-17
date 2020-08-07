@@ -11,12 +11,7 @@ import WatchConnectivity
 import CoreML
 
 class DrillingPageViewController: UIViewController {
-    @IBOutlet weak var hoursText: UILabel!
-    @IBOutlet weak var minuteText: UILabel!
-    @IBOutlet weak var secondsText: UILabel!
-    
-    var results: Result!
-    var drillDetails = [DrillDetail]()
+    @IBOutlet var timerLabel: UILabel!
     
     let accX = try? MLMultiArray(
         shape: [MlParameters.predictionWindowSize] as [NSNumber],
@@ -51,11 +46,12 @@ class DrillingPageViewController: UIViewController {
     var currentIndexInPredictionWindow = 0
     var wcSession : WCSession! = nil
     
-    var hours = 0
-    var minutes = 0
-    var seconds = 0
+    var results: Result!
+    var newDrillDetails = [DrillDetail]()
     
     var timer = Timer()
+    var timeSecond = 0
+    
     var permissionHelper = PermissionHelper()
     var isHealthStoreAuthorized = false
     var isRun = false
@@ -63,59 +59,58 @@ class DrillingPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wcSession = WCSession.default
-        wcSession.delegate = self
-        wcSession.activate()
+        activateWCSession()
         
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
         permissionHelper.delegate = self
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
         
         checkHealthStoreAuth()
     }
     
-    @objc func count() {
+    @objc func setTimer () {
         if isHealthStoreAuthorized && isRun {
-            seconds += 1
-            if seconds == 60 {
-                minutes += 1
-                seconds = 0
-                
-            } else if minutes == 60 {
-                hours += 1
-                minutes = 0
-                seconds = 0
-            }
-            
-            //Show Timer Text
-            if seconds < 10 {
-                secondsText.text = "0\(seconds)"
-            } else {
-                secondsText.text = "\(seconds)"
-            }
-            
-            if minutes < 10 {
-                minuteText.text = "0\(minutes)"
-            } else {
-                minuteText.text = "\(minutes)"
-            }
-            
-            if hours < 10 {
-                hoursText.text = "0\(hours)"
-            } else {
-                hoursText.text = "\(hours)"
-            }
+            timeSecond += 1
+            timerLabel.text = "\(countTimerHour()):\(countTimerMinute()):\(countTimerSecond())"
+            print("run")
+        }
+    }
+    
+    func countTimerHour() -> String {
+        if timeSecond/3600 < 10 {
+            return "0\(timeSecond/3600)"
+        }
+        else {
+            return "\(timeSecond/3600)"
+        }
+    }
+    
+    func countTimerMinute() -> String {
+        if timeSecond%3600/60 < 10 {
+            return "0\(timeSecond%3600/60)"
+        }
+        else {
+            return "\(timeSecond%3600/60)"
+        }
+    }
+    
+    func countTimerSecond() -> String {
+        if timeSecond%3600%60 < 10 {
+            return "0\(timeSecond%3600%60)"
+        }
+        else {
+            return "\(timeSecond%3600%60)"
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        results = Result(drillDetail: drillDetails)
-        let drillResult = Drill(drill_name: SharedInfo.selectedDrill, video: nil, drill_details: drillDetails)
+        results = Result(drillDetail: newDrillDetails)
+        let drillResult = Drill(drill_name: SharedInfo.selectedDrill, video: nil, drill_details: newDrillDetails)
         DataModel.addNewData(drill: drillResult)
         if let identifer = segue.identifier {
             if identifer == SegueIdentifier.toResultsNoVideo {
                 if let destination = segue.destination as? ResultNoVideoVC {
                     destination.results = results
-                    destination.duration = "\(hours):\(minutes):\(seconds)"
+                    destination.duration = timeSecond
                 }
             }
         }
@@ -166,8 +161,11 @@ extension DrillingPageViewController: PermissionHelperDelegate {
 
 //MARK: - WatchConnectivity
 extension DrillingPageViewController: WCSessionDelegate {
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+        wcSession = WCSession.default
+        wcSession.delegate = self
+        wcSession.activate()
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
@@ -222,10 +220,17 @@ extension DrillingPageViewController: WCSessionDelegate {
     private func isReachable() -> Bool {
         return wcSession.isReachable
     }
+    
+    private func activateWCSession() {
+        wcSession = WCSession.default
+        wcSession.delegate = self
+        wcSession.activate()
+    }
 }
 
 //MARK: - CoreML
 extension DrillingPageViewController {
+    
     func activityPrediction() -> String? {
         // Perform prediction
         let modelPrediction = try? classifier.prediction(
@@ -266,10 +271,10 @@ extension DrillingPageViewController {
                         if let predictionResult = self.activityPrediction() {
                             print("PREDICTION: \(predictionResult)")
                             if predictionResult == "lob_betul" {
-                                self.drillDetails.append(DrillDetail(shotQuality: ShotQuality.goodMove, time: 0)) // need time sended from watch
+                                self.newDrillDetails.append(DrillDetail(shotQuality: ShotQuality.goodMove, time: self.timeSecond)) // need time sended from watch
                             }
                             else if predictionResult == "lob_salah" {
-                                self.drillDetails.append(DrillDetail(shotQuality: ShotQuality.badMove, time: 0)) // need time sended from watch
+                                self.newDrillDetails.append(DrillDetail(shotQuality: ShotQuality.badMove, time: self.timeSecond)) // need time sended from watch
                             }
                             
                             self.sendMessage(strMsg: predictionResult, isPreditionData: true)

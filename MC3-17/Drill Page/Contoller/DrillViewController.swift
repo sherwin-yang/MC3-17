@@ -27,6 +27,7 @@ class DrillViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setVideo()
         self.generateThumbnail()
         self.drillCardView.addCardShadow()
         self.setAllLabels()
@@ -44,14 +45,16 @@ class DrillViewController: UIViewController {
     }
     
     func setAllLabels() {
-        if SharedInfo.selectedDrill != nil {
-            self.drillNameLabel.text = SharedInfo.selectedDrill
-            self.setDescriptionLabel()
-            self.totalAttemptsLabel.text = String(Drill.countTotalAttempts(SharedInfo.selectedDrill!))
-            if Drill.countTotalAttempts(SharedInfo.selectedDrill!) != 0 {
-                self.badMovesLabel.text = String(Drill.countBadMoves(SharedInfo.selectedDrill!))
-                self.goodMovesLabel.text = String(Drill.countGoodMoves(SharedInfo.selectedDrill!))
-                self.highestScoreLabel.text = String(Drill.findHighestScore(SharedInfo.selectedDrill!))
+        DispatchQueue.main.async {
+            if SharedInfo.selectedDrill != nil {
+                self.drillNameLabel.text = SharedInfo.selectedDrill
+                self.setDescriptionLabel()
+                self.totalAttemptsLabel.text = String(Drill.countTotalAttempts(SharedInfo.selectedDrill!))
+                if Drill.countTotalAttempts(SharedInfo.selectedDrill!) != 0 {
+                    self.badMovesLabel.text = String(Drill.countBadMoves(SharedInfo.selectedDrill!))
+                    self.goodMovesLabel.text = String(Drill.countGoodMoves(SharedInfo.selectedDrill!))
+                    self.highestScoreLabel.text = String(Drill.findHighestScore(SharedInfo.selectedDrill!))
+                }
             }
         }
     }
@@ -83,11 +86,10 @@ class DrillViewController: UIViewController {
             }
         }
     
-    func setVideo() -> String {
+    func setVideo() {
         if SharedInfo.selectedDrill == DrillName.lob {
             self.videoName = "Lob Video"
         }
-        
-        return videoName!
     }
+    
 }

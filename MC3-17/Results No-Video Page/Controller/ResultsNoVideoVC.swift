@@ -30,13 +30,14 @@ class ResultNoVideoVC: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     
     var results: Result!
-    var duration = ""
+    var duration: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         rounded()
         shadow()
         attemptsLabel.text = "\(results.countTotalAttempts())"
+        durationLabel.text = "\(countTimerHour()):\(countTimerMinute()):\(countTimerSecond())"
         goodLabel.text = "\(results.countGoodMoves())"
         badLabel.text = "\(results.countBadMoves())"
         totalScoreLabel.text = "\(results.countScoreResult())"
@@ -70,6 +71,33 @@ class ResultNoVideoVC: UIViewController {
 //        totalScoreViewSmall.layer.cornerRadius = totalScoreViewSmall.frame.size.height/2
         practiceBtn.layer.cornerRadius = 10
         doneBtn.layer.cornerRadius = 10
+    }
+    
+    func countTimerHour() -> String {
+        if duration/3600 < 10 {
+            return "0\(duration/3600)"
+        }
+        else {
+            return "\(duration/3600)"
+        }
+    }
+    
+    func countTimerMinute() -> String {
+        if duration%3600/60 < 10 {
+            return "0\(duration%3600/60)"
+        }
+        else {
+            return "\(duration%3600/60)"
+        }
+    }
+    
+    func countTimerSecond() -> String {
+        if duration%3600%60 < 10 {
+            return "0\(duration%3600%60)"
+        }
+        else {
+            return "\(duration%3600%60)"
+        }
     }
     
 }

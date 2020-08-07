@@ -13,19 +13,17 @@ struct Drill {
     var video: String?
     var drill_details = [DrillDetail]()
     
-    static let drillsData = DataModel.loadDrills()
-    static let drillDetailsData = DataModel.loadDrillDetails()
+    static let drillsCoreData = DataModel.loadDrills()
+    static let drillDetailsCoreData = DataModel.loadDrillDetails()
     
     static func countTotalAttempts(_ drillName: String) -> Int {
         var totalAttempts = 0
         
-        if drillsData.count != 0 {
-            for drill in drillsData {
-                if drill.drill_name == drillName {
-                    for drillDetail in drillDetailsData {
-                        if drill.drill_number == drillDetail.drill_number {
-                            totalAttempts += 1;
-                        }
+        for drill in drillsCoreData {
+            if drill.drill_name == drillName {
+                for drillDetail in drillDetailsCoreData {
+                    if drill.drill_number == drillDetail.drill_number {
+                        totalAttempts += 1;
                     }
                 }
             }
@@ -37,11 +35,13 @@ struct Drill {
     static func countGoodMoves(_ drillName: String) -> Int {
         var totalGoodMoves = 0
         
-        for drill in drillsData {
+        for drill in drillsCoreData {
             if drill.drill_name == drillName {
-                for drillDetail in drillDetailsData {
-                    if drillDetail.shotQuality == ShotQuality.goodMove {
-                        totalGoodMoves += 1;
+                for drillDetail in drillDetailsCoreData {
+                    if drill.drill_number == drillDetail.drill_number {
+                        if drillDetail.shotQuality == ShotQuality.goodMove {
+                            totalGoodMoves += 1;
+                        }
                     }
                 }
             }
@@ -53,12 +53,13 @@ struct Drill {
     static func countBadMoves(_ drillName: String) -> Int {
         var totalBadMoves = 0
         
-        for drill in drillsData {
+        for drill in drillsCoreData {
             if drill.drill_name == drillName {
-                for drillDetail in drillDetailsData {
-                    if drillDetail.shotQuality == ShotQuality.badMove {
-                        totalBadMoves += 1;
-                        
+                for drillDetail in drillDetailsCoreData {
+                    if drill.drill_number == drillDetail.drill_number {
+                        if drillDetail.shotQuality == ShotQuality.badMove {
+                            totalBadMoves += 1
+                        }
                     }
                 }
             }
@@ -67,34 +68,37 @@ struct Drill {
         return totalBadMoves
     }
     
-    static func findHighestScore(_ drillName: String) -> Int{
-        var highestScore = 0
+    static func findHighestScore(_ drillName: String) -> Int {
+        var highestScore: Double = 0
         
-        for drill in drillsData {
+        for drill in drillsCoreData {
             if drill.drill_name == drillName {
-                var attempts = 0
-                var goodMoves = 0
-                for drillDetail in drillDetailsData {
+                var attempts: Double = 0
+                var goodMoves: Double = 0
+                for drillDetail in drillDetailsCoreData {
                     if drill.drill_number == drillDetail.drill_number {
-                        attempts += 0
+                        attempts += 1
                         if drillDetail.shotQuality == ShotQuality.goodMove {
-                            goodMoves += 0
+                            goodMoves += 1
                         }
                     }
                 }
-                highestScore = calculateHighestScore(currentHighestScore: highestScore, newTotalAttepts: attempts, newTotalGoodMoves: goodMoves)
+                highestScore = calculateHighestScore(currentHighestScore: highestScore, newTotalAttempts: attempts, newTotalGoodMoves: goodMoves)
             }
         }
         
-        return highestScore
+        return Int(highestScore)
     }
     
-    static func calculateHighestScore(currentHighestScore: Int, newTotalAttepts: Int, newTotalGoodMoves: Int) -> Int {
-//        let newHighestScore = newTotalGoodMoves/newTotalAttepts*100
-//        if newHighestScore > currentHighestScore {
-//            return newHighestScore
-//        }
-//        
+    static func calculateHighestScore(currentHighestScore: Double, newTotalAttempts: Double, newTotalGoodMoves: Double) -> Double {
+        if newTotalAttempts != 0 {
+            let newHighestScore = newTotalGoodMoves/newTotalAttempts*100
+            
+            if newHighestScore > currentHighestScore {
+                return newHighestScore
+            }
+        }
+        
         return currentHighestScore
     }
     
