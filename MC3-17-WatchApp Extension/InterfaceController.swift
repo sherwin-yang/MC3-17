@@ -173,6 +173,8 @@ extension InterfaceController: WCSessionDelegate {
                 result.badMoves += 1
                 badMoveLabel.setText(String(result.badMoves))
             }
+            //Tambah 1
+            stopRecording()
         }
         
         if let instruction = message["instructionFromIos"] as? String {
