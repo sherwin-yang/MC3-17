@@ -50,7 +50,7 @@
 		3D1EC43924D6630900250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43824D6630900250EFF /* HealthKit.framework */; };
 		3D1EC43C24D6636800250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43B24D6636800250EFF /* HealthKit.framework */; };
 		3D1EC43F24D66C1B00250EFF /* PermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */; };
-		3DA6D6EF24DEB81F00072AFF /* BadmintonActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6D6EE24DEB81F00072AFF /* BadmintonActivityClassifier.mlmodel */; };
+		3DA6D6F124DEBC0900072AFF /* BadmintonActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6D6F024DEBC0900072AFF /* BadmintonActivityClassifier.mlmodel */; };
 		A509A72624D950790084F8AE /* ExtentionsForVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509A72524D950790084F8AE /* ExtentionsForVideo.swift */; };
 		A509A72B24D955870084F8AE /* ResultsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509A72A24D955870084F8AE /* ResultsVideo.swift */; };
 		A5E65F2E24CB60400048828A /* ResultsVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */; };
@@ -175,7 +175,7 @@
 		3D1EC43A24D6636800250EFF /* MC3-17-WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MC3-17-WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		3D1EC43B24D6636800250EFF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionHelper.swift; sourceTree = "<group>"; };
-		3DA6D6EE24DEB81F00072AFF /* BadmintonActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BadmintonActivityClassifier.mlmodel; sourceTree = "<group>"; };
+		3DA6D6F024DEBC0900072AFF /* BadmintonActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BadmintonActivityClassifier.mlmodel; sourceTree = "<group>"; };
 		A509A72524D950790084F8AE /* ExtentionsForVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsForVideo.swift; sourceTree = "<group>"; };
 		A509A72A24D955870084F8AE /* ResultsVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVideo.swift; sourceTree = "<group>"; };
 		A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsVideo.storyboard; sourceTree = "<group>"; };
@@ -399,7 +399,7 @@
 				3D1EC43D24D66BE500250EFF /* Helper */,
 				217678AD24CCD91D004EC8B2 /* Main.storyboard */,
 				21AA703924C58CE800DA35F6 /* Assets.xcassets */,
-				3DA6D6EE24DEB81F00072AFF /* BadmintonActivityClassifier.mlmodel */,
+				3DA6D6F024DEBC0900072AFF /* BadmintonActivityClassifier.mlmodel */,
 				21AA703B24C58CE800DA35F6 /* LaunchScreen.storyboard */,
 				21AA703E24C58CE800DA35F6 /* Info.plist */,
 				21AA703624C58CE600DA35F6 /* MC3_17.xcdatamodeld */,
@@ -933,7 +933,7 @@
 				A5E65F3624CB60CD0048828A /* ResultsVideoVC.swift in Sources */,
 				217678B524CF3B9A004EC8B2 /* ResultOverviewViewController.swift in Sources */,
 				AD1A4BD724CF40240023E012 /* InfoPageViewController.swift in Sources */,
-				3DA6D6EF24DEB81F00072AFF /* BadmintonActivityClassifier.mlmodel in Sources */,
+				3DA6D6F124DEBC0900072AFF /* BadmintonActivityClassifier.mlmodel in Sources */,
 				A5E65F3624CB60CD0048828A /* ResultsVideoVC.swift in Sources */,
 				AD1A4BD524CF40170023E012 /* DrillingPageViewController.swift in Sources */,
 				A509A72624D950790084F8AE /* ExtentionsForVideo.swift in Sources */,
