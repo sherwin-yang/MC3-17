@@ -35,6 +35,8 @@ class InterfaceController: WKInterfaceController {
     var currentQuery: HKQuery?
     let sensorsUpdateFrequency = 1.0 / 75.0
     
+    var timerText = ""
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -74,7 +76,8 @@ class InterfaceController: WKInterfaceController {
     
     @objc func setTimer() {
         result.timeSecond += 1
-        timerLabel.setText("\(countTimerHour()):\(countTimerMinute()):\(countTimerSecond())")
+        timerText = "\(countTimerHour()):\(countTimerMinute()):\(countTimerSecond())"
+        timerLabel.setText(timerText)
     }
     
     func countTimerHour() -> String {
@@ -145,7 +148,8 @@ extension InterfaceController {
                 csvString = "\(trueData.userAcceleration.x),\(trueData.userAcceleration.y),\(trueData.userAcceleration.z),\(trueData.rotationRate.x),\(trueData.rotationRate.y),\(trueData.rotationRate.z)\n"
                 dataMotionCounter += 1
                 
-                if dataMotionCounter == 10 {
+                if dataMotionCounter == 60 {
+                    print("CUKUP: \(self.timerText)")
                     self.sendMessage(strMsg: csvString, isMotion: true)
                     csvString = ""
                     dataMotionCounter = 0
@@ -288,7 +292,7 @@ extension InterfaceController: HKWorkoutSessionDelegate{
             DispatchQueue.main.async {
                 guard let sample = samples.first else { return }
                 let value = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
-                print("This line is executed!")
+//                print("This line is executed!")
                 self.heartRateLabel.setText(String(UInt16(value))) //Update label
             }
             
