@@ -12,6 +12,10 @@ import CoreML
 
 class DrillingPageViewController: UIViewController {
     @IBOutlet var timerLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var borderImg: UIImageView!
+    @IBOutlet weak var borderTxtLabel: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
     
     let accX = try? MLMultiArray(
         shape: [MlParameters.predictionWindowSize] as [NSNumber],
@@ -65,6 +69,7 @@ class DrillingPageViewController: UIViewController {
         permissionHelper.delegate = self
         
         checkHealthStoreAuth()
+        cancelButton.isHidden = true
     }
     
     @objc func setTimer () {
@@ -72,6 +77,11 @@ class DrillingPageViewController: UIViewController {
             timeSecond += 1
             timerLabel.text = "\(countTimerHour()):\(countTimerMinute()):\(countTimerSecond())"
             print("run")
+            
+            descLabel.text = "You Are Now Drilling"
+            borderImg.isHidden = true
+            borderTxtLabel.isHidden = true
+            cancelButton.isHidden = false
         }
     }
     
@@ -116,6 +126,9 @@ class DrillingPageViewController: UIViewController {
         }
     }
     
+    @IBAction func cancelDrilling(_ sender: Any) {
+        
+    }
     /*
      // MARK: - Navigation
      
