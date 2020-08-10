@@ -69,7 +69,6 @@ class DrillingPageViewController: UIViewController {
         permissionHelper.delegate = self
         
         checkHealthStoreAuth()
-        cancelButton.isHidden = true
     }
     
     @objc func setTimer () {
@@ -126,9 +125,6 @@ class DrillingPageViewController: UIViewController {
         }
     }
     
-    @IBAction func cancelDrilling(_ sender: Any) {
-        
-    }
     /*
      // MARK: - Navigation
      

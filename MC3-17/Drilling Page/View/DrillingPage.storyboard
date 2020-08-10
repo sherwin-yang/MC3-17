@@ -10,7 +10,7 @@
         <!--Drilling Page View Controller-->
         <scene sceneID="5Q4-cP-qHB">
             <objects>
-                <viewController id="BNW-dR-rEZ" customClass="DrillingPageViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BNW-dR-rEZ" customClass="DrillingPageViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="35O-cr-Ck9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,23 +33,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2n2-Ce-lpf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="0pQ-g7-Ejx">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="Cd0-3C-0uO"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="Brh-pY-MlC">
                                 <rect key="frame" x="39" y="533" width="337" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uS-v2-Pbm">
-                                <rect key="frame" x="39" y="785" width="337" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uS-v2-Pbm">
+                                <rect key="frame" x="38.5" y="785" width="337" height="41"/>
                                 <color key="backgroundColor" red="0.1027386114" green="0.1483265758" blue="0.18039682509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="cwX-zK-uk5"/>
+                                    <constraint firstAttribute="width" constant="337" id="hxl-Sp-DIl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Cancel"/>
@@ -59,8 +53,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cancelDrilling:" destination="BNW-dR-rEZ" eventType="touchUpInside" id="DXX-YK-xyn"/>
-                                    <segue destination="Exr-Y2-pfh" kind="presentation" modalPresentationStyle="fullScreen" id="FT2-QL-H23"/>
+                                    <segue destination="Exr-Y2-pfh" kind="presentation" identifier="toCancelDrillingPopUp" id="7zc-VA-LHW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're All Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-rc-rYI">
@@ -72,6 +65,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7uS-v2-Pbm" firstAttribute="centerX" secondItem="35O-cr-Ck9" secondAttribute="centerX" id="8sg-DI-PMw"/>
+                            <constraint firstItem="h8B-7v-GyT" firstAttribute="bottom" secondItem="7uS-v2-Pbm" secondAttribute="bottom" constant="36" id="GIl-pt-njC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h8B-7v-GyT"/>
                     </view>
                     <connections>

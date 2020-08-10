@@ -10,7 +10,7 @@
         <!--Cancel Drilling Pop Up View Controller-->
         <scene sceneID="NoQ-TA-8Ux">
             <objects>
-                <viewController id="qQc-c1-psu" customClass="CancelDrillingPopUpViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="qQc-c1-psu" customClass="CancelDrillingPopUpViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fup-Fa-21e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,10 +41,13 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="No, Continue"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="corneraRadius">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="continueDrilling:" destination="qQc-c1-psu" eventType="touchUpInside" id="ehD-Zg-XCc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-AY-IR5">
                                         <rect key="frame" x="24" y="189" width="291" height="45"/>
@@ -58,6 +61,10 @@
                                                 <integer key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="stopDrilling:" destination="qQc-c1-psu" eventType="touchUpInside" id="osJ-rV-blE"/>
+                                            <segue destination="etz-7Z-OjP" kind="presentation" identifier="toDrillPage" modalPresentationStyle="fullScreen" id="Lvh-lp-4Sg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,6 +82,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FB-xk-C7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="97.767857142857139"/>
+        </scene>
+        <!--Drill-->
+        <scene sceneID="ymI-L0-hsg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Drill" id="etz-7Z-OjP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eS6-gk-wGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="98"/>
         </scene>
     </scenes>
 </document>
