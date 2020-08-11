@@ -28,6 +28,7 @@ struct SegueIdentifier {
     static let toResultsVideo = "toResultsVideo"
     static let toResultsNoVideo = "toResultsNoVideo"
     static let toCategoryPage = "toCategoryPage"
+    static let toWatchConnectivity = "toWatchConnectivity"
 }
 
 struct DrillName {

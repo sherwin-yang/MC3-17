@@ -69,7 +69,17 @@ class DrillingPageViewController: UIViewController {
         permissionHelper.delegate = self
         
         checkHealthStoreAuth()
+        
+//        checkWatchConnectivity()
     }
+    
+//    func checkWatchConnectivity(){
+//        if wcSession.isReachable == false{
+//            DispatchQueue.main.async {
+//                self.performSegue(withIdentifier: SegueIdentifier.toWatchConnectivity, sender: self)
+//            }
+//        }
+//    }
     
     @objc func setTimer () {
         if isHealthStoreAuthorized && isRun {
