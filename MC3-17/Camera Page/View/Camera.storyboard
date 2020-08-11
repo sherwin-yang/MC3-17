@@ -78,7 +78,7 @@
                         <outlet property="cameraButtonStop" destination="9yj-Xz-7w0" id="oOu-g2-4g7"/>
                         <outlet property="durationLabel" destination="2Ol-PT-L3T" id="PKU-6m-Bcz"/>
                         <outlet property="scoreLabel" destination="d5f-Zu-AIb" id="HBo-l5-rAq"/>
-                        <segue destination="glL-8b-YtH" kind="show" identifier="toVideoPage" id="LGE-LL-Zps"/>
+                        <segue destination="glL-8b-YtH" kind="show" identifier="toResultsVideo" id="LGE-LL-Zps"/>
                         <segue destination="KY7-uw-VLf" kind="show" identifier="cameraToInfoPage" id="pMA-PF-V8n"/>
                     </connections>
                 </viewController>
@@ -94,7 +94,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGU-hQ-Vxj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-21561" y="-430"/>
+            <point key="canvasLocation" x="-21555" y="-432"/>
         </scene>
     </scenes>
     <resources>

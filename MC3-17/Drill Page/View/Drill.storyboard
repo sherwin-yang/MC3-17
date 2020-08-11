@@ -10,7 +10,7 @@
         <!--Drill View Controller-->
         <scene sceneID="Tvg-7L-q3b">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="3sk-S6-z9r" customClass="DrillViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrillPage" hidesBottomBarWhenPushed="YES" id="3sk-S6-z9r" customClass="DrillViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZD-uM-yrd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoY-cG-ZXY">
-                                        <rect key="frame" x="216" y="62" width="132" height="90"/>
+                                        <rect key="frame" x="214" y="62" width="142" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="75"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

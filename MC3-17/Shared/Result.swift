@@ -37,7 +37,10 @@ struct Result {
     }
     
     func countScoreResult() -> Int {
-        return countGoodMoves()/countTotalAttempts()
+        if countTotalAttempts() == 0 {
+            return 0
+        }
+        return Int(Double(countGoodMoves())/Double(countTotalAttempts()))*100
     }
     
 }
