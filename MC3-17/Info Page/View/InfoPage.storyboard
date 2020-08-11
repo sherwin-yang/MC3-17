@@ -10,7 +10,7 @@
         <!--Info Page View Controller-->
         <scene sceneID="zEu-ah-I1O">
             <objects>
-                <viewController id="sEX-Rf-BYx" customClass="InfoPageViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoPage" id="sEX-Rf-BYx" customClass="InfoPageViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24e-1G-S5F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,16 +19,6 @@
                                 <rect key="frame" x="70" y="227" width="274" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-rD-SNC">
-                                <rect key="frame" x="84" y="537" width="246" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Keep the distance between your
-Apple Watch and your phone
-less than 10 meters.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ6-Jf-RT1">
                                 <rect key="frame" x="31" y="660" width="352" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,9 +33,16 @@ less than 10 meters.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="6g2-OO-RIb" kind="presentation" identifier="toDrillingPage" modalPresentationStyle="fullScreen" id="c72-MF-pjQ"/>
+                                    <segue destination="6g2-OO-RIb" kind="showDetail" identifier="toDrillingPage" id="c72-MF-pjQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="While drilling, keep the distance  between your Apple Watch and your phone less than 10 meters." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-rD-SNC">
+                                <rect key="frame" x="53" y="520" width="309" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Kit-yE-fA4"/>

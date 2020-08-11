@@ -10,7 +10,7 @@
         <!--Drill View Controller-->
         <scene sceneID="Tvg-7L-q3b">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="3sk-S6-z9r" customClass="DrillViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrillPage" hidesBottomBarWhenPushed="YES" id="3sk-S6-z9r" customClass="DrillViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZD-uM-yrd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
