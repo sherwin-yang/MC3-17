@@ -78,11 +78,12 @@
                         <outlet property="descLabel" destination="hTe-rc-rYI" id="UKf-3x-Rox"/>
                         <outlet property="timerLabel" destination="Uv9-eu-DjL" id="Rtx-VC-37T"/>
                         <segue destination="FGV-8G-sqN" kind="presentation" identifier="toResultsNoVideo" modalPresentationStyle="fullScreen" id="bPv-GR-85x"/>
+                        <segue destination="jXl-26-Zuv" kind="presentation" identifier="toWatchConnectivity" id="Gi5-vA-Qbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2V-q0-l3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-475.36231884057975" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-919" y="-16"/>
         </scene>
         <!--CancelDrillingPopUp-->
         <scene sceneID="bFh-c0-t4K">
@@ -103,6 +104,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPR-CT-KYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="532" y="122"/>
+        </scene>
+        <!--WatchConnectivity-->
+        <scene sceneID="LMU-1w-bpt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WatchConnectivity" id="jXl-26-Zuv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3l-Vf-e5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="-16"/>
         </scene>
     </scenes>
     <resources>
