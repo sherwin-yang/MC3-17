@@ -141,8 +141,8 @@ extension InterfaceController {
             (data, error) in
 //            print(data as Any)
             if let trueData =  data {
+                csvString = csvString.appending("\(trueData.userAcceleration.x),\(trueData.userAcceleration.y),\(trueData.userAcceleration.z),\(trueData.rotationRate.x),\(trueData.rotationRate.y),\(trueData.rotationRate.z)\n")
                 
-                csvString = "\(trueData.userAcceleration.x),\(trueData.userAcceleration.y),\(trueData.userAcceleration.z),\(trueData.rotationRate.x),\(trueData.rotationRate.y),\(trueData.rotationRate.z)\n"
                 dataMotionCounter += 1
                 
                 if dataMotionCounter == 10 {
