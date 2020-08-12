@@ -70,6 +70,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func stopButtonTapped() {
         stopRecording()
+        pushController(withName: "showResult", context: result)
     }
     
     @objc func setTimer() {
@@ -125,7 +126,6 @@ class InterfaceController: WKInterfaceController {
         badMoveLabel.setText("0")
         startButton.setHidden(false)
         stopButton.setHidden(true)
-        pushController(withName: "showResult", context: result)
         result = Result(goodMoves: 0, badMoves: 0, timeSecond: 0)
     }
 }
@@ -177,8 +177,9 @@ extension InterfaceController: WCSessionDelegate {
         
         if let instruction = message["instructionFromIos"] as? String {
             print(instruction)
-            if instruction == "STOP" {
-                stopRecording()
+            if instruction == "CANCEL"{
+//                stopRecording()
+                presentController(withName: "presentMovementsDiscarded", context: nil)
             }
         }
         
@@ -197,9 +198,7 @@ extension InterfaceController: WCSessionDelegate {
         }
         
         wcSession.sendMessage(message, replyHandler: nil) { (error) in
-            
             print(error.localizedDescription)
-            
         }
         
         print("sendMessage")

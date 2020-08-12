@@ -53,7 +53,7 @@ class DrillingPageViewController: UIViewController {
     var results: Result!
     var newDrillDetails = [DrillDetail]()
     
-    var timer = Timer()
+    var timer: Timer!
     var timeSecond = 0
     
     var permissionHelper = PermissionHelper()
@@ -133,6 +133,13 @@ class DrillingPageViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+//        results = nil
+//        timer.invalidate()
+//        timer = nil
+        sendMessage(strMsg: "CANCEL", isPreditionData: false)
     }
     
     /*
