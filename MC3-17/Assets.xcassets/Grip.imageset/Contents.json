@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Footwork with card.png",
+      "filename" : "Grip with card.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Footwork with card@2x.png",
+      "filename" : "Grip with card@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Footwork with card@3x.png",
+      "filename" : "Grip with card@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

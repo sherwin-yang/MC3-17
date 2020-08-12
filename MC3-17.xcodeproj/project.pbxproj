@@ -66,6 +66,7 @@
 		AD1A4BD724CF40240023E012 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */; };
 		ADC6B2A324E0467F006D8DC0 /* CancelDrillingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC6B2A224E0467F006D8DC0 /* CancelDrillingPopUp.storyboard */; };
 		ADC6B2A524E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6B2A424E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift */; };
+		D1A5818224E3AF94000194F9 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5818124E3AF94000194F9 /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +195,7 @@
 		AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
 		ADC6B2A224E0467F006D8DC0 /* CancelDrillingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CancelDrillingPopUp.storyboard; sourceTree = "<group>"; };
 		ADC6B2A424E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelDrillingPopUpViewController.swift; sourceTree = "<group>"; };
+		D1A5818124E3AF94000194F9 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +394,7 @@
 				3D1EC43624D6630900250EFF /* MC3-17.entitlements */,
 				21AA702D24C58CE600DA35F6 /* AppDelegate.swift */,
 				21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */,
+				D1A5818124E3AF94000194F9 /* TabBarVC.swift */,
 				21B4E13D24C7280300EAC15F /* Shared */,
 				2524FF3224D6F75B00B0E794 /* Onboarding */,
 				215DA68224CC6F760035603A /* Category Page */,
@@ -943,6 +946,7 @@
 				21B4E13624C6120C00EAC15F /* DrillViewController.swift in Sources */,
 				215DA69524CC6FCE0035603A /* Category.swift in Sources */,
 				21B4E13224C60FF100EAC15F /* PopUpViewController.swift in Sources */,
+				D1A5818224E3AF94000194F9 /* TabBarVC.swift in Sources */,
 				215DA68924CC6FA00035603A /* ShotsCell.swift in Sources */,
 				217678BC24CF43D8004EC8B2 /* MoveCategory.swift in Sources */,
 				21B4E13C24C618F800EAC15F /* Extentions.swift in Sources */,

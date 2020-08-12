@@ -15,9 +15,9 @@ class CategoryViewController: UIViewController {
     let categories = [
         Category(categoryName: "Shots", categoryImage: "Shots", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
         Category(categoryName: "Serve", categoryImage: "Serve", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
-        Category(categoryName: "Footwork", categoryImage: "Notyet", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
-        Category(categoryName: "Grip", categoryImage: "Notyet", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
-        Category(categoryName: "Position", categoryImage: "Notyet", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!")]
+        Category(categoryName: "Grip", categoryImage: "Grip", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
+        Category(categoryName: "Footwork", categoryImage: "Footwork", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!"),
+        Category(categoryName: "Position", categoryImage: "Position", categoryDesc: "Learn the correct technique to execute these shots! By practice and practice!")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,14 +72,6 @@ extension CategoryViewController: UITabBarControllerDelegate {
         self.tabBarController?.delegate = self
     }
     
-    override func viewWillLayoutSubviews() {
-        var tabFrame = self.tabBarController?.tabBar.frame
-        
-        tabFrame?.size.height = 100
-        tabFrame?.origin.y = self.view.frame.size.height - 100
-        self.tabBarController?.tabBar.frame = tabFrame!
-    }
-    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
 
         if tabBarController.selectedIndex > 0{
@@ -92,3 +84,4 @@ extension CategoryViewController: UITabBarControllerDelegate {
         }
     }
 }
+
