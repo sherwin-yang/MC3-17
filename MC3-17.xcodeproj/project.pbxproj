@@ -388,7 +388,6 @@
 		21AA702C24C58CE600DA35F6 /* MC3-17 */ = {
 			isa = PBXGroup;
 			children = (
-				ADC6B29F24E0460B006D8DC0 /* Cancel Drilling Pop Up */,
 				3D1EC43624D6630900250EFF /* MC3-17.entitlements */,
 				21AA702D24C58CE600DA35F6 /* AppDelegate.swift */,
 				21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */,
@@ -401,6 +400,7 @@
 				AD1A4BC824CF3EC00023E012 /* Info Page */,
 				A5E65F2124CB5F7B0048828A /* Camera Page */,
 				AD1A4BC924CF3EFC0023E012 /* Drilling Page */,
+				ADC6B29F24E0460B006D8DC0 /* Cancel Drilling Pop Up */,
 				A5E65F2324CB5F850048828A /* Results Video Page */,
 				A5E65F2224CB5F800048828A /* Results No-Video Page */,
 				217678AF24CEFF88004EC8B2 /* Results Overview Page */,

@@ -20,14 +20,28 @@
                                     <items>
                                         <group width="0.5" height="88" alignment="left" layout="vertical" id="BPg-PN-HtP">
                                             <items>
-                                                <label width="1" alignment="left" text="0" id="8a0-Po-T08">
-                                                    <color key="textColor" red="0.62352941176470589" green="0.86274509803921573" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="36"/>
-                                                </label>
-                                                <label width="1" alignment="left" text="0" id="6D7-dQ-meg">
-                                                    <color key="textColor" red="0.98039215686274506" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="36"/>
-                                                </label>
+                                                <group width="1" alignment="left" id="PYZ-iw-fGU">
+                                                    <items>
+                                                        <label width="0.75" alignment="right" text="0" id="8a0-Po-T08">
+                                                            <color key="textColor" red="0.62352941176470589" green="0.86274509803921573" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="font" type="system" weight="semibold" pointSize="36"/>
+                                                        </label>
+                                                        <imageView alignment="left" verticalAlignment="center" image="hand.thumbsup.fill" catalog="system" id="i3B-s2-S0t">
+                                                            <color key="tintColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </imageView>
+                                                    </items>
+                                                </group>
+                                                <group width="1" alignment="left" id="uef-0K-XSX">
+                                                    <items>
+                                                        <label width="0.75" alignment="right" text="0" id="6D7-dQ-meg">
+                                                            <color key="textColor" red="0.98039215686274506" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="font" type="system" weight="semibold" pointSize="36"/>
+                                                        </label>
+                                                        <imageView alignment="left" verticalAlignment="center" image="hand.thumbsdown.fill" catalog="system" id="dxF-Sw-PuK">
+                                                            <color key="tintColor" red="0.98039215690000003" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </imageView>
+                                                    </items>
+                                                </group>
                                             </items>
                                         </group>
                                         <group width="0.5" height="1" alignment="left" layout="overlap" id="WB4-Ue-qy9">
@@ -49,16 +63,27 @@
                                 </group>
                             </items>
                         </group>
-                        <group width="1" alignment="left" layout="overlap" id="B7A-DE-YZl">
+                        <group width="1" alignment="left" id="B7A-DE-YZl">
                             <items>
-                                <label width="1" alignment="left" text="BPM" textAlignment="center" id="Dqd-U3-t8e">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
-                                </label>
-                                <label width="1" height="40" alignment="left" text="0" textAlignment="center" id="ywZ-rp-r0O">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
-                                </label>
+                                <group width="0.5" height="1" alignment="left" verticalAlignment="center" layout="vertical" id="Y60-sx-F83">
+                                    <items>
+                                        <imageView alignment="right" verticalAlignment="center" image="heart.fill" catalog="system" id="IaK-gv-6nU">
+                                            <color key="tintColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                    </items>
+                                </group>
+                                <group width="0.5" alignment="right" verticalAlignment="center" layout="overlap" id="Dq1-a4-ce1">
+                                    <items>
+                                        <label width="1" alignment="left" text="BPM" textAlignment="left" id="Dqd-U3-t8e">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                                        </label>
+                                        <label width="1" height="40" alignment="left" verticalAlignment="bottom" text="0" textAlignment="left" id="ywZ-rp-r0O">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
@@ -73,6 +98,19 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="34" y="30.357142857142858"/>
+        </scene>
+        <!--presentMovementsDiscarded-->
+        <scene sceneID="K0L-gh-wUG">
+            <objects>
+                <controller identifier="presentMovementsDiscarded" id="9Hj-6Q-gkb">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="All your movements have been discarded" textAlignment="center" numberOfLines="0" id="5za-hY-xBB">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="153.7391304347826" y="309.64285714285717"/>
         </scene>
         <!--showResult-->
         <scene sceneID="acp-OW-nPw">
@@ -140,7 +178,8 @@
     <resources>
         <image name="hand.thumbsdown.fill" catalog="system" width="128" height="124"/>
         <image name="hand.thumbsup.fill" catalog="system" width="128" height="124"/>
+        <image name="heart.fill" catalog="system" width="128" height="105"/>
         <image name="start" width="59" height="36"/>
-        <image name="stop" width="59" height="36"/>
+        <image name="stop" width="86" height="86"/>
     </resources>
 </document>
