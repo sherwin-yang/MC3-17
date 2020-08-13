@@ -209,7 +209,7 @@ extension DrillingPageViewController: WCSessionDelegate {
         }
         
         if let csv = message["motionFromWatch"] as? String {
-            print(csv)
+//            print(csv)
             //            csvString = csvString.appending(csv)
             convertCsvStrToArray(csvStr: csv)
         }
@@ -271,6 +271,7 @@ extension DrillingPageViewController {
         // Update the state vector
         currentState = modelPrediction?.stateOut
         
+//        print(modelPrediction?.labelProbability) //cek lob salah betul persentase.
         // Return the predicted activity
         return modelPrediction?.label
     }
