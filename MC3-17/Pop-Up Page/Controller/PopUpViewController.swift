@@ -14,7 +14,7 @@ class PopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(navigationController?.viewControllers.count)
+        
     }
 
     @IBAction func closeButtonTapped(_ sender: Any) {
@@ -22,8 +22,6 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func yesButtonTapped(_ sender: Any) {
-//        performSegue(withIdentifier: SegueIdentifier.toCameraScreen, sender: self)
-        
         let alert = UIAlertController(title: "", message: "This feature is still under development", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         
@@ -33,16 +31,6 @@ class PopUpViewController: UIViewController {
     
     @IBAction func noButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: SegueIdentifier.toInfoPage, sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            if identifier == SegueIdentifier.toCameraScreen {
-                if let destination = segue.destination as? CameraVC {
-                    
-                }
-            }
-        }
     }
     
 }

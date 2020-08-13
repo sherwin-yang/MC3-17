@@ -51,9 +51,11 @@
 		3D1EC43924D6630900250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43824D6630900250EFF /* HealthKit.framework */; };
 		3D1EC43C24D6636800250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43B24D6636800250EFF /* HealthKit.framework */; };
 		3D1EC43F24D66C1B00250EFF /* PermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */; };
-		3D9973C024D7EBA500020899 /* BadmintonActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D9973BF24D7EBA500020899 /* BadmintonActivityClassifier.mlmodel */; };
+		3DE9168B24E50E010077589D /* BadmintonActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9168A24E50E010077589D /* BadmintonActivityClassifier.mlmodel */; };
 		A509A72624D950790084F8AE /* ExtentionsForVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509A72524D950790084F8AE /* ExtentionsForVideo.swift */; };
 		A509A72B24D955870084F8AE /* ResultsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509A72A24D955870084F8AE /* ResultsVideo.swift */; };
+		A5C87AD524E286A000467F05 /* WatchConnectivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C87AD424E286A000467F05 /* WatchConnectivityVC.swift */; };
+		A5C87AD724E286BB00467F05 /* WatchConnectivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C87AD624E286BB00467F05 /* WatchConnectivity.storyboard */; };
 		A5E65F2E24CB60400048828A /* ResultsVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */; };
 		A5E65F3024CB60640048828A /* ResultsNoVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F2F24CB60640048828A /* ResultsNoVideo.storyboard */; };
 		A5E65F3224CB606F0048828A /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E65F3124CB606F0048828A /* Camera.storyboard */; };
@@ -64,6 +66,9 @@
 		AD1A4BD324CF3F980023E012 /* DrillingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */; };
 		AD1A4BD524CF40170023E012 /* DrillingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4BD424CF40170023E012 /* DrillingPageViewController.swift */; };
 		AD1A4BD724CF40240023E012 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */; };
+		ADC6B2A324E0467F006D8DC0 /* CancelDrillingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC6B2A224E0467F006D8DC0 /* CancelDrillingPopUp.storyboard */; };
+		ADC6B2A524E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6B2A424E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift */; };
+		D1A5818224E3AF94000194F9 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5818124E3AF94000194F9 /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,9 +182,11 @@
 		3D1EC43A24D6636800250EFF /* MC3-17-WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MC3-17-WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		3D1EC43B24D6636800250EFF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionHelper.swift; sourceTree = "<group>"; };
-		3D9973BF24D7EBA500020899 /* BadmintonActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BadmintonActivityClassifier.mlmodel; sourceTree = "<group>"; };
+		3DE9168A24E50E010077589D /* BadmintonActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BadmintonActivityClassifier.mlmodel; sourceTree = "<group>"; };
 		A509A72524D950790084F8AE /* ExtentionsForVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsForVideo.swift; sourceTree = "<group>"; };
 		A509A72A24D955870084F8AE /* ResultsVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVideo.swift; sourceTree = "<group>"; };
+		A5C87AD424E286A000467F05 /* WatchConnectivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityVC.swift; sourceTree = "<group>"; };
+		A5C87AD624E286BB00467F05 /* WatchConnectivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchConnectivity.storyboard; sourceTree = "<group>"; };
 		A5E65F2D24CB60400048828A /* ResultsVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsVideo.storyboard; sourceTree = "<group>"; };
 		A5E65F2F24CB60640048828A /* ResultsNoVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsNoVideo.storyboard; sourceTree = "<group>"; };
 		A5E65F3124CB606F0048828A /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
@@ -190,6 +197,9 @@
 		AD1A4BD224CF3F980023E012 /* DrillingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrillingPage.storyboard; sourceTree = "<group>"; };
 		AD1A4BD424CF40170023E012 /* DrillingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillingPageViewController.swift; sourceTree = "<group>"; };
 		AD1A4BD624CF40240023E012 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
+		ADC6B2A224E0467F006D8DC0 /* CancelDrillingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CancelDrillingPopUp.storyboard; sourceTree = "<group>"; };
+		ADC6B2A424E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelDrillingPopUpViewController.swift; sourceTree = "<group>"; };
+		D1A5818124E3AF94000194F9 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				2195697324D2FB1400116F59 /* Interface.storyboard */,
+				3DE9168A24E50E010077589D /* BadmintonActivityClassifier.mlmodel */,
 				2195697624D2FB1400116F59 /* Assets.xcassets */,
 				2195697824D2FB1400116F59 /* Info.plist */,
 			);
@@ -384,9 +395,11 @@
 		21AA702C24C58CE600DA35F6 /* MC3-17 */ = {
 			isa = PBXGroup;
 			children = (
+				A5C87AD124E2863A00467F05 /* Watch Connectivity Pop-Up */,
 				3D1EC43624D6630900250EFF /* MC3-17.entitlements */,
 				21AA702D24C58CE600DA35F6 /* AppDelegate.swift */,
 				21AA702F24C58CE600DA35F6 /* SceneDelegate.swift */,
+				D1A5818124E3AF94000194F9 /* TabBarVC.swift */,
 				21B4E13D24C7280300EAC15F /* Shared */,
 				2524FF3224D6F75B00B0E794 /* Onboarding */,
 				215DA68224CC6F760035603A /* Category Page */,
@@ -396,13 +409,13 @@
 				AD1A4BC824CF3EC00023E012 /* Info Page */,
 				A5E65F2124CB5F7B0048828A /* Camera Page */,
 				AD1A4BC924CF3EFC0023E012 /* Drilling Page */,
+				ADC6B29F24E0460B006D8DC0 /* Cancel Drilling Pop Up */,
 				A5E65F2324CB5F850048828A /* Results Video Page */,
 				A5E65F2224CB5F800048828A /* Results No-Video Page */,
 				217678AF24CEFF88004EC8B2 /* Results Overview Page */,
 				3D1EC43D24D66BE500250EFF /* Helper */,
 				217678AD24CCD91D004EC8B2 /* Main.storyboard */,
 				21AA703924C58CE800DA35F6 /* Assets.xcassets */,
-				3D9973BF24D7EBA500020899 /* BadmintonActivityClassifier.mlmodel */,
 				21AA703B24C58CE800DA35F6 /* LaunchScreen.storyboard */,
 				21AA703E24C58CE800DA35F6 /* Info.plist */,
 				21AA703624C58CE600DA35F6 /* MC3_17.xcdatamodeld */,
@@ -467,16 +480,8 @@
 			children = (
 				21B4E12E24C6053F00EAC15F /* Controller */,
 				21B4E12D24C6053B00EAC15F /* View */,
-				21B4E12C24C6052D00EAC15F /* Model */,
 			);
 			path = "Pop-Up Page";
-			sourceTree = "<group>";
-		};
-		21B4E12C24C6052D00EAC15F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		21B4E12D24C6053B00EAC15F /* View */ = {
@@ -557,12 +562,36 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A5C87AD124E2863A00467F05 /* Watch Connectivity Pop-Up */ = {
+			isa = PBXGroup;
+			children = (
+				A5C87AD324E2867400467F05 /* Controller */,
+				A5C87AD224E2866E00467F05 /* View */,
+			);
+			path = "Watch Connectivity Pop-Up";
+			sourceTree = "<group>";
+		};
+		A5C87AD224E2866E00467F05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5C87AD624E286BB00467F05 /* WatchConnectivity.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5C87AD324E2867400467F05 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5C87AD424E286A000467F05 /* WatchConnectivityVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A5E65F2124CB5F7B0048828A /* Camera Page */ = {
 			isa = PBXGroup;
 			children = (
 				A5E65F2624CB5FF90048828A /* Controller */,
 				A5E65F2524CB5FF30048828A /* View */,
-				A5E65F2424CB5FED0048828A /* Model */,
 			);
 			path = "Camera Page";
 			sourceTree = "<group>";
@@ -580,18 +609,11 @@
 		A5E65F2324CB5F850048828A /* Results Video Page */ = {
 			isa = PBXGroup;
 			children = (
-				A509A72924D955720084F8AE /* Model */,
 				A5E65F2C24CB60150048828A /* Controller */,
 				A5E65F2B24CB60110048828A /* View */,
+				A509A72924D955720084F8AE /* Model */,
 			);
 			path = "Results Video Page";
-			sourceTree = "<group>";
-		};
-		A5E65F2424CB5FED0048828A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		A5E65F2524CB5FF30048828A /* View */ = {
@@ -652,9 +674,8 @@
 		AD1A4BC824CF3EC00023E012 /* Info Page */ = {
 			isa = PBXGroup;
 			children = (
-				AD1A4BCC24CF3F160023E012 /* Model */,
-				AD1A4BCB24CF3F100023E012 /* View */,
 				AD1A4BCA24CF3F030023E012 /* Controller */,
+				AD1A4BCB24CF3F100023E012 /* View */,
 			);
 			path = "Info Page";
 			sourceTree = "<group>";
@@ -662,9 +683,8 @@
 		AD1A4BC924CF3EFC0023E012 /* Drilling Page */ = {
 			isa = PBXGroup;
 			children = (
-				AD1A4BCF24CF3F250023E012 /* Model */,
-				AD1A4BCE24CF3F200023E012 /* View */,
 				AD1A4BCD24CF3F1A0023E012 /* Controller */,
+				AD1A4BCE24CF3F200023E012 /* View */,
 			);
 			path = "Drilling Page";
 			sourceTree = "<group>";
@@ -685,13 +705,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AD1A4BCC24CF3F160023E012 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		AD1A4BCD24CF3F1A0023E012 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,11 +721,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AD1A4BCF24CF3F250023E012 /* Model */ = {
+		ADC6B29F24E0460B006D8DC0 /* Cancel Drilling Pop Up */ = {
 			isa = PBXGroup;
 			children = (
+				ADC6B2A124E04623006D8DC0 /* Controller */,
+				ADC6B2A024E04618006D8DC0 /* View */,
 			);
-			path = Model;
+			path = "Cancel Drilling Pop Up";
+			sourceTree = "<group>";
+		};
+		ADC6B2A024E04618006D8DC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6B2A224E0467F006D8DC0 /* CancelDrillingPopUp.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADC6B2A124E04623006D8DC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6B2A424E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -884,6 +915,7 @@
 				21B4E13024C6054E00EAC15F /* PopUp.storyboard in Resources */,
 				AD1A4BD124CF3F390023E012 /* InfoPage.storyboard in Resources */,
 				A5E65F3024CB60640048828A /* ResultsNoVideo.storyboard in Resources */,
+				ADC6B2A324E0467F006D8DC0 /* CancelDrillingPopUp.storyboard in Resources */,
 				217678B824CF4000004EC8B2 /* ResultOverview.storyboard in Resources */,
 				215DA69324CC6FC70035603A /* Category.storyboard in Resources */,
 				21B4E13A24C6174E00EAC15F /* Drill.storyboard in Resources */,
@@ -895,6 +927,7 @@
 				A5E65F3224CB606F0048828A /* Camera.storyboard in Resources */,
 				215DA68D24CC6FB00035603A /* Shots.storyboard in Resources */,
 				21856BB224D9E1F100E481A9 /* Lob Video.mp4 in Resources */,
+				A5C87AD724E286BB00467F05 /* WatchConnectivity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,9 +966,9 @@
 				A5E65F3424CB60A40048828A /* ResultsNoVideoVC.swift in Sources */,
 				A5E65F3824CB60FB0048828A /* CameraVC.swift in Sources */,
 				215DA69124CC6FBD0035603A /* CategoryViewController.swift in Sources */,
+				A5C87AD524E286A000467F05 /* WatchConnectivityVC.swift in Sources */,
 				217678BA24CF41DD004EC8B2 /* ResultOverviewTableViewCell.swift in Sources */,
 				A5E65F3624CB60CD0048828A /* ResultsVideoVC.swift in Sources */,
-				3D9973C024D7EBA500020899 /* BadmintonActivityClassifier.mlmodel in Sources */,
 				217678B524CF3B9A004EC8B2 /* ResultOverviewViewController.swift in Sources */,
 				AD1A4BD724CF40240023E012 /* InfoPageViewController.swift in Sources */,
 				A5E65F3624CB60CD0048828A /* ResultsVideoVC.swift in Sources */,
@@ -944,6 +977,7 @@
 				21B4E13624C6120C00EAC15F /* DrillViewController.swift in Sources */,
 				215DA69524CC6FCE0035603A /* Category.swift in Sources */,
 				21B4E13224C60FF100EAC15F /* PopUpViewController.swift in Sources */,
+				D1A5818224E3AF94000194F9 /* TabBarVC.swift in Sources */,
 				215DA68924CC6FA00035603A /* ShotsCell.swift in Sources */,
 				217678BC24CF43D8004EC8B2 /* MoveCategory.swift in Sources */,
 				21B4E13C24C618F800EAC15F /* Extentions.swift in Sources */,
@@ -951,6 +985,7 @@
 				21AA702E24C58CE600DA35F6 /* AppDelegate.swift in Sources */,
 				21856BB024D95C1100E481A9 /* Result.swift in Sources */,
 				21B4E13F24C77AD500EAC15F /* DataModel.swift in Sources */,
+				3DE9168B24E50E010077589D /* BadmintonActivityClassifier.mlmodel in Sources */,
 				215DA68B24CC6FA90035603A /* Shots.swift in Sources */,
 				3D1EC43F24D66C1B00250EFF /* PermissionHelper.swift in Sources */,
 				215DA69024CC6FBD0035603A /* CategoryCell.swift in Sources */,
@@ -960,6 +995,7 @@
 				2524FF3824D6F93300B0E794 /* PageControlViewController.swift in Sources */,
 				21B4E12824C5A04D00EAC15F /* Drill.swift in Sources */,
 				21B4E14124C7818100EAC15F /* Constants.swift in Sources */,
+				ADC6B2A524E047F2006D8DC0 /* CancelDrillingPopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,10 +1066,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 9QG2498G8L;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rifaldi.MC3-17.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1049,10 +1085,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 9QG2498G8L;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rifaldi.MC3-17.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1068,14 +1104,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rifaldi.MC3-17.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1091,14 +1127,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rifaldi.MC3-17.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1228,13 +1264,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rifaldi.MC3-17";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1247,13 +1283,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rifaldi.MC3-17";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

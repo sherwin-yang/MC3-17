@@ -10,71 +10,91 @@
         <!--Drilling Page View Controller-->
         <scene sceneID="5Q4-cP-qHB">
             <objects>
-                <viewController id="BNW-dR-rEZ" customClass="DrillingPageViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BNW-dR-rEZ" customClass="DrillingPageViewController" customModule="MC3_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="35O-cr-Ck9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Drilling" translatesAutoresizingMaskIntoConstraints="NO" id="pjf-3K-Inh">
-                                <rect key="frame" x="88" y="328" width="240" height="128"/>
+                                <rect key="frame" x="87" y="348" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Are Now Drilling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-rc-rYI">
-                                <rect key="frame" x="126" y="464" width="163" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Begin Drilling, Press the Start Button on Your Apple Watch" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-ZC-kQ2">
+                                <rect key="frame" x="45" y="539" width="324" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.96583789590000002" green="0.14072662590000001" blue="0.33724415299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv9-eu-DjL">
+                                <rect key="frame" x="107" y="288" width="200" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="Brh-pY-MlC">
+                                <rect key="frame" x="39" y="533" width="337" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uS-v2-Pbm">
+                                <rect key="frame" x="38.5" y="785" width="337" height="41"/>
+                                <color key="backgroundColor" red="0.1027386114" green="0.1483265758" blue="0.18039682509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="cwX-zK-uk5"/>
+                                    <constraint firstAttribute="width" constant="337" id="hxl-Sp-DIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Cancel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="BNW-dR-rEZ" eventType="touchUpInside" id="7Nn-yu-fED"/>
+                                    <segue destination="Exr-Y2-pfh" kind="presentation" identifier="toCancelDrillingPopUp" id="7zc-VA-LHW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're All Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-rc-rYI">
+                                <rect key="frame" x="112" y="484" width="190" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avy-5Z-KmP">
-                                <rect key="frame" x="164" y="294" width="28" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHS-Zy-Wjv">
-                                <rect key="frame" x="226" y="294" width="32" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auj-fR-wtb">
-                                <rect key="frame" x="195" y="294" width="28" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSp-EN-M2A">
-                                <rect key="frame" x="221" y="293" width="6" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFk-5P-dZd">
-                                <rect key="frame" x="190" y="293" width="6" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7uS-v2-Pbm" firstAttribute="centerX" secondItem="35O-cr-Ck9" secondAttribute="centerX" id="8sg-DI-PMw"/>
+                            <constraint firstItem="h8B-7v-GyT" firstAttribute="bottom" secondItem="7uS-v2-Pbm" secondAttribute="bottom" constant="36" id="GIl-pt-njC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h8B-7v-GyT"/>
                     </view>
                     <connections>
-                        <outlet property="hoursText" destination="avy-5Z-KmP" id="LIK-oR-pg3"/>
-                        <outlet property="minuteText" destination="auj-fR-wtb" id="hHu-li-ZLl"/>
-                        <outlet property="secondsText" destination="vHS-Zy-Wjv" id="zdN-y0-L1g"/>
+                        <outlet property="borderImg" destination="Brh-pY-MlC" id="YpR-vg-ri2"/>
+                        <outlet property="borderTxtLabel" destination="2xL-ZC-kQ2" id="pSG-fv-mU6"/>
+                        <outlet property="cancelButton" destination="7uS-v2-Pbm" id="CTC-PW-e3e"/>
+                        <outlet property="descLabel" destination="hTe-rc-rYI" id="UKf-3x-Rox"/>
+                        <outlet property="timerLabel" destination="Uv9-eu-DjL" id="Rtx-VC-37T"/>
                         <segue destination="FGV-8G-sqN" kind="presentation" identifier="toResultsNoVideo" modalPresentationStyle="fullScreen" id="bPv-GR-85x"/>
+                        <segue destination="jXl-26-Zuv" kind="presentation" identifier="toWatchConnectivity" id="Gi5-vA-Qbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2V-q0-l3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49.275362318840585" y="121.875"/>
+            <point key="canvasLocation" x="-919" y="-16"/>
+        </scene>
+        <!--CancelDrillingPopUp-->
+        <scene sceneID="bFh-c0-t4K">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CancelDrillingPopUp" id="Exr-Y2-pfh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="L7k-w4-mRO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IL3-am-Icx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="172"/>
         </scene>
         <!--ResultsNoVideo-->
         <scene sceneID="JEr-eB-bzH">
@@ -84,10 +104,19 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPR-CT-KYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="122"/>
+            <point key="canvasLocation" x="94" y="21"/>
+        </scene>
+        <!--WatchConnectivity-->
+        <scene sceneID="LMU-1w-bpt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WatchConnectivity" id="jXl-26-Zuv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3l-Vf-e5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="-16"/>
         </scene>
     </scenes>
     <resources>
         <image name="Drilling" width="214" height="101"/>
+        <image name="Rectangle" width="324" height="63"/>
     </resources>
 </document>
