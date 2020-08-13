@@ -1066,7 +1066,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 9QG2498G8L;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp";
@@ -1085,7 +1085,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = 9QG2498G8L;
 				IBSC_MODULE = MC3_17_WatchApp_Extension;
 				INFOPLIST_FILE = "MC3-17-WatchApp/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mc3team.MC3-17.watchkitapp";
@@ -1104,7 +1104,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1127,7 +1127,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17-WatchApp Extension/MC3-17-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1264,7 +1264,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1283,7 +1283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC3-17/MC3-17.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WFP7XFVDQT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MC3-17/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
