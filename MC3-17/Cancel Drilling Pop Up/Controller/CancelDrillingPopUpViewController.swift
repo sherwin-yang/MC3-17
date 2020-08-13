@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class CancelDrillingPopUpViewController: UIViewController {
 
@@ -21,7 +22,18 @@ class CancelDrillingPopUpViewController: UIViewController {
     }
     
     @IBAction func stopDrilling(_ sender: Any) {
+        sendMessage(strMsg: "CANCEL")
         performSegue(withIdentifier: SegueIdentifier.toDrillPage, sender: self)
+    }
+    
+    func sendMessage(strMsg: String){
+        let message = ["instructionFromIos":strMsg]
+        
+        WCSession.default.sendMessage(message, replyHandler: nil) { (error) in
+            
+            print(error.localizedDescription)
+            
+        }
     }
     
 }

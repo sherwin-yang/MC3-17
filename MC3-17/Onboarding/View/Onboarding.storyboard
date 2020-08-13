@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="370" id="eax-A6-bGs"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to, [App name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG2-tf-qJl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Badmintech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG2-tf-qJl">
                                 <rect key="frame" x="83" y="486" width="253" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -153,7 +153,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Category" storyboardName="Category" id="pZQ-Bs-GNT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDe-bD-tDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="234"/>
+            <point key="canvasLocation" x="419" y="242"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ntd-6h-5uc">
@@ -223,7 +223,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X7e-kC-I9g"/>
+        <segue reference="q9F-qp-UO1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="asset_onBoarding1" width="365" height="242"/>
