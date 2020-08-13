@@ -30,7 +30,7 @@ struct Result {
         var badMoves = 0
         for i in 0..<drillDetail.count {
             if drillDetail[i].shotQuality == ShotQuality.badMove {
-                badMoves += 0
+                badMoves += 1
             }
         }
         return badMoves

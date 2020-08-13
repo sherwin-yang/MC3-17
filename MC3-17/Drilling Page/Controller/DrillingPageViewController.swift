@@ -53,6 +53,7 @@ class DrillingPageViewController: UIViewController {
     var results: Result!
     var newDrillDetails = [DrillDetail]()
     
+    var checkWCTimer: Timer!
     var timer: Timer!
     var timeSecond = 0
     
@@ -64,22 +65,13 @@ class DrillingPageViewController: UIViewController {
         super.viewDidLoad()
         
         activateWCSession()
-        
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
         permissionHelper.delegate = self
+
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTimer), userInfo: nil, repeats: true)
+        self.checkWCTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(checkWatchConnectivity), userInfo: nil, repeats: true)
         
         checkHealthStoreAuth()
-        
-//        checkWatchConnectivity()
     }
-    
-//    func checkWatchConnectivity(){
-//        if wcSession.isReachable == false{
-//            DispatchQueue.main.async {
-//                self.performSegue(withIdentifier: SegueIdentifier.toWatchConnectivity, sender: self)
-//            }
-//        }
-//    }
     
     @objc func setTimer () {
         if isHealthStoreAuthorized && isRun {
@@ -135,23 +127,6 @@ class DrillingPageViewController: UIViewController {
         }
     }
     
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-//        results = nil
-//        timer.invalidate()
-//        timer = nil
-        sendMessage(strMsg: "CANCEL", isPreditionData: false)
-    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 //MARK: - PermissionHelperDelegate
@@ -188,10 +163,22 @@ extension DrillingPageViewController: PermissionHelperDelegate {
 //MARK: - WatchConnectivity
 extension DrillingPageViewController: WCSessionDelegate {
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    private func activateWCSession() {
         wcSession = WCSession.default
         wcSession.delegate = self
         wcSession.activate()
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        activateWCSession()
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        //
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        //
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
@@ -209,25 +196,10 @@ extension DrillingPageViewController: WCSessionDelegate {
         }
         
         if let csv = message["motionFromWatch"] as? String {
-//            print(csv)
-            //            csvString = csvString.appending(csv)
             convertCsvStrToArray(csvStr: csv)
+            //            print(csv)
+            //            csvString = csvString.appending(csv)
         }
-        
-    }
-    
-//    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-//        if let instruction = message["instructionFromWatch"] as? String {
-//            print("INSTRUCTION2: \(instruction)")
-//        }
-//    }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        
     }
     
     func sendMessage(strMsg: String, isPreditionData: Bool){
@@ -243,15 +215,14 @@ extension DrillingPageViewController: WCSessionDelegate {
         }
     }
     
-    private func isReachable() -> Bool {
-        return wcSession.isReachable
+    @objc func checkWatchConnectivity(){
+        if wcSession.isReachable == false{
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: SegueIdentifier.toWatchConnectivity, sender: self)
+            }
+        }
     }
     
-    private func activateWCSession() {
-        wcSession = WCSession.default
-        wcSession.delegate = self
-        wcSession.activate()
-    }
 }
 
 //MARK: - CoreML
@@ -271,7 +242,8 @@ extension DrillingPageViewController {
         // Update the state vector
         currentState = modelPrediction?.stateOut
         
-//        print(modelPrediction?.labelProbability) //cek lob salah betul persentase.
+        // print(modelPrediction?.labelProbability) //cek lob salah betul persentase.
+        
         // Return the predicted activity
         return modelPrediction?.label
     }

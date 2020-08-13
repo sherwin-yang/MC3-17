@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class WatchConnectivityVC: UIViewController {
     override func viewDidLoad() {
@@ -14,11 +15,11 @@ class WatchConnectivityVC: UIViewController {
     }
     
     @IBAction func tryAgainDidTapped(_ sender: Any) {
-//        if wcSession.isReachable == false{
-//            print("Disconnected")
-//        }else{
-//            print("Connected")
-//            self.dismiss(animated: true, completion: nil)
-//        }
+        if WCSession.default.isReachable == false {
+            print("Disconnected")
+        } else {
+            print("Connected")
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

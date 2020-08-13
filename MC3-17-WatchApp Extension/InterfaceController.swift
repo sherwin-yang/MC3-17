@@ -49,7 +49,6 @@ class InterfaceController: WKInterfaceController {
         wcSession.delegate = self
         wcSession.activate()
         
-        
         WKExtension.shared().isAutorotating = true
         
         //Check HealthStore
@@ -69,8 +68,8 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func stopButtonTapped() {
-        stopRecording()
         pushController(withName: "showResult", context: result)
+        stopRecording()
     }
     
     @objc func setTimer() {
@@ -163,6 +162,10 @@ extension InterfaceController {
 //    MARK: - WCSession
 extension InterfaceController: WCSessionDelegate {
     
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        // Code.
+    }
+    
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let prediction = message["preditionFromIos"] as? String {
             print(prediction)
@@ -178,16 +181,10 @@ extension InterfaceController: WCSessionDelegate {
         if let instruction = message["instructionFromIos"] as? String {
             print(instruction)
             if instruction == "CANCEL"{
-//                stopRecording()
+                stopRecording()
                 presentController(withName: "presentMovementsDiscarded", context: nil)
             }
         }
-        
-    }
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
-        // Code.
         
     }
     
@@ -217,10 +214,6 @@ extension InterfaceController: WCSessionDelegate {
 //            print("iPhone is not reachable!!")
 //        }
 //    }
-    
-    private func isReachable() -> Bool {
-        return wcSession.isReachable
-    }
 }
 
 //MARK: - WorkOut

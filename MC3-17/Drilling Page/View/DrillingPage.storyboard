@@ -53,7 +53,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cancelButtonTapped:" destination="BNW-dR-rEZ" eventType="touchUpInside" id="7Nn-yu-fED"/>
                                     <segue destination="Exr-Y2-pfh" kind="presentation" identifier="toCancelDrillingPopUp" id="7zc-VA-LHW"/>
                                 </connections>
                             </button>
@@ -94,7 +93,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IL3-am-Icx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="172"/>
+            <point key="canvasLocation" x="-176" y="70"/>
         </scene>
         <!--ResultsNoVideo-->
         <scene sceneID="JEr-eB-bzH">
@@ -104,7 +103,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPR-CT-KYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="21"/>
+            <point key="canvasLocation" x="-154" y="-38"/>
         </scene>
         <!--WatchConnectivity-->
         <scene sceneID="LMU-1w-bpt">
@@ -112,7 +111,7 @@
                 <viewControllerPlaceholder storyboardName="WatchConnectivity" id="jXl-26-Zuv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3l-Vf-e5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="-16"/>
+            <point key="canvasLocation" x="-167" y="-155"/>
         </scene>
     </scenes>
     <resources>
