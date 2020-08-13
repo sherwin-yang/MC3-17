@@ -51,6 +51,7 @@
 		3D1EC43924D6630900250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43824D6630900250EFF /* HealthKit.framework */; };
 		3D1EC43C24D6636800250EFF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1EC43B24D6636800250EFF /* HealthKit.framework */; };
 		3D1EC43F24D66C1B00250EFF /* PermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */; };
+		3D7F0DFC24E55F660004C737 /* CreateML.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3D7F0DFB24E55F650004C737 /* CreateML.zip */; };
 		3DE9168B24E50E010077589D /* BadmintonActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9168A24E50E010077589D /* BadmintonActivityClassifier.mlmodel */; };
 		A509A72624D950790084F8AE /* ExtentionsForVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509A72524D950790084F8AE /* ExtentionsForVideo.swift */; };
 		A509A72B24D955870084F8AE /* ResultsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509A72A24D955870084F8AE /* ResultsVideo.swift */; };
@@ -182,6 +183,7 @@
 		3D1EC43A24D6636800250EFF /* MC3-17-WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MC3-17-WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		3D1EC43B24D6636800250EFF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		3D1EC43E24D66C1B00250EFF /* PermissionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionHelper.swift; sourceTree = "<group>"; };
+		3D7F0DFB24E55F650004C737 /* CreateML.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = CreateML.zip; sourceTree = "<group>"; };
 		3DE9168A24E50E010077589D /* BadmintonActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BadmintonActivityClassifier.mlmodel; sourceTree = "<group>"; };
 		A509A72524D950790084F8AE /* ExtentionsForVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsForVideo.swift; sourceTree = "<group>"; };
 		A509A72A24D955870084F8AE /* ResultsVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVideo.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		21AA702124C58CE600DA35F6 = {
 			isa = PBXGroup;
 			children = (
+				3D7F0DFB24E55F650004C737 /* CreateML.zip */,
 				21856BB124D9E1F100E481A9 /* Lob Video.mp4 */,
 				21AA702C24C58CE600DA35F6 /* MC3-17 */,
 				21AA704624C58CE800DA35F6 /* MC3-17Tests */,
@@ -925,6 +928,7 @@
 				21AA703A24C58CE800DA35F6 /* Assets.xcassets in Resources */,
 				2524FF3624D6F7BB00B0E794 /* Onboarding.storyboard in Resources */,
 				A5E65F3224CB606F0048828A /* Camera.storyboard in Resources */,
+				3D7F0DFC24E55F660004C737 /* CreateML.zip in Resources */,
 				215DA68D24CC6FB00035603A /* Shots.storyboard in Resources */,
 				21856BB224D9E1F100E481A9 /* Lob Video.mp4 in Resources */,
 				A5C87AD724E286BB00467F05 /* WatchConnectivity.storyboard in Resources */,
